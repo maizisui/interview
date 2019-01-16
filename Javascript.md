@@ -10,7 +10,7 @@ String
 Symbol (ECMAScript 6 新定义)
 和 Object
 
-2.介绍js有哪些内置对象？
+2. 介绍js有哪些内置对象？
  Object 是 JavaScript 中所有对象的父对象
  数据封装类对象：Object、Array、Boolean、Number 和 String
  其他对象：Function、Arguments、Math、Date、RegExp、Error
@@ -46,4 +46,27 @@ ECMAScript5中增添了JSON这个存在于全局的内置对象。
 
 关于专业名词：本地对象也经常被叫做原生对象或内部对象，包含Global和Math在内的内置对象在《JavaScript高级程序设计》里也被叫做单体内置对象，很多时候，干脆也会直接把本地对象和内置对象统称为“内置对象”，也就是说除了宿主对象，剩下的都是ECMAScript的内部的“内置”对象。
 
-3.说几条写JavaScript的基本规范？
+3. 说几条写JavaScript的基本规范？
+https://github.com/fex-team/styleguide/blob/master/javascript.md
+https://www.css88.com/archives/8405
+
+4. JavaScript原型，原型链 ? 有什么特点？
+prototype(显式原型), __proto__(隐式原型)的区别:
+
+
+5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
+
+ 栈：原始数据类型（Undefined，Null，Boolean，Number、String）
+ 堆：引用数据类型（对象、数组和函数）
+
+ 特点：
+ 两种类型的区别是：存储位置不同；
+ 原始数据类型是直接存储在栈(stack)中的简单数据段，占据空间小、大小固定，属于被频繁使用数据，所以放入栈中存储；
+ 引用数据类型存储在堆(heap)中的对象,占据空间大、大小不固定。如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，取得地址后从堆中获得实体。
+https://segmentfault.com/a/1190000016733918
+
+6. 如何将字符串转化为数字，例如'12.3b'?
+parseInt(), parseFloat(), Number()(转换的是整个值，而不是部分值)
+扩展：转换函数、强制类型转换、利用JS变量弱类型特点进行转换；
+https://www.jianshu.com/p/7962deab3cea
+https://blog.csdn.net/Inuyasha1121/article/details/40182105

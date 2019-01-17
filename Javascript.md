@@ -115,7 +115,39 @@ https://blog.csdn.net/Inuyasha1121/article/details/40182105
 ```
 
 ####9.Javascript如何实现继承
+    
+    参考： http://www.cnblogs.com/humin/p/4556820.html
+    http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html
+    http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html
+    https://segmentfault.com/a/1190000002440502
+    https://juejin.im/entry/5993eeaa51882524382f3c0b
+
 ####10.javascript创建对象的几种方式
+    1. 工厂模式
+       优点:
+       缺点:
+    2. 构造函数模式
+       优点:
+       缺点:
+    3. 原型模式
+       优点:
+       缺点:
+    4. 组合使用构造函数模式和原型模式
+       优点:
+       缺点:
+    5. 动态原型模式
+       优点:
+       缺点:
+    6. 寄生构造函数模式
+       优点:
+       缺点:
+    7. 稳妥构造函数模式
+       优点:
+       缺点:
+    参考：https://xxxgitone.github.io/2017/06/10/JavaScript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F/
+    https://github.com/mqyqingfeng/Blog/issues/15   
+    https://segmentfault.com/a/1190000008293117
+
 ####11.Javascript作用链域
 ####12.谈谈This对象的理解
 ####13.eval是做什么的？

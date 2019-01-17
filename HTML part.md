@@ -164,10 +164,11 @@ HTML part
 14. Label的作用是什么？是怎么用的？
 
   label标签来定义表单控制间的关系,当用户选择该标签时，浏览器会自动将焦点转到和标签相关的表单控件上。
+  ```
   <label for="Name">Number:</label>
   <input type=“text“name="Name" id="Name"/>
   <label>Date:<input type="text" name="B"/></label>     	
-
+```
 15. HTML5的form如何关闭自动完成功能？
 
   给不想要提示的 form 或某个 input 设置为 autocomplete=off。

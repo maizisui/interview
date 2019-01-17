@@ -1,5 +1,5 @@
 CSS part
-1. 介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？
+## 1. 介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？
 	CSS 框模型 (Box Model) 规定了元素框处理元素内容、内边距、边框 和 外边距 的方式。
   （1）有两种， IE 盒子模型、W3C 盒子模型；
   （2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border)；
@@ -12,11 +12,11 @@ CSS part
   	3.标签选择器（div, h1, p）
   	4.相邻选择器（h1 + p）
   	5.子选择器（ul > li）
-  	6.后代选择器（li a）
+  	6.后代选择器（li [[a）]]
   	7.通配符选择器（ * ）
   	8.属性选择器（a[rel = "external"]）
-  	9.伪类选择器（a:hover, li:nth-child）:
-  	10.伪元素 :: ::after, ::before, ::first-letter, ::first-line, ::selection, ::backdrop
+  	9.伪类选择器（a:hover, li:nth-child）:,
+  	10.伪元素 ::, ::after, ::before, ::first-letter, ::first-line, ::selection, ::backdrop
   	伪类和伪元素区别：https://segmentfault.com/a/1190000013737796
 	添加到选择器后面去选择某个元素的某个部分
   	 可继承的样式： font-size font-family color, UL LI DL DD DT;
@@ -55,7 +55,8 @@ CSS part
 5.  如何居中div? 
 	水平居中：给div设置一个宽度，然后添加margin:0 auto属性
 	让绝对定位的div居中
-	· div {
+	(```)
+	 div {
 	 	position: absolute;
 	 	width: 300px;
 	 	height: 300px;
@@ -66,7 +67,7 @@ CSS part
 	 	right: 0;
 	 	background-color: pink;	/* 方便看效果 */
 	 }
-	·
+	(```)
 	 水平垂直居中一
 	 确定容器的宽高 宽500 高 300 的层
 	 设置层的外边距

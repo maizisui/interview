@@ -1,7 +1,6 @@
 HTML part
 #### 1. Doctype作用？标准模式与兼容模式各有什么区别?
-     告知浏览器的解析器用什么文档标准解析这个文档。
-     DOCTYPE声明位于HTML文档中的第一行，处于html标签之前。
+    Doctype是Document Type（文档类型）的缩写，`<!DOCTYPE>`声明位于文档中的最前面，处于`<html>`标签之前。告诉浏览器以何种模式来渲染文档。`<!DOCTYPE>`声明不是HTML标签，`<!DOCTYPE>`声明没有结束标签，`<!DOCTYPE>`声明对大小写不敏感。   
      DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。 
 
      标准模式： 以该浏览器支持的最高标准呈现页面。  
@@ -10,6 +9,19 @@ HTML part
      具体：
         在严格模式中 ：width是内容宽度 ，元素真正的宽度 = margin + border+ padding + width;
         在怪癖模式中 ：width则是元素的实际宽度 ，内容宽度 = width - ( padding+ border)  
+
+    扩展：
+      HTML文档声明的类型主要有3几种：过渡定义类型、严格定义类型、框架定义类型。  
+      HTML 4.01规定了三种文档类型：Strict、Transitional以及Frameset；  
+      XHTML 1.0规定了三种XML文档类型：Strict、Transitional以及Frameset。
+
+    模式触发：
+    浏览器根据DOCTYPE是否存在以及使用的哪种DTD（Document Type Declaration文档类型声明）来选择要使用的呈现方法。  
+    如果XHTML 1.0、HTML 4.01文档包含形式完整的DOCTYPE，那么它一般以标准模式呈现。  
+    包含过渡DTD（文档类型声明）和URI的DOCTYPE也导致页面以标准模式呈现，但是有过渡DTD而没有URI会导致页面以混杂模式呈现。  
+    DOCTYPE不存在或形式不正确会导致HTML和XHTML文档以混杂模式呈现。  
+    HTML5没有DTD，也就没有严格模式与宽松模式的区别，HTML5有相对宽松的语法，实现时，已经尽可能大的实现了向后兼容。
+
 
 #### 2. HTML5 为什么只需要写 `<!DOCTYPE HTML>`？  
     HTML5 不基于 SGML, 因此不需要对DTD进行引用，但是需要doctype来规范浏览器的行为（让浏览器按照它们应该的方式来运行）;   

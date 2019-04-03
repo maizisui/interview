@@ -15,9 +15,6 @@
     其他对象：Function、Arguments、Math、Date、RegExp、Error   
 
     扩展：
-[JS所有内置对象属性和方法汇总](https://segmentfault.com/a/1190000011467723)
-https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
-
      JavaScript有3大对象，分别是本地对象、内置对象和宿主对象。  
     在此引用ECMA-262（ECMAScript的制定标准）对于他们的定义：  
     本地对象  
@@ -42,6 +39,9 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
     《JavaScript高级程序设计》里也被叫做单体内置对象，很多时候，
     干脆也会直接把本地对象和内置对象统称为“内置对象”，也就是说除了宿主对象，
     剩下的都是ECMAScript的内部的“内置”对象。
+[JS所有内置对象属性和方法汇总](https://segmentfault.com/a/1190000011467723)
+[标准内置对象的分类](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)    
+    
 
 #### 3. 说几条写JavaScript的基本规范？
     https://github.com/fex-team/styleguide/blob/master/javascript.md

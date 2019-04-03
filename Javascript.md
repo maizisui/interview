@@ -15,8 +15,8 @@
     其他对象：Function、Arguments、Math、Date、RegExp、Error   
 
     扩展：
-    https://segmentfault.com/a/1190000011467723
-    https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
+[JS所有内置对象属性和方法汇总(]https://segmentfault.com/a/1190000011467723)
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 
      JavaScript有3大对象，分别是本地对象、内置对象和宿主对象。  
     在此引用ECMA-262（ECMAScript的制定标准）对于他们的定义：  

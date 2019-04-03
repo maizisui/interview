@@ -1,6 +1,6 @@
 ####1. 介绍JavaScript的基本数据类型
-      最新的 ECMAScript 标准定义了 7 种数据类型:  
-      6 种原始类型:
+            最新的 ECMAScript 标准定义了 7 种数据类型:  
+            6 种原始类型:
       Boolean
       Null
       Undefined

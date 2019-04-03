@@ -165,14 +165,14 @@
     如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 从 ECMAScript 5 起，它工作在全局作用域下，而不是局部作用域中。
     [JavaScript 为什么不推荐使用 eval？](https://www.zhihu.com/question/20591877)
 
-####14.什么是window对象? 什么是document对象?
+#### 14.什么是window对象? 什么是document对象?
     Window 对象表示浏览器中打开的窗口。Window 对象是全局对象, 在全局作用域中声明的任何一个变量,  函数都会成为window对象的属性和方法。
     每个载入浏览器的 HTML 文档都会成为 Document 对象。
     Document 对象是 HTML 文档的根节点。
     Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。
     Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。
 
-####15.null，undefined 的区别？
+#### 15.null，undefined 的区别？
     ECMAScript 规范认为，既然 null 和  undefined 的行为很相似，并且都表示 一个无效的值，那么它们所表示的内容也具有相似性，即有undefined == null.
     typeof null        // "object" (因为一些以前的原因而不是'null')
     typeof undefined   // "undefined"
@@ -189,7 +189,7 @@
     （3）对象没有赋值的属性，该属性的值为undefined。
     （4）函数没有返回值时，默认返回undefined。
 
-####16.写一个通用的事件侦听器函数。
+#### 16.写一个通用的事件侦听器函数。
     var eventUtil = {
     //add dom event
     // 视能力分别使用dom0||dom2||IE方式 来绑定事件
@@ -249,8 +249,8 @@
         return ev;
     }
 };
-####17.["1", "2", "3"].map(parseInt) 答案是多少？
-####18.事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？
+#### 17.["1", "2", "3"].map(parseInt) 答案是多少？
+#### 18.事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？
     http://www.w3school.com.cn/js/js_events.asp
     事件是可以被 JavaScript 侦测到的行为。
     网页中的每个元素都可以产生某些可以触发 JavaScript 函数的事件。比方说，我们可以在用户点击某按钮时产生一个 onClick 事件来触发某个函数。事件在 HTML 页面中定义。
@@ -259,10 +259,10 @@
      IE的事件流叫做事件冒泡（event bubbling），即事件开始时由最具体的元素（文档中嵌套层次最深的那个节点）接收，然后逐级向上传播到较为不具体的节点（文档）。也就是子级元素先触发，父级元素后触发。
      Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件.
      在W3c中，使用event.stopPropagation()方法。 在IE下设置event.cancelBubble = true；
-####19.什么是闭包（closure），为什么要用它？
+#### 19.什么是闭包（closure），为什么要用它？
     闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。  
     闭包的最大用处有两个，一个是可以读取函数内部的变量，另一个就是让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。闭包的另一个用处，是封装对象的私有属性和私有方法。
-####20.javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
+#### 20.javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
     'use strict'是一种ECMAscript 5 添加的一种运行模式：即严格模式,这种模式使得 Javascript 在更严格的条件下运行。
     设立"严格模式"的目的，主要有以下几个：
     - 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
@@ -293,7 +293,7 @@
     使用这些词作为变量名将会报错。
     https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
     [Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
-####21.如何判断一个对象是否属于某个类？
+#### 21.如何判断一个对象是否属于某个类？
     JavaScript中判断一个对象是否为一个类的实例主要有两种方法，即instanceof和constructor。   
     前者的用法是：`object instanceof constructor`；  
     后者的用法是：`var o = new Object // 或者 o = {} ;  o.constructor == Object`；    
@@ -305,20 +305,20 @@
     alert(a.constructor == Array);  //返回true  
     alert(a.constructor == Object);  //返回false  
     </pre>
-####22.new操作符具体干了什么呢?
+#### 22.new操作符具体干了什么呢?
     new命令的作用，就是执行构造函数，返回一个实例对象。     使用new命令时，它后面的函数调用就不是正常的调用，而是依次执行下面的步骤。  
     - 创建一个空对象，作为将要返回的对象实例；   
     -  将这个空对象的原型，指向构造函数的prototype属性；   
     -  将这个空对象赋值给函数内部的this关键字；   
     -  开始执行构造函数内部的代码。  
-####23.用原生JavaScript的实现过什么功能吗？
-####24.Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？
+#### 23.用原生JavaScript的实现过什么功能吗？
+#### 24.Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？
      `hasOwnProperty`  
     javaScript中`hasOwnProperty()`方法是返回一个布尔值，指出一个对象是否具有指定名称的属性。此方法无法检查该对象的原型链中是否具有该属性；该属性必须是对象本身的一个成员。  
     使用方法：  
     `object.hasOwnProperty(proName)`     
     如果 object 具有指定名称的属性，那么JavaScript中hasOwnProperty()方法返回 true，反之则返回 false。
-####25.JSON 的了解
+#### 25.JSON 的了解
     JSON 指的是 JavaScript 对象表示法（JavaScript Object Notation）。   
     JSON 是存储和交换文本信息的语法，类似 XML，JSON 比 XML 更小、更快，更易解析。  
     JSON 是轻量级的文本数据交换格式。  
@@ -338,8 +338,8 @@
     var last=obj.toJSONString();
     var last=JSON.stringify(obj);
 
-####26.`[].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)}) 能解释一下这段代码的意思吗？`
-####27.js延迟加载的方式有哪些？
+#### 26.`[].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)}) 能解释一下这段代码的意思吗？`
+#### 27.js延迟加载的方式有哪些？
     （1）直接将script节点放置在</body>之前，这样js脚本就会在页面显示出来之后再加载。  
     （2）使用script标签的defer和async属性，defer属性为延迟加载，是在页面渲染完成之后再进行加载的，而async属性则是和文档并行加载，这两种解决方案都不完美，原因在于不是所有浏览器都支持。  直接插入代码、将脚本放置在底部和使用“defer”或“async”，这几种方法都不能达到先加载页面后加载JS的目的，而且它们肯定不能在各个浏览器上表现一致。   
     （3）Google帮助页面的推荐方案： (动态创建DOM方式（用得最多）) 
@@ -361,7 +361,7 @@
     2）不应该把那些页面正常加载需要依赖的javascript代码放在这里。   
     3）将JavaScript代码分成两组：一组是因页面需要而立即加载的javascript代码，另外一组是在页面加载后进行操作的javascript代码(例如添加click事件或其他东西)。这些需等到页面加载后再执行的JavaScript代码，应放在一个外部文件，然后再引进来。   
     （4）通过ajax下载js脚本，动态添加script节点。但是ajax有一个缺点，就是无法引用使用CDN方式提供的js文件，因为这种方式下，你即时通过xhr.open下载了js文件，而向body中注入script节点时还是需要向CDN请求js文件。   
-####28.Ajax 是什么? 如何创建一个Ajax？
+#### 28.Ajax 是什么? 如何创建一个Ajax？
     AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML 在后台与服务器进行异步数据交换，不用重载整个网页，实现局部刷新。
     创建 ajax 步骤：
     1.创建 XMLHttpRequest 对象
@@ -381,7 +381,7 @@
     xhr.send(data);
     [Ajax 是什么? 如何创建一个Ajax？](https://zhuanlan.zhihu.com/p/23605192)
     [深入浅出Ajax](https://segmentfault.com/a/1190000015611594)
-####29.Ajax 解决浏览器缓存问题？
+#### 29.Ajax 解决浏览器缓存问题？
     1、在ajax发送请求前加上 anyAjaxObj.setRequestHeader("If-Modified-Since","0")。
     2、在ajax发送请求前加上 anyAjaxObj.setRequestHeader("Cache-Control","no-cache")。
     3、在URL后面加上一个随机数： "fresh=" + Math.random();。
@@ -390,78 +390,78 @@
     这样页面的所有ajax都会执行这条语句就是不需要保存缓存记录。
     https://www.jianshu.com/p/4f76f06383ec
     [彻底理解浏览器的缓存机制](https://juejin.im/entry/5ad86c16f265da505a77dca4)
-####30.同步和异步的区别?
-####31. 如何解决跨域问题?
-####32. 页面编码和被请求的资源编码如果不一致如何处理？
-####33. 服务器代理转发时，该如何处理cookie？
-####34. 模块化开发怎么做？
-####35. AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？
-####36. requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）
-####37. JS模块加载器的轮子怎么造，也就是如何实现一个模块加载器？
-####38. 谈一谈你对ECMAScript6的了解？
-####39. ECMAScript6 怎么写class么，为什么会出现class这种东西?
-####40. 异步加载JS的方式有哪些？
-####41. documen.write和 innerHTML的区别
-####42. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
-####43. call() 和 apply() 的区别？
-####44. 数组和对象有哪些原生方法，列举一下？
-####45. JS 怎么实现一个类。怎么实例化这个类
-####46. JavaScript中的作用域与变量声明提升？
-####47. 如何编写高性能的Javascript？
-####48. 那些操作会造成内存泄漏？
-####49. JQuery的源码看过吗？能不能简单概况一下它的实现原理？
-####50. jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？
-####51. jquery中如何将数组转化为json字符串，然后再转化回来？
-####52. jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？
-####53. jquery.extend 与 jquery.fn.extend的区别？
-####54. jQuery 的队列是如何实现的？队列可以用在哪些地方？
-####55. 谈一下Jquery中的bind(),live(),delegate(),on()的区别？
-####56. JQuery一个对象可以同时绑定多个事件，这是如何实现的？
-####57. 是否知道自定义事件。jQuery里的fire函数是什么意思，什么时候用？
-####58. jQuery 是通过哪个方法和 Sizzle 选择器结合的？（jQuery.fn.find()进入Sizzle）
-####59. 针对 jQuery性能的优化方法？
-####60. Jquery与jQuery UI 有啥区别？
-####61. jQuery和Zepto的区别？各自的使用场景？
-####62. Zepto的点透问题如何解决？
-####63. jQueryUI如何自定义组件?
-####64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
-####65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
-####66. 移动端最小触控区域是多大？
-####67. jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?
-####68. 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
-####69. 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
-####70. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
-####71. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
-####72. 解释JavaScript中的作用域与变量声明提升？
-####73. 那些操作会造成内存泄漏？
-####74. Node.js的适用场景？
-####75. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
-####76. 解释一下 Backbone 的 MVC 实现方式？
-####77. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
-####78. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
-####79. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
-####80. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
-####81. 简述一下 Handlebars 的基本用法？
-####82. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
-####83. 检测浏览器版本版本有哪些方式？
-####84. What is a Polyfill?
-####85. 做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
-####86. 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡。会执行几次事件，会先执行冒泡还是捕获？
-####87. 使用JS实现获取文件扩展名？
-####88. Webpack热更新实现原理?
-####89. 请介绍一下JS之事件节流？
-####90. 什么是JS的函数防抖？
+#### 30.同步和异步的区别?
+#### 31. 如何解决跨域问题?
+#### 32. 页面编码和被请求的资源编码如果不一致如何处理？
+#### 33. 服务器代理转发时，该如何处理cookie？
+#### 34. 模块化开发怎么做？
+#### 35. AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？
+#### 36. requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）
+#### 37. JS模块加载器的轮子怎么造，也就是如何实现一个模块加载器？
+#### 38. 谈一谈你对ECMAScript6的了解？
+#### 39. ECMAScript6 怎么写class么，为什么会出现class这种东西?
+#### 40. 异步加载JS的方式有哪些？
+#### 41. documen.write和 innerHTML的区别
+#### 42. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
+#### 43. call() 和 apply() 的区别？
+#### 44. 数组和对象有哪些原生方法，列举一下？
+#### 45. JS 怎么实现一个类。怎么实例化这个类
+#### 46. JavaScript中的作用域与变量声明提升？
+#### 47. 如何编写高性能的Javascript？
+#### 48. 那些操作会造成内存泄漏？
+#### 49. JQuery的源码看过吗？能不能简单概况一下它的实现原理？
+#### 50. jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？
+#### 51. jquery中如何将数组转化为json字符串，然后再转化回来？
+#### 52. jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？
+#### 53. jquery.extend 与 jquery.fn.extend的区别？
+#### 54. jQuery 的队列是如何实现的？队列可以用在哪些地方？
+#### 55. 谈一下Jquery中的bind(),live(),delegate(),on()的区别？
+#### 56. JQuery一个对象可以同时绑定多个事件，这是如何实现的？
+#### 57. 是否知道自定义事件。jQuery里的fire函数是什么意思，什么时候用？
+#### 58. jQuery 是通过哪个方法和 Sizzle 选择器结合的？（jQuery.fn.find()进入Sizzle）
+#### 59. 针对 jQuery性能的优化方法？
+#### 60. Jquery与jQuery UI 有啥区别？
+#### 61. jQuery和Zepto的区别？各自的使用场景？
+#### 62. Zepto的点透问题如何解决？
+#### 63. jQueryUI如何自定义组件?
+#### 64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
+#### 65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
+#### 66. 移动端最小触控区域是多大？
+#### 67. jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?
+#### 68. 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
+#### 69. 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
+#### 70. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
+#### 71. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
+#### 72. 解释JavaScript中的作用域与变量声明提升？
+#### 73. 那些操作会造成内存泄漏？
+#### 74. Node.js的适用场景？
+#### 75. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
+#### 76. 解释一下 Backbone 的 MVC 实现方式？
+#### 77. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
+#### 78. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
+#### 79. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
+#### 80. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
+#### 81. 简述一下 Handlebars 的基本用法？
+#### 82. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
+#### 83. 检测浏览器版本版本有哪些方式？
+#### 84. What is a Polyfill?
+#### 85. 做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
+#### 86. 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡。会执行几次事件，会先执行冒泡还是捕获？
+#### 87. 使用JS实现获取文件扩展名？
+#### 88. Webpack热更新实现原理?
+#### 89. 请介绍一下JS之事件节流？
+#### 90. 什么是JS的函数防抖？
 
-####91.
-####92.
-####93.
-####94.
-####95.
-####96.
-####97.
-####98.
-####99.
-####100.
+#### 91.
+#### 92.
+#### 93.
+#### 94.
+#### 95.
+#### 96.
+#### 97.
+#### 98.
+#### 99.
+#### 100.
 
 
 

@@ -396,9 +396,50 @@ https://blog.csdn.net/Inuyasha1121/article/details/40182105
 ####38. 谈一谈你对ECMAScript6的了解？
 ####39. ECMAScript6 怎么写class么，为什么会出现class这种东西?
 ####40. 异步加载JS的方式有哪些？
-####41. documen.write和 innerHTML的区别
+####41. document.write和 innerHTML的区别
+    两者都可向页面输出内容.
+    ducument.write会将内容直接写入页面，即重绘整个页面.
+    innerHTML只将当前元素的内容替换为新的内容,可以重绘页面的一部分。
+    innerHTML很多情况下都优于document.write，其原因在于其允许更精确的控制要刷新页面的那一个部分。
+    [全面理解document.write()](https://segmentfault.com/a/1190000007958530)
+  
 ####42. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
+    //查找
+    document.getElementById ：根据ID查找元素，大小写敏感，如果有多个结果，只返回第一个；
+    document.getElementsByClassName ：根据类名查找元素，多个类名用空格分隔，返回一个 HTMLCollection 。注意兼容性为IE9+（含）。另外，不仅仅是document，其它元素也支持 getElementsByClassName 方法；
+    document.getElementsByTagName ：根据标签查找元素， * 表示查询所有标签，返回一个 HTMLCollection 。
+    document.getElementsByName ：根据元素的name属性查找，返回一个 NodeList 。
+    document.querySelector ：返回单个Node，IE8+(含），如果匹配到多个结果，只返回第一个。
+    document.querySelectorAll ：返回一个 NodeList ，IE8+(含）。
+    document.forms ：获取当前页面所有form，返回一个 HTMLCollection ；
+    //创建
+    createElement
+    createTextNode
+    cloneNode
+    createDocumentFragment
+    //修改
+    appendChild
+    insertBefore
+    removeChild
+    replaceChild
+    
+    //扩展
+    Javascript操作DOM常用API总结 http://luopq.com/2015/11/30/javascript-dom/
+    JavaScript常见原生DOM操作API总结 https://www.cnblogs.com/liuxianan/p/javascript-dom-api.html
+    常见的原生javascript DOM操作 https://segmentfault.com/a/1190000004076145
+    为什么说DOM操作很慢
+    https://segmentfault.com/a/1190000004114594
+
 ####43. call() 和 apply() 的区别？
+    相同点:两个方法产生的作用是完全一样的
+    不同点:方法传递的参数不同
+    apply 方法传入两个参数：一个是作为函数上下文的对象，另外一个是作为函数参数所组成的数组。
+    call 方法第一个参数也是作为函数上下文的对象，但是后面传入的是一个参数列表，而不是单个数组。
+    //apply 和 call 的用法
+    改变 this 指向
+    借用别的对象的方法
+    调用函数
+    apply 和 call 的区别 https://github.com/lin-xin/blog/issues/7
 ####44. 数组和对象有哪些原生方法，列举一下？
 ####45. JS 怎么实现一个类。怎么实例化这个类
 ####46. JavaScript中的作用域与变量声明提升？

@@ -162,8 +162,9 @@
     由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')');
     如果 eval() 的参数不是字符串， eval() 将会将参数原封不动的返回.
     eval(new String("2 + 2")); // 返回了包含"2 + 2"的字符串对象.
-    如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 从 ECMAScript 5 起，它工作在全局作用域下，而不是局部作用域中。
-    [JavaScript 为什么不推荐使用 eval？](https://www.zhihu.com/question/20591877)
+    如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 从 ECMAScript 5 起，
+    它工作在全局作用域下，而不是局部作用域中。
+   [JavaScript 为什么不推荐使用 eval？](https://www.zhihu.com/question/20591877)
 
 #### 14.什么是window对象? 什么是document对象?
     Window 对象表示浏览器中打开的窗口。Window 对象是全局对象, 在全局作用域中声明的任何一个变量,  函数都会成为window对象的属性和方法。

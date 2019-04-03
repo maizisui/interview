@@ -1,6 +1,6 @@
-####1. 介绍JavaScript的基本数据类型
-            最新的 ECMAScript 标准定义了 7 种数据类型:  
-            6 种原始类型:
+#### 1. 介绍JavaScript的基本数据类型
+      最新的 ECMAScript 标准定义了 7 种数据类型:  
+      6 种原始类型:
       Boolean
       Null
       Undefined
@@ -47,11 +47,11 @@
     https://github.com/fex-team/styleguide/blob/master/javascript.md
     https://www.css88.com/archives/8405
 
-####4. JavaScript原型，原型链 ? 有什么特点？
+#### 4. JavaScript原型，原型链 ? 有什么特点？
     prototype(显式原型), __proto__(隐式原型)的区别:
 
 
-####5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
+#### 5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
 
     栈：原始数据类型（Undefined，Null，Boolean，Number、String）
     堆：引用数据类型（对象、数组和函数）  
@@ -81,7 +81,7 @@
             });
       }
 
-####8. 如何实现数组的随机排序？
+#### 8. 如何实现数组的随机排序？
 ```
 方法一：
     var arr = [1,2,3,4,5,6,7,8,9,10];
@@ -117,7 +117,7 @@
     console.log(arr);
 ```
 
-####9.Javascript如何实现继承
+#### 9.Javascript如何实现继承
     
     参考： http://www.cnblogs.com/humin/p/4556820.html
     http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html
@@ -125,7 +125,7 @@
     https://segmentfault.com/a/1190000002440502
     https://juejin.im/entry/5993eeaa51882524382f3c0b
 
-####10.javascript创建对象的几种方式
+#### 10.javascript创建对象的几种方式
     1. 工厂模式
        优点:
        缺点:
@@ -151,12 +151,12 @@
     https://github.com/mqyqingfeng/Blog/issues/15   
     https://segmentfault.com/a/1190000008293117
 
-####11.Javascript作用链域
+#### 11.Javascript作用链域
        当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，
        就会从父级(词法层面上的父级)执行上下文的变量对象中查找，一直找到全局上下文的变量对象，
        也就是全局对象。这样由多个执行上下文的变量对象构成的链表就叫做作用域链。
-####12.谈谈This对象的理解
-####13.eval是做什么的？
+#### 12.谈谈This对象的理解
+#### 13.eval是做什么的？
     eval() 函数会将传入的字符串当做 JavaScript 代码进行执行。
     但是应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
     由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')');

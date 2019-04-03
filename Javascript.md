@@ -1,13 +1,13 @@
 ####1. 介绍JavaScript的基本数据类型
-    最新的 ECMAScript 标准定义了 7 种数据类型:  
-    6 种原始类型:
-    Boolean
-    Null
-    Undefined
-    Number
-    String
-    Symbol (ECMAScript 6 新定义)
-    和 Object
+      最新的 ECMAScript 标准定义了 7 种数据类型:  
+      6 种原始类型:
+      Boolean
+      Null
+      Undefined
+      Number
+      String
+      Symbol (ECMAScript 6 新定义)
+      和 Object
 
 #### 2. 介绍js有哪些内置对象？
     Object 是 JavaScript 中所有对象的父对象  

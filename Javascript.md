@@ -1,13 +1,13 @@
 #### 1. 介绍JavaScript的基本数据类型
-      最新的 ECMAScript 标准定义了 7 种数据类型:  
-      6 种原始类型:
-      Boolean
-      Null
-      Undefined
-      Number
-      String
-      Symbol (ECMAScript 6 新定义)
-      和 Object
+	最新的 ECMAScript 标准定义了 7 种数据类型:  
+	6 种原始类型:
+	Boolean
+	Null
+	Undefined
+	Number
+	String
+	Symbol (ECMAScript 6 新定义)
+	和 Object
 
 #### 2. 介绍js有哪些内置对象？
     Object 是 JavaScript 中所有对象的父对象  
@@ -162,8 +162,7 @@
     由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')');
     如果 eval() 的参数不是字符串， eval() 将会将参数原封不动的返回.
     eval(new String("2 + 2")); // 返回了包含"2 + 2"的字符串对象.
-    如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 从 ECMAScript 5 起，
-    它工作在全局作用域下，而不是局部作用域中。
+    如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 从 ECMAScript 5 起，它工作在全局作用域下，而不是局部作用域中。
    [JavaScript 为什么不推荐使用 eval？](https://www.zhihu.com/question/20591877)
 
 #### 14.什么是window对象? 什么是document对象?
@@ -342,7 +341,9 @@
 #### 26.`[].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)}) 能解释一下这段代码的意思吗？`
 #### 27.js延迟加载的方式有哪些？
     （1）直接将script节点放置在</body>之前，这样js脚本就会在页面显示出来之后再加载。  
-    （2）使用script标签的defer和async属性，defer属性为延迟加载，是在页面渲染完成之后再进行加载的，而async属性则是和文档并行加载，这两种解决方案都不完美，原因在于不是所有浏览器都支持。  直接插入代码、将脚本放置在底部和使用“defer”或“async”，这几种方法都不能达到先加载页面后加载JS的目的，而且它们肯定不能在各个浏览器上表现一致。   
+    （2）使用script标签的defer和async属性，defer属性为延迟加载，是在页面渲染完成之后再进行加载的，而async属性则是和文档并行加载，
+    这两种解决方案都不完美，原因在于不是所有浏览器都支持。  直接插入代码、将脚本放置在底部和使用“defer”或“async”，
+    这几种方法都不能达到先加载页面后加载JS的目的，而且它们肯定不能在各个浏览器上表现一致。   
     （3）Google帮助页面的推荐方案： (动态创建DOM方式（用得最多）) 
     下面是Google推荐的代码。这些代码应被放置在</body>标签前(接近HTML文件底部)。另外，我将外部JS文件名突出显示。  
     <pre>
@@ -360,10 +361,14 @@
     说明：   
     1）复制上面代码、粘贴到HTML的</body>标签前(靠近HTML文件底部)，修改“defer.js”为你的外部JS文件。   
     2）不应该把那些页面正常加载需要依赖的javascript代码放在这里。   
-    3）将JavaScript代码分成两组：一组是因页面需要而立即加载的javascript代码，另外一组是在页面加载后进行操作的javascript代码(例如添加click事件或其他东西)。这些需等到页面加载后再执行的JavaScript代码，应放在一个外部文件，然后再引进来。   
-    （4）通过ajax下载js脚本，动态添加script节点。但是ajax有一个缺点，就是无法引用使用CDN方式提供的js文件，因为这种方式下，你即时通过xhr.open下载了js文件，而向body中注入script节点时还是需要向CDN请求js文件。   
+    3）将JavaScript代码分成两组：一组是因页面需要而立即加载的javascript代码，
+    另外一组是在页面加载后进行操作的javascript代码(例如添加click事件或其他东西)。
+    这些需等到页面加载后再执行的JavaScript代码，应放在一个外部文件，然后再引进来。   
+    （4）通过ajax下载js脚本，动态添加script节点。但是ajax有一个缺点，就是无法引用使用CDN方式提供的js文件，
+    因为这种方式下，你即时通过xhr.open下载了js文件，而向body中注入script节点时还是需要向CDN请求js文件。   
 #### 28.Ajax 是什么? 如何创建一个Ajax？
-    AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML 在后台与服务器进行异步数据交换，不用重载整个网页，实现局部刷新。
+    AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML 
+    在后台与服务器进行异步数据交换，不用重载整个网页，实现局部刷新。
     创建 ajax 步骤：
     1.创建 XMLHttpRequest 对象
     2.创建一个新的 HTTP 请求，并指定该 HTTP 请求的类型、验证信息

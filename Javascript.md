@@ -396,67 +396,109 @@
     这样页面的所有ajax都会执行这条语句就是不需要保存缓存记录。
     https://www.jianshu.com/p/4f76f06383ec
     [彻底理解浏览器的缓存机制](https://juejin.im/entry/5ad86c16f265da505a77dca4)
-#### 30.同步和异步的区别?
-#### 31. 如何解决跨域问题?
-#### 32. 页面编码和被请求的资源编码如果不一致如何处理？
-#### 33. 服务器代理转发时，该如何处理cookie？
-#### 34. 模块化开发怎么做？
-#### 35. AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？
-#### 36. requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）
-#### 37. JS模块加载器的轮子怎么造，也就是如何实现一个模块加载器？
-#### 38. 谈一谈你对ECMAScript6的了解？
-#### 39. ECMAScript6 怎么写class么，为什么会出现class这种东西?
-#### 40. 异步加载JS的方式有哪些？
-#### 41. documen.write和 innerHTML的区别
-#### 42. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
-#### 43. call() 和 apply() 的区别？
-#### 44. 数组和对象有哪些原生方法，列举一下？
-#### 45. JS 怎么实现一个类。怎么实例化这个类
-#### 46. JavaScript中的作用域与变量声明提升？
-#### 47. 如何编写高性能的Javascript？
-#### 48. 那些操作会造成内存泄漏？
-#### 49. JQuery的源码看过吗？能不能简单概况一下它的实现原理？
-#### 50. jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？
-#### 51. jquery中如何将数组转化为json字符串，然后再转化回来？
-#### 52. jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？
-#### 53. jquery.extend 与 jquery.fn.extend的区别？
-#### 54. jQuery 的队列是如何实现的？队列可以用在哪些地方？
-#### 55. 谈一下Jquery中的bind(),live(),delegate(),on()的区别？
-#### 56. JQuery一个对象可以同时绑定多个事件，这是如何实现的？
-#### 57. 是否知道自定义事件。jQuery里的fire函数是什么意思，什么时候用？
-#### 58. jQuery 是通过哪个方法和 Sizzle 选择器结合的？（jQuery.fn.find()进入Sizzle）
-#### 59. 针对 jQuery性能的优化方法？
-#### 60. Jquery与jQuery UI 有啥区别？
-#### 61. jQuery和Zepto的区别？各自的使用场景？
-#### 62. Zepto的点透问题如何解决？
-#### 63. jQueryUI如何自定义组件?
-#### 64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
-#### 65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
-#### 66. 移动端最小触控区域是多大？
-#### 67. jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?
-#### 68. 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
-#### 69. 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
-#### 70. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
-#### 71. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
-#### 72. 解释JavaScript中的作用域与变量声明提升？
-#### 73. 那些操作会造成内存泄漏？
-#### 74. Node.js的适用场景？
-#### 75. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
-#### 76. 解释一下 Backbone 的 MVC 实现方式？
-#### 77. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
-#### 78. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
-#### 79. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
-#### 80. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
-#### 81. 简述一下 Handlebars 的基本用法？
-#### 82. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
-#### 83. 检测浏览器版本版本有哪些方式？
-#### 84. What is a Polyfill?
-#### 85. 做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
-#### 86. 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡。会执行几次事件，会先执行冒泡还是捕获？
-#### 87. 使用JS实现获取文件扩展名？
-#### 88. Webpack热更新实现原理?
-#### 89. 请介绍一下JS之事件节流？
-#### 90. 什么是JS的函数防抖？
+<<<<<<< HEAD
+####30.同步和异步的区别?
+####31. 如何解决跨域问题?
+####32. 页面编码和被请求的资源编码如果不一致如何处理？
+####33. 服务器代理转发时，该如何处理cookie？
+####34. 模块化开发怎么做？
+####35. AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？
+####36. requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）
+####37. JS模块加载器的轮子怎么造，也就是如何实现一个模块加载器？
+####38. 谈一谈你对ECMAScript6的了解？
+####39. ECMAScript6 怎么写class么，为什么会出现class这种东西?
+####40. 异步加载JS的方式有哪些？
+####41. document.write和 innerHTML的区别
+    两者都可向页面输出内容.
+    ducument.write会将内容直接写入页面，即重绘整个页面.
+    innerHTML只将当前元素的内容替换为新的内容,可以重绘页面的一部分。
+    innerHTML很多情况下都优于document.write，其原因在于其允许更精确的控制要刷新页面的那一个部分。
+    [全面理解document.write()](https://segmentfault.com/a/1190000007958530)
+  
+####42. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
+    //查找
+    document.getElementById ：根据ID查找元素，大小写敏感，如果有多个结果，只返回第一个；
+    document.getElementsByClassName ：根据类名查找元素，多个类名用空格分隔，返回一个 HTMLCollection 。注意兼容性为IE9+（含）。另外，不仅仅是document，其它元素也支持 getElementsByClassName 方法；
+    document.getElementsByTagName ：根据标签查找元素， * 表示查询所有标签，返回一个 HTMLCollection 。
+    document.getElementsByName ：根据元素的name属性查找，返回一个 NodeList 。
+    document.querySelector ：返回单个Node，IE8+(含），如果匹配到多个结果，只返回第一个。
+    document.querySelectorAll ：返回一个 NodeList ，IE8+(含）。
+    document.forms ：获取当前页面所有form，返回一个 HTMLCollection ；
+    //创建
+    createElement
+    createTextNode
+    cloneNode
+    createDocumentFragment
+    //修改
+    appendChild
+    insertBefore
+    removeChild
+    replaceChild
+    
+    //扩展
+    Javascript操作DOM常用API总结 http://luopq.com/2015/11/30/javascript-dom/
+    JavaScript常见原生DOM操作API总结 https://www.cnblogs.com/liuxianan/p/javascript-dom-api.html
+    常见的原生javascript DOM操作 https://segmentfault.com/a/1190000004076145
+    为什么说DOM操作很慢
+    https://segmentfault.com/a/1190000004114594
+
+####43. call() 和 apply() 的区别？
+    相同点:两个方法产生的作用是完全一样的
+    不同点:方法传递的参数不同
+    apply 方法传入两个参数：一个是作为函数上下文的对象，另外一个是作为函数参数所组成的数组。
+    call 方法第一个参数也是作为函数上下文的对象，但是后面传入的是一个参数列表，而不是单个数组。
+    //apply 和 call 的用法
+    改变 this 指向
+    借用别的对象的方法
+    调用函数
+    apply 和 call 的区别 https://github.com/lin-xin/blog/issues/7
+####44. 数组和对象有哪些原生方法，列举一下？
+####45. JS 怎么实现一个类。怎么实例化这个类
+####46. JavaScript中的作用域与变量声明提升？
+####47. 如何编写高性能的Javascript？
+####48. 那些操作会造成内存泄漏？
+####49. JQuery的源码看过吗？能不能简单概况一下它的实现原理？
+####50. jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？
+####51. jquery中如何将数组转化为json字符串，然后再转化回来？
+####52. jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？
+####53. jquery.extend 与 jquery.fn.extend的区别？
+####54. jQuery 的队列是如何实现的？队列可以用在哪些地方？
+####55. 谈一下Jquery中的bind(),live(),delegate(),on()的区别？
+####56. JQuery一个对象可以同时绑定多个事件，这是如何实现的？
+####57. 是否知道自定义事件。jQuery里的fire函数是什么意思，什么时候用？
+####58. jQuery 是通过哪个方法和 Sizzle 选择器结合的？（jQuery.fn.find()进入Sizzle）
+####59. 针对 jQuery性能的优化方法？
+####60. Jquery与jQuery UI 有啥区别？
+####61. jQuery和Zepto的区别？各自的使用场景？
+####62. Zepto的点透问题如何解决？
+####63. jQueryUI如何自定义组件?
+####64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
+####65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
+####66. 移动端最小触控区域是多大？
+####67. jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?
+####68. 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
+####69. 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
+####70. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
+####71. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
+####72. 解释JavaScript中的作用域与变量声明提升？
+####73. 那些操作会造成内存泄漏？
+####74. Node.js的适用场景？
+####75. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
+####76. 解释一下 Backbone 的 MVC 实现方式？
+####77. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
+####78. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
+####79. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
+####80. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
+####81. 简述一下 Handlebars 的基本用法？
+####82. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
+####83. 检测浏览器版本版本有哪些方式？
+####84. What is a Polyfill?
+####85. 做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
+####86. 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡。会执行几次事件，会先执行冒泡还是捕获？
+####87. 使用JS实现获取文件扩展名？
+####88. Webpack热更新实现原理?
+####89. 请介绍一下JS之事件节流？
+####90. 什么是JS的函数防抖？
 
 #### 91.
 #### 92.

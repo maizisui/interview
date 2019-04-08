@@ -147,9 +147,9 @@
     7. 稳妥构造函数模式
        优点:
        缺点:
-    参考：https://xxxgitone.github.io/2017/06/10/JavaScript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F/
-    https://github.com/mqyqingfeng/Blog/issues/15   
-    https://segmentfault.com/a/1190000008293117
+[JavaScript创建对象的七种方式](https://xxxgitone.github.io/2017/06/10/JavaScript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F/)
+    [1](https://github.com/mqyqingfeng/Blog/issues/15   )
+    [2](https://segmentfault.com/a/1190000008293117)
 
 #### 11.Javascript作用链域
        当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，
@@ -162,18 +162,21 @@
     由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')');
     如果 eval() 的参数不是字符串， eval() 将会将参数原封不动的返回.
     eval(new String("2 + 2")); // 返回了包含"2 + 2"的字符串对象.
-    如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 从 ECMAScript 5 起，它工作在全局作用域下，而不是局部作用域中。
+    如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 
+    从 ECMAScript 5 起, 它工作在全局作用域下，而不是局部作用域中。
    [JavaScript 为什么不推荐使用 eval？](https://www.zhihu.com/question/20591877)
 
 #### 14.什么是window对象? 什么是document对象?
-    Window 对象表示浏览器中打开的窗口。Window 对象是全局对象, 在全局作用域中声明的任何一个变量,  函数都会成为window对象的属性和方法。
+    Window 对象表示浏览器中打开的窗口。
+    Window 对象是全局对象, 在全局作用域中声明的任何一个变量,  函数都会成为window对象的属性和方法。
     每个载入浏览器的 HTML 文档都会成为 Document 对象。
     Document 对象是 HTML 文档的根节点。
     Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。
     Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。
 
 #### 15.null，undefined 的区别？
-    ECMAScript 规范认为，既然 null 和  undefined 的行为很相似，并且都表示 一个无效的值，那么它们所表示的内容也具有相似性，即有undefined == null.
+    ECMAScript 规范认为，既然 null 和  undefined 的行为很相似，并且都表示 一个无效的值，
+    那么它们所表示的内容也具有相似性，即有undefined == null.
     typeof null        // "object" (因为一些以前的原因而不是'null')
     typeof undefined   // "undefined"
     null是一个表示"无"的对象，转为数值时为0；
@@ -253,15 +256,22 @@
 #### 18.事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？
     http://www.w3school.com.cn/js/js_events.asp
     事件是可以被 JavaScript 侦测到的行为。
-    网页中的每个元素都可以产生某些可以触发 JavaScript 函数的事件。比方说，我们可以在用户点击某按钮时产生一个 onClick 事件来触发某个函数。事件在 HTML 页面中定义。
+    网页中的每个元素都可以产生某些可以触发 JavaScript 函数的事件。
+    比方说，我们可以在用户点击某按钮时产生一个 onClick 事件来触发某个函数。事件在 HTML 页面中定义。
     事件举例：
     鼠标点击, 页面或图像载入, 鼠标悬浮于页面的某个热点之上, 在表单中选取输入框, 确认表单, 键盘按键.
-     IE的事件流叫做事件冒泡（event bubbling），即事件开始时由最具体的元素（文档中嵌套层次最深的那个节点）接收，然后逐级向上传播到较为不具体的节点（文档）。也就是子级元素先触发，父级元素后触发。
+    IE的事件流叫做事件冒泡（event bubbling），即事件开始时由最具体的元素（文档中嵌套层次最深的那个节点）接收，
+    然后逐级向上传播到较为不具体的节点（文档）。也就是子级元素先触发，父级元素后触发。
      Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件.
      在W3c中，使用event.stopPropagation()方法。 在IE下设置event.cancelBubble = true；
 #### 19.什么是闭包（closure），为什么要用它？
-    闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。  
-    闭包的最大用处有两个，一个是可以读取函数内部的变量，另一个就是让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。闭包的另一个用处，是封装对象的私有属性和私有方法。
+    闭包是指有权访问另一个函数作用域中变量的函数，
+    创建闭包的最常见的方式就是在一个函数内创建另一个函数，
+    通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。  
+    闭包的最大用处有两个，
+    一个是可以读取函数内部的变量，
+    另一个就是让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。
+    闭包的另一个用处，是封装对象的私有属性和私有方法。
 #### 20.javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
     'use strict'是一种ECMAscript 5 添加的一种运行模式：即严格模式,这种模式使得 Javascript 在更严格的条件下运行。
     设立"严格模式"的目的，主要有以下几个：
@@ -289,10 +299,12 @@
     （3）禁止使用arguments.callee
     4.9 函数必须声明在顶层
     4.10 保留字
-    为了向将来Javascript的新版本过渡，严格模式新增了一些保留字：implements, interface, let, package, private, protected, public, static, yield。
+    为了向将来Javascript的新版本过渡，严格模式新增了一些保留字：
+    implements, interface, let, package, private, protected, public, static, yield。
     使用这些词作为变量名将会报错。
-    https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode
-    [Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
+[严格模式
+](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
+[Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
 #### 21.如何判断一个对象是否属于某个类？
     JavaScript中判断一个对象是否为一个类的实例主要有两种方法，即instanceof和constructor。   
     前者的用法是：`object instanceof constructor`；  
@@ -306,7 +318,8 @@
     alert(a.constructor == Object);  //返回false  
     </pre>
 #### 22.new操作符具体干了什么呢?
-    new命令的作用，就是执行构造函数，返回一个实例对象。     使用new命令时，它后面的函数调用就不是正常的调用，而是依次执行下面的步骤。  
+    new命令的作用，就是执行构造函数，返回一个实例对象。     
+    使用new命令时，它后面的函数调用就不是正常的调用，而是依次执行下面的步骤。  
     - 创建一个空对象，作为将要返回的对象实例；   
     -  将这个空对象的原型，指向构造函数的prototype属性；   
     -  将这个空对象赋值给函数内部的this关键字；   
@@ -314,7 +327,8 @@
 #### 23.用原生JavaScript的实现过什么功能吗？
 #### 24.Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？
      `hasOwnProperty`  
-    javaScript中`hasOwnProperty()`方法是返回一个布尔值，指出一个对象是否具有指定名称的属性。此方法无法检查该对象的原型链中是否具有该属性；该属性必须是对象本身的一个成员。  
+    javaScript中`hasOwnProperty()`方法是返回一个布尔值，指出一个对象是否具有指定名称的属性。
+    此方法无法检查该对象的原型链中是否具有该属性；该属性必须是对象本身的一个成员。  
     使用方法：  
     `object.hasOwnProperty(proName)`     
     如果 object 具有指定名称的属性，那么JavaScript中hasOwnProperty()方法返回 true，反之则返回 false。
@@ -328,7 +342,10 @@
     **优点：**  
     轻量级、易于人的阅读和编写，便于机器（JavaScript）解析，支持复合数据类型（数组、对象、字符串、数字）。  
     **缺点：**   
-    和许多好东西都具有两面性一样，JSON的非冗长性也不例外，为此JSON丢失了XML具有的一些特性。命名空间允许不同上下文中的相同的信息段彼此混合，然而，显然在JSON中已经找不到了命名空间。JSON与XML的另一个差别是属性的差异，由于JSON采用冒号赋值，这将导致当XML转化为 JSON时，在标识符（XML  CDATA）与实际属性值之间很难区分谁应该被当作文本考虑。   
+    和许多好东西都具有两面性一样，JSON的非冗长性也不例外，为此JSON丢失了XML具有的一些特性。
+    命名空间允许不同上下文中的相同的信息段彼此混合，然而，显然在JSON中已经找不到了命名空间。
+    JSON与XML的另一个差别是属性的差异，由于JSON采用冒号赋值，这将导致当XML转化为 JSON时，
+    在标识符（XML  CDATA）与实际属性值之间很难区分谁应该被当作文本考虑。   
     另外，JSON片段的创建和验证过程比一般的XML稍显复杂。从这一点来看，XML在开发工具方面领先于JSON。
     JSON字符串转换为JSON对象:
     var obj =eval('('+ str +')');
@@ -341,8 +358,9 @@
 #### 26.`[].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)}) 能解释一下这段代码的意思吗？`
 #### 27.js延迟加载的方式有哪些？
     （1）直接将script节点放置在</body>之前，这样js脚本就会在页面显示出来之后再加载。  
-    （2）使用script标签的defer和async属性，defer属性为延迟加载，是在页面渲染完成之后再进行加载的，而async属性则是和文档并行加载，
-    这两种解决方案都不完美，原因在于不是所有浏览器都支持。  直接插入代码、将脚本放置在底部和使用“defer”或“async”，
+    （2）使用script标签的defer和async属性，defer属性为延迟加载，是在页面渲染完成之后再进行加载的，
+    而async属性则是和文档并行加载，这两种解决方案都不完美，原因在于不是所有浏览器都支持。  
+    直接插入代码、将脚本放置在底部和使用“defer”或“async”，
     这几种方法都不能达到先加载页面后加载JS的目的，而且它们肯定不能在各个浏览器上表现一致。   
     （3）Google帮助页面的推荐方案： (动态创建DOM方式（用得最多）) 
     下面是Google推荐的代码。这些代码应被放置在</body>标签前(接近HTML文件底部)。另外，我将外部JS文件名突出显示。  
@@ -417,7 +435,7 @@
 #### 42. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
     //查找
     document.getElementById ：根据ID查找元素，大小写敏感，如果有多个结果，只返回第一个；
-    document.getElementsByClassName ：根据类名查找元素，多个类名用空格分隔，返回一个 HTMLCollection 。注意兼容性为IE9+（含）。另外，不仅仅是document，其它元素也支持 getElementsByClassName 方法；
+    document.getElementsByClassName ：根据类名查找元素，多个类名用空格分隔，返回一个 HTMLCollection 。注意兼容性为IE9+（含）。
     document.getElementsByTagName ：根据标签查找元素， * 表示查询所有标签，返回一个 HTMLCollection 。
     document.getElementsByName ：根据元素的name属性查找，返回一个 NodeList 。
     document.querySelector ：返回单个Node，IE8+(含），如果匹配到多个结果，只返回第一个。
@@ -435,12 +453,10 @@
     replaceChild
     
     //扩展
-    Javascript操作DOM常用API总结 http://luopq.com/2015/11/30/javascript-dom/
-    JavaScript常见原生DOM操作API总结 https://www.cnblogs.com/liuxianan/p/javascript-dom-api.html
-    常见的原生javascript DOM操作 https://segmentfault.com/a/1190000004076145
-    为什么说DOM操作很慢
-    https://segmentfault.com/a/1190000004114594
-
+[Javascript操作DOM常用API总结]( http://luopq.com/2015/11/30/javascript-dom/)
+[JavaScript常见原生DOM操作API总结]( https://www.cnblogs.com/liuxianan/p/javascript-dom-api.html)
+[常见的原生javascript DOM操作]( https://segmentfault.com/a/1190000004076145)
+[为什么说DOM操作很慢](https://segmentfault.com/a/1190000004114594)
 #### 43. call() 和 apply() 的区别？
     相同点:两个方法产生的作用是完全一样的
     不同点:方法传递的参数不同
@@ -484,7 +500,7 @@
 #### 77. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
     路由是根据不同的 url 地址展示不同的内容或页面.
     前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。
-    传统的路由指的是：当用户访问一个url时，对应的服务器会接收这个请求，然后解析url中的路径，从而执行对应的处理逻辑。这样就完成了一次路由分发。
+    传统的路由指的是：当用户访问一个url时，对应的服务器会接收这个请求，然后解析url中的路径，从而执行对应的处理逻辑。
     而前端路由是不涉及服务器的，是前端利用hash或者HTML5的history API来实现的，一般用于不同内容的展示和切换。
     其实前端路由要做的就是两点：
     在页面不刷新的情况下实现url的变化;捕捉url的变化，根据url更改页面内容。
@@ -509,10 +525,12 @@
     console: 使用控制台面板查看信息，或者使用它作为 shell在页面上与JavaScript交互。
     sources:在源代码面板中设置断点来调试 JavaScript ，或者通过Workspaces（工作区）连接本地文件来使用开发者工具的实时编辑器。
     network: 使用网络面板了解请求和下载的资源文件并优化网页加载性能.
-    performance:使用时间轴面板可以通过记录和查看网站生命周期内发生的各种事件来提高页面的运行时性能。(Note: 在 Chrome 57 之后时间线Timeline面板更名为性能面板.)
+    performance:使用时间轴面板可以通过记录和查看网站生命周期内发生的各种事件来提高页面的运行时性能。
+    (Note: 在 Chrome 57 之后时间线Timeline面板更名为性能面板.)
     memory：查找影响页面性能的内存问题，包括内存泄漏、内存膨胀和频繁的垃圾回收;
     JavaScript CPU 分析器(识别开销大的函数);
-    application: 使用资源面板检查加载的所有资源，包括IndexedDB与Web SQL数据库，本地和会话存储，cookie，应用程序缓存，图像，字体和样式表。(Note: 在 Chrome 52 之后资源面板更名为应用面板.)
+    application: 使用资源面板检查加载的所有资源，包括IndexedDB与Web SQL数据库，本地和会话存储，cookie，应用程序缓存，
+    图像，字体和样式表。(Note: 在 Chrome 52 之后资源面板更名为应用面板.)
     security: 使用安全面板调试混合内容问题，证书问题等等
 [深入剖析 WebKit](https://ming1016.github.io/2017/10/11/deeply-analyse-webkit/) 
 [Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn)
@@ -535,7 +553,8 @@
 #### 88. Webpack热更新实现原理?
 #### 89. 函数节流和函数防抖？
     debounce 强制函数在某段时间内只执行一次，throttle 强制函数以固定的速率执行。
-    函数节流（throttle）与 函数防抖（debounce）都是为了限制函数的执行频次，以优化函数触发频率过高导致的响应速度跟不上触发频率，出现延迟，假死或卡顿的现象。
+    函数节流（throttle）与 函数防抖（debounce）都是为了限制函数的执行频次，以优化函数触发频率过高导致的响应速度跟不上触发频率，
+    出现延迟，假死或卡顿的现象。
     区别：节流函数不管事件触发有多频繁，都会保证在规定时间内一定会执行一次真正的事件处理函数。
     对于函数防抖，有以下几种应用场景：
     给按钮加函数防抖防止表单多次提交。 

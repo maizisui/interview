@@ -1,3 +1,4 @@
+## part one js 基础
 #### 1. 介绍JavaScript的基本数据类型
 	最新的 ECMAScript 标准定义了 7 种数据类型:  
 	6 种原始类型:
@@ -13,7 +14,7 @@
     Object 是 JavaScript 中所有对象的父对象  
     数据封装类对象：Object、Array、Boolean、Number 和 String  
     其他对象：Function、Arguments、Math、Date、RegExp、Error   
-
+    
     扩展：
      JavaScript有3大对象，分别是本地对象、内置对象和宿主对象。  
     在此引用ECMA-262（ECMAScript的制定标准）对于他们的定义：  
@@ -34,7 +35,7 @@
     对于嵌入到网页中的JS来说，其宿主对象就是浏览器提供的对象，浏览器对象有很多，
     如Window和Document等。
     所有的DOM和BOM对象都属于宿主对象。
-
+    
     关于专业名词：本地对象也经常被叫做原生对象或内部对象，包含Global和Math在内的内置对象在
     《JavaScript高级程序设计》里也被叫做单体内置对象，很多时候，
     干脆也会直接把本地对象和内置对象统称为“内置对象”，也就是说除了宿主对象，
@@ -72,7 +73,6 @@
     https://blog.csdn.net/Inuyasha1121/article/details/40182105
 
 #### 7.  如何将浮点数点左边的数每三位添加一个逗号， 如12000000.11 转化为『12,000,000.11』?
-
      function commafy(num){
         return num && num
             .toString()
@@ -367,7 +367,7 @@
     （4）通过ajax下载js脚本，动态添加script节点。但是ajax有一个缺点，就是无法引用使用CDN方式提供的js文件，
     因为这种方式下，你即时通过xhr.open下载了js文件，而向body中注入script节点时还是需要向CDN请求js文件。   
 #### 28.Ajax 是什么? 如何创建一个Ajax？
-    AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML 
+    AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML, 是浏览器用来实现异步加载的一种技术方案.
     在后台与服务器进行异步数据交换，不用重载整个网页，实现局部刷新。
     创建 ajax 步骤：
     1.创建 XMLHttpRequest 对象
@@ -388,15 +388,14 @@
     [Ajax 是什么? 如何创建一个Ajax？](https://zhuanlan.zhihu.com/p/23605192)
     [深入浅出Ajax](https://segmentfault.com/a/1190000015611594)
 #### 29.Ajax 解决浏览器缓存问题？
-    1、在ajax发送请求前加上 anyAjaxObj.setRequestHeader("If-Modified-Since","0")。
-    2、在ajax发送请求前加上 anyAjaxObj.setRequestHeader("Cache-Control","no-cache")。
+    1、在ajax发送请求前加上anyAjaxObj.setRequestHeader("If-Modified-Since","0")。
+    2、在ajax发送请求前加上anyAjaxObj.setRequestHeader("Cache-Control","no-cache")。
     3、在URL后面加上一个随机数： "fresh=" + Math.random();。
     4、在URL后面加上时间戳："nowtime=" + new Date().getTime();。
     5、如果是使用jQuery，直接这样就可以了 $.ajaxSetup({cache:false})。
     这样页面的所有ajax都会执行这条语句就是不需要保存缓存记录。
     https://www.jianshu.com/p/4f76f06383ec
     [彻底理解浏览器的缓存机制](https://juejin.im/entry/5ad86c16f265da505a77dca4)
-<<<<<<< HEAD
 ####30.同步和异步的区别?
 ####31. 如何解决跨域问题?
 ####32. 页面编码和被请求的资源编码如果不一致如何处理？
@@ -457,7 +456,108 @@
 ####46. JavaScript中的作用域与变量声明提升？
 ####47. 如何编写高性能的Javascript？
 ####48. 那些操作会造成内存泄漏？
+
+####64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
+####65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
+####66. 移动端最小触控区域是多大？
+####67. jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?
+####68. 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
+####69. 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
+####70. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
+####71. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
+####72. 解释JavaScript中的作用域与变量声明提升？
+####73. 那些操作会造成内存泄漏？
+    意外的全局变量引起的内存泄漏
+    闭包引起的内存泄漏
+    没有清理的DOM元素引用
+    被遗忘的定时器或者回调
+    子元素存在引用引起的内存泄漏
+
+[JavaScript 内存泄漏教程](http://www.ruanyifeng.com/blog/2017/04/memory-leak.html)
+[4类 JavaScript 内存泄漏及如何避免](https://jinlong.github.io/2016/05/01/4-Types-of-Memory-Leaks-in-JavaScript-and-How-to-Get-Rid-Of-Them/)
+[了解 JavaScript 应用程序中的内存泄漏](https://www.ibm.com/developerworks/cn/web/wa-jsmemory/index.html)
+[关于js闭包是否真的会造成内存泄漏？](https://www.zhihu.com/question/31078912)
+[常见的 JavaScript 内存泄露](https://github.com/zhansingsong/js-leakage-patterns)
+####74. Node.js的适用场景？
+####75. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
+####76. 解释一下 Backbone 的 MVC 实现方式？
+####77. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
+    路由是根据不同的 url 地址展示不同的内容或页面.
+    前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。
+    传统的路由指的是：当用户访问一个url时，对应的服务器会接收这个请求，然后解析url中的路径，从而执行对应的处理逻辑。这样就完成了一次路由分发。
+    而前端路由是不涉及服务器的，是前端利用hash或者HTML5的history API来实现的，一般用于不同内容的展示和切换。
+    其实前端路由要做的就是两点：
+    在页面不刷新的情况下实现url的变化;捕捉url的变化，根据url更改页面内容。
+    在单页面应用，大部分页面结构不变，只改变部分内容的使用.
+    优点
+    用户体验好，不需要每次都从服务器全部获取，快速展现给用户
+    缺点
+    使用浏览器的前进，后退键的时候会重新发送请求，没有合理地利用缓存.
+    单页面无法记住之前滚动的位置，无法在前进，后退的时候记住滚动的位置.
+[你了解前端路由吗?](https://juejin.im/post/5ac61da66fb9a028c71eae1b)
+[前端路由是什么东西？](https://www.zhihu.com/question/53064386)
+[前端路由的两种实现原理](https://segmentfault.com/a/1190000007238999)
+[理解Web路由](https://zhuanlan.zhihu.com/p/24814675)
+[浅谈前后端路由与前后端渲染](https://molunerfinn.com/fe-be-router-render/)
+[为什么要前后端分离？有什么优缺点？](https://blog.csdn.net/bntx2jsqfehy7/article/details/80589580)
+####78. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
+    WebKit是一种用来让网页浏览器绘制网页的排版引擎。
+    使用Chrome 开发者工具。
+    是一套内置于Google Chrome中的Web开发和调试工具，可用来对网站进行迭代、调试和分析。
+    Elements, console, sources, network, performance, memory, application, security, audits
+    elements: 使用元素面板可以自由的操作DOM和CSS来迭代布局和设计页面.
+    console: 使用控制台面板查看信息，或者使用它作为 shell在页面上与JavaScript交互。
+    sources:在源代码面板中设置断点来调试 JavaScript ，或者通过Workspaces（工作区）连接本地文件来使用开发者工具的实时编辑器。
+    network: 使用网络面板了解请求和下载的资源文件并优化网页加载性能.
+    performance:使用时间轴面板可以通过记录和查看网站生命周期内发生的各种事件来提高页面的运行时性能。(Note: 在 Chrome 57 之后时间线Timeline面板更名为性能面板.)
+    memory：查找影响页面性能的内存问题，包括内存泄漏、内存膨胀和频繁的垃圾回收;
+    JavaScript CPU 分析器(识别开销大的函数);
+    application: 使用资源面板检查加载的所有资源，包括IndexedDB与Web SQL数据库，本地和会话存储，cookie，应用程序缓存，图像，字体和样式表。(Note: 在 Chrome 52 之后资源面板更名为应用面板.)
+    security: 使用安全面板调试混合内容问题，证书问题等等
+[深入剖析 WebKit](https://ming1016.github.io/2017/10/11/deeply-analyse-webkit/) 
+[Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn)
+[chrome调试](https://segmentfault.com/a/1190000002439648)    
+
+####79. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
+####80. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
+####81. 简述一下 Handlebars 的基本用法？
+####82. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
+####83. 检测浏览器版本版本有哪些方式？
+####84. What is a Polyfill?
+####85. 做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
+####86. 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡。会执行几次事件，会先执行冒泡还是捕获？
+
+[一个DOM元素绑定多个事件时，先执行冒泡还是捕获](https://blog.csdn.net/u013217071/article/details/77613706)
+####87. 使用JS实现获取文件扩展名？
+    function getFileExtension(filename) {
+        return filename.slice(filename.lastIndexOf('.')+1);
+    }
+[如何更有效的获取文件扩展名](https://segmentfault.com/a/1190000004993946)
+####88. Webpack热更新实现原理?
+####89. 函数节流和函数防抖？
+    debounce 强制函数在某段时间内只执行一次，throttle 强制函数以固定的速率执行。
+    函数节流（throttle）与 函数防抖（debounce）都是为了限制函数的执行频次，以优化函数触发频率过高导致的响应速度跟不上触发频率，出现延迟，假死或卡顿的现象。
+    区别：节流函数不管事件触发有多频繁，都会保证在规定时间内一定会执行一次真正的事件处理函数。
+    对于函数防抖，有以下几种应用场景：
+    给按钮加函数防抖防止表单多次提交。 
+    对于输入框连续输入进行AJAX验证时，用函数防抖能有效减少请求次数。
+    判断scroll是否滑到底部，滚动事件+函数防抖
+    总的来说，适合多次事件一次响应的情况
+    对于函数节流，有如下几个场景：
+    游戏中的刷新率
+    DOM元素拖拽
+    Canvas画笔功能
+    总的来说，适合大量事件按时间做平均分配触发
+[函数防抖与函数节流](https://zhuanlan.zhihu.com/p/38313717)
+[Debounce 和 Throttle 的原理及实现](https://segmentfault.com/a/1190000015619151)
+[浅谈 Underscore.js 中 _.throttle 和 _.debounce 的差异](https://segmentfault.com/a/1190000007440036)
+
+
+## part two 库,框架及其他
 ####49. JQuery的源码看过吗？能不能简单概况一下它的实现原理？
+    
+[jQuery诞生记-原理与机制](https://www.zhangxinxu.com/wordpress/2013/07/jquery-%E5%8E%9F%E7%90%86-%E6%9C%BA%E5%88%B6/)    
+[jQuery 源码系列（一）总体架构](https://segmentfault.com/a/1190000008365621)
 ####50. jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？
 ####51. jquery中如何将数组转化为json字符串，然后再转化回来？
 ####52. jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？
@@ -472,44 +572,6 @@
 ####61. jQuery和Zepto的区别？各自的使用场景？
 ####62. Zepto的点透问题如何解决？
 ####63. jQueryUI如何自定义组件?
-####64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
-####65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
-####66. 移动端最小触控区域是多大？
-####67. jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?
-####68. 把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？
-####69. 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
-####70. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
-####71. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
-####72. 解释JavaScript中的作用域与变量声明提升？
-####73. 那些操作会造成内存泄漏？
-####74. Node.js的适用场景？
-####75. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
-####76. 解释一下 Backbone 的 MVC 实现方式？
-####77. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
-####78. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
-####79. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
-####80. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
-####81. 简述一下 Handlebars 的基本用法？
-####82. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
-####83. 检测浏览器版本版本有哪些方式？
-####84. What is a Polyfill?
-####85. 做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
-####86. 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡。会执行几次事件，会先执行冒泡还是捕获？
-####87. 使用JS实现获取文件扩展名？
-####88. Webpack热更新实现原理?
-####89. 请介绍一下JS之事件节流？
-####90. 什么是JS的函数防抖？
-
-#### 91.
-#### 92.
-#### 93.
-#### 94.
-#### 95.
-#### 96.
-#### 97.
-#### 98.
-#### 99.
-#### 100.
 
 
 

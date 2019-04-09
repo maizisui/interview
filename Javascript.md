@@ -1,10 +1,10 @@
-## part one js 基础
+## Part 1 基础
 #### 1. 介绍JavaScript的基本数据类型
 	最新的 ECMAScript 标准定义了 7 种数据类型:  
 	6 种原始类型:
-	Boolean
-	Null
 	Undefined
+    Null
+    Boolean
 	Number
 	String
 	Symbol (ECMAScript 6 新定义)
@@ -53,7 +53,6 @@
 
 
 #### 5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
-
     栈：原始数据类型（Undefined，Null，Boolean，Number、String）
     堆：引用数据类型（对象、数组和函数）  
     特点：
@@ -118,12 +117,16 @@
 ```
 
 #### 9.Javascript如何实现继承
-    
-    参考： http://www.cnblogs.com/humin/p/4556820.html
-    http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance.html
-    http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_inheritance_continued.html
-    https://segmentfault.com/a/1190000002440502
-    https://juejin.im/entry/5993eeaa51882524382f3c0b
+    原型链
+    借用构造函数
+    组合继承
+    原型式继承
+    寄生式继承
+    寄生组合式继承
+[JS实现继承的几种方式](http://www.cnblogs.com/humin/p/4556820.html)
+[Javascript面向对象编程：封装,构造函数的继承,非构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)
+[JavaScript继承方式详解](https://segmentfault.com/a/1190000002440502)
+[JavaScript常见的继承方式](https://juejin.im/entry/5993eeaa51882524382f3c0b)
 
 #### 10.javascript创建对象的几种方式
     1. 工厂模式
@@ -148,14 +151,28 @@
        优点:
        缺点:
 [JavaScript创建对象的七种方式](https://xxxgitone.github.io/2017/06/10/JavaScript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F/)
-    [1](https://github.com/mqyqingfeng/Blog/issues/15   )
-    [2](https://segmentfault.com/a/1190000008293117)
+[JavaScript深入之创建对象的多种方式以及优缺点](https://github.com/mqyqingfeng/Blog/issues/15   )
+[原生js的对象创建模式以及优缺点](https://segmentfault.com/a/1190000008293117)
 
 #### 11.Javascript作用链域
-       当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，
-       就会从父级(词法层面上的父级)执行上下文的变量对象中查找，一直找到全局上下文的变量对象，
-       也就是全局对象。这样由多个执行上下文的变量对象构成的链表就叫做作用域链。
+    当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，
+    就会从父级(词法层面上的父级)执行上下文的变量对象中查找, 一直找到全局上下文的变量对象, 也就是全局对象。 这样由多个执行上下文的变量对象构成的链表就叫做作用域链。
+[JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/6)
+[深入了解 JavaScript，从作用域链开始（1）](https://juejin.im/entry/57f5d492bf22ec006475238f)
+[理解JavaScript的作用域链](https://www.cnblogs.com/wilber2013/p/4909459.html)
+[]()
+[]()
+[]()
 #### 12.谈谈This对象的理解
+[JavaScript 的 this 原理](http://www.ruanyifeng.com/blog/2018/06/javascript-this.html)
+[Javascript 的 this 用法](http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html)
+[彻底理解js中this的指向](https://www.cnblogs.com/pssp/p/5216085.html)
+[从这两套题，重新认识JS的this、作用域、闭包、对象](https://juejin.im/post/59aa71d56fb9a0248d24fae3)
+[this](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this)
+[深入理解 js this 绑定](https://segmentfault.com/a/1190000011194676)
+[你不懂JS：this与对象原型 第二章：this豁然开朗！](https://www.jianshu.com/p/fcbc21a2c507)
+[深入浅出 JavaScript 中的 this](https://www.ibm.com/developerworks/cn/web/1207_wangqf_jsthis/index.html)
+[如何理解 JavaScript 中的 this 关键字？](https://www.zhihu.com/question/19636194)
 #### 13.eval是做什么的？
     eval() 函数会将传入的字符串当做 JavaScript 代码进行执行。
     但是应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
@@ -468,10 +485,37 @@
     调用函数
 [apply 和 call 的区别]( https://github.com/lin-xin/blog/issues/7)
 #### 44. 数组和对象有哪些原生方法，列举一下？
+    数组：
+    Array.from()  
+    Array.isArray()  
+    Array.of()
+    修改器方法[Mutator methods], 会改变调用它们的对象自身的值：
+    Array.prototype.pop()
+    Array.prototype.push()
+    Array.prototype.reverse()
+    Array.prototype.shift()
+    Array.prototype.sort()
+    Array.prototype.splice()
+    Array.prototype.unshift()
+    访问方法[], 绝对不会改变调用它们的对象的值, 只会返回一个新的数组。
+    Array.prototype.concat()
+    Array.prototype.join()
+    Array.prototype.slice()
+    Array.prototype.toString()
+    Array.prototype.toLocaleString()
+    Array.prototype.indexOf()
+    Array.prototype.lastIndexOf()
+    迭代方法[]
+    对象：
+
+[Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)   
+[js 数组详细操作方法及解析合集](https://juejin.im/post/5b0903b26fb9a07a9d70c7e0)
+[JavaScript Array 对象](http://www.runoob.com/jsref/jsref-obj-array.html)
+[]()
+[]()
 #### 45. JS 怎么实现一个类。怎么实例化这个类
 #### 46. JavaScript中的作用域与变量声明提升？
 #### 47. 如何编写高性能的Javascript？
-#### 48. 那些操作会造成内存泄漏？
 
 #### 64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
 #### 65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）

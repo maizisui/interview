@@ -45,13 +45,25 @@
     
 
 #### 3. 说几条写JavaScript的基本规范？
-    https://github.com/fex-team/styleguide/blob/master/javascript.md
-    https://www.css88.com/archives/8405
+     1.不要在同一行声明多个变量。  
+     2.请使用 ===/!==来比较true/false或者数值  
+     3.使用对象字面量替代new Array这种形式  
+     4.不要使用全局函数。  
+     5.Switch语句必须带有default分支  
+     6.函数不应该有时候有返回值，有时候没有返回值。  
+     7.For循环必须使用大括号  
+     8.If语句必须使用大括号  
+     9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。  
+[JavaScript编码规范](https://github.com/fex-team/styleguide/blob/master/javascript.md)
+[5个JavaScript编码规范-包括AirBnB, GitHub 和 Google](https://www.css88.com/archives/8405)
 
 #### 4. JavaScript原型，原型链 ? 有什么特点？
     prototype(显式原型), __proto__(隐式原型)的区别:
 
-
+[js中__proto__和prototype的区别和关系？](https://www.zhihu.com/question/34183746)
+[(JavaScript)原型与原型对象](https://segmentfault.com/a/1190000013778393)
+[]()
+[]()
 #### 5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
     栈：原始数据类型（Undefined，Null，Boolean，Number、String）
     堆：引用数据类型（对象、数组和函数）  
@@ -319,8 +331,7 @@
     为了向将来Javascript的新版本过渡，严格模式新增了一些保留字：
     implements, interface, let, package, private, protected, public, static, yield。
     使用这些词作为变量名将会报错。
-[严格模式
-](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
+[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
 [Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
 #### 21.如何判断一个对象是否属于某个类？
     JavaScript中判断一个对象是否为一个类的实例主要有两种方法，即instanceof和constructor。   

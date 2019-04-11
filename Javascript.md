@@ -57,10 +57,12 @@
 [JavaScript编码规范](https://github.com/fex-team/styleguide/blob/master/javascript.md)
 [5个JavaScript编码规范-包括AirBnB, GitHub 和 Google](https://www.css88.com/archives/8405)
 
-#### 4. JavaScript原型, 原型对象, 实例, 构造函数 ,__proto__,原型链 ? 有什么特点？
-    所有对象有[[prototype]]属性，指向其构造函数的原型对象
-    所有函数都有prototype属性，指向其原型对象
-    所有实例都有constructor属性，指向其构造函数
+#### 4. JavaScript原型, 原型对象, 实例, 构造函数 ,`__proto__`,原型链 ? 有什么特点？
+    所有对象有[[prototype]]属性，指向其构造函数的原型对象.
+    所有函数都有prototype属性，指向其原型对象.
+    所有实例都有constructor属性，指向其构造函数.
+    每个函数对象都有一个`prototype` 属性, 这个属性指向函数的原型对象, 它包含了对象实例共享的方法和属性。  
+    当我们访问一个对象的属性时, 如果这个对象内部不存在这个属性, 那么他就会去prototype里找这个属性, 这个prototype又会有自己的prototype, 于是就这样一直找下去，就构成了实例与原型之间的链条，也就是我们平时所说的原型链的概念。  
 
 [js中__proto__和prototype的区别和关系？](https://www.zhihu.com/question/34183746)
 [(JavaScript)原型与原型对象](https://segmentfault.com/a/1190000013778393)
@@ -81,8 +83,7 @@
 #### 6. 如何将字符串转化为数字，例如'12.3b'?
     parseInt(), parseFloat(), Number()(转换的是整个值，而不是部分值)
     扩展：转换函数、强制类型转换、利用JS变量弱类型特点进行转换；
-    https://www.jianshu.com/p/7962deab3cea
-    https://blog.csdn.net/Inuyasha1121/article/details/40182105
+[JavaScript 字符串与数字的相互转换](https://www.jianshu.com/p/7962deab3cea)
 
 #### 7.  如何将浮点数点左边的数每三位添加一个逗号， 如12000000.11 转化为『12,000,000.11』?
      function commafy(num){
@@ -282,9 +283,10 @@
         return ev;
     }
 };
-#### 17.["1", "2", "3"].map(parseInt) 答案是多少？
+#### 17.`["1", "2", "3"].map(parseInt)` 答案是多少？
+    [1, NaN, NaN]  
+[详细解析](http://blog.csdn.net/justjavac/article/details/19473199)  
 #### 18.事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？
-    http://www.w3school.com.cn/js/js_events.asp
     事件是可以被 JavaScript 侦测到的行为。
     网页中的每个元素都可以产生某些可以触发 JavaScript 函数的事件。
     比方说，我们可以在用户点击某按钮时产生一个 onClick 事件来触发某个函数。事件在 HTML 页面中定义。
@@ -294,6 +296,7 @@
     然后逐级向上传播到较为不具体的节点（文档）。也就是子级元素先触发，父级元素后触发。
      Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件.
      在W3c中，使用event.stopPropagation()方法。 在IE下设置event.cancelBubble = true；
+[JavaScript 事件](http://www.w3school.com.cn/js/js_events.asp)
 #### 19.什么是闭包（closure），为什么要用它？
     闭包是指有权访问另一个函数作用域中变量的函数，
     创建闭包的最常见的方式就是在一个函数内创建另一个函数，
@@ -441,9 +444,18 @@
     4、在URL后面加上时间戳："nowtime=" + new Date().getTime();。
     5、如果是使用jQuery，直接这样就可以了 $.ajaxSetup({cache:false})。
     这样页面的所有ajax都会执行这条语句就是不需要保存缓存记录。
-    https://www.jianshu.com/p/4f76f06383ec
-    [彻底理解浏览器的缓存机制](https://juejin.im/entry/5ad86c16f265da505a77dca4)
+[Ajax 解决浏览器缓存问题](https://www.jianshu.com/p/4f76f06383ec)
+[彻底理解浏览器的缓存机制](https://juejin.im/entry/5ad86c16f265da505a77dca4)
 #### 30.同步和异步的区别?
+    网络通信中的同步机制和异步机制是描述通信模式的概念。
+    同步机制是指发送方发送请求后,需要等待接收到接收方发回的响应后,才接着发送下一个请求;
+    异步机制,和同步机制正好相反,在异步机制中,发送方发出一个请求后,不等待接收方响应这个请求,就继续发送下个请求。
+    在同步机制中,所有的请求在服务器端得到同步,发送方和接收方对请求的处理步调是一致的;
+    在异步机制中,所有来自发送方的请求形成一个队列,接收方处理完成后通知发送方。
+[怎样理解阻塞非阻塞与同步异步的区别？](https://www.zhihu.com/question/19732473)
+[深入理解--异步和非阻塞](https://liuchi.coding.me/2017/07/28/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E5%BC%82%E6%AD%A5%E5%92%8C%E9%9D%9E%E9%98%BB%E5%A1%9E/)
+[Javascript异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)
+[]()
 #### 31. 如何解决跨域问题?
 #### 32. 页面编码和被请求的资源编码如果不一致如何处理？
 #### 33. 服务器代理转发时，该如何处理cookie？

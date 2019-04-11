@@ -57,13 +57,14 @@
 [JavaScript编码规范](https://github.com/fex-team/styleguide/blob/master/javascript.md)
 [5个JavaScript编码规范-包括AirBnB, GitHub 和 Google](https://www.css88.com/archives/8405)
 
-#### 4. JavaScript原型，原型链 ? 有什么特点？
-    prototype(显式原型), __proto__(隐式原型)的区别:
+#### 4. JavaScript原型, 原型对象, 实例, 构造函数 ,__proto__,原型链 ? 有什么特点？
+    所有对象有[[prototype]]属性，指向其构造函数的原型对象
+    所有函数都有prototype属性，指向其原型对象
+    所有实例都有constructor属性，指向其构造函数
 
 [js中__proto__和prototype的区别和关系？](https://www.zhihu.com/question/34183746)
 [(JavaScript)原型与原型对象](https://segmentfault.com/a/1190000013778393)
-[]()
-[]()
+![示意图](https://image-static.segmentfault.com/475/872/475872986-5aab55344226c_articlex)
 #### 5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
     栈：原始数据类型（Undefined，Null，Boolean，Number、String）
     堆：引用数据类型（对象、数组和函数）  

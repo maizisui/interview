@@ -54,7 +54,7 @@
      7.For循环必须使用大括号  
      8.If语句必须使用大括号  
      9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。  
-[JavaScript编码规范](https://github.com/fex-team/styleguide/blob/master/javascript.md)
+[JavaScript编码规范](https://github.com/fex-team/styleguide/blob/master/javascript.md)</br>
 [5个JavaScript编码规范-包括AirBnB, GitHub 和 Google](https://www.css88.com/archives/8405)
 
 #### 4. JavaScript原型, 原型对象, 实例, 构造函数 ,`__proto__`,原型链 ? 有什么特点？
@@ -63,10 +63,9 @@
     所有实例都有constructor属性，指向其构造函数.
     每个函数对象都有一个`prototype` 属性, 这个属性指向函数的原型对象, 它包含了对象实例共享的方法和属性。  
     当我们访问一个对象的属性时, 如果这个对象内部不存在这个属性, 那么他就会去prototype里找这个属性, 这个prototype又会有自己的prototype, 于是就这样一直找下去，就构成了实例与原型之间的链条，也就是我们平时所说的原型链的概念。  
-
-[js中__proto__和prototype的区别和关系？](https://www.zhihu.com/question/34183746)
+![示意图](https://image-static.segmentfault.com/475/872/475872986-5aab55344226c_articlex)</br>
+[js中__proto__和prototype的区别和关系？](https://www.zhihu.com/question/34183746)</br>
 [(JavaScript)原型与原型对象](https://segmentfault.com/a/1190000013778393)
-![示意图](https://image-static.segmentfault.com/475/872/475872986-5aab55344226c_articlex)
 #### 5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
     栈：原始数据类型（Undefined，Null，Boolean，Number、String）
     堆：引用数据类型（对象、数组和函数）  
@@ -78,7 +77,7 @@
     如果存储在栈中，将会影响程序运行的性能；引用数据类型在栈中存储了指针，
     该指针指向堆中该实体的起始地址。当解释器寻找引用值时，会首先检索其在栈中的地址，
     取得地址后从堆中获得实体。
-    https://segmentfault.com/a/1190000016733918
+[JavaScript的数据类型及其检测](https://segmentfault.com/a/1190000016733918)
 
 #### 6. 如何将字符串转化为数字，例如'12.3b'?
     parseInt(), parseFloat(), Number()(转换的是整个值，而不是部分值)
@@ -137,10 +136,10 @@
     原型式继承
     寄生式继承
     寄生组合式继承
-[JS实现继承的几种方式](http://www.cnblogs.com/humin/p/4556820.html)
-[Javascript面向对象编程：封装,构造函数的继承,非构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)
-[JavaScript继承方式详解](https://segmentfault.com/a/1190000002440502)
-[JavaScript常见的继承方式](https://juejin.im/entry/5993eeaa51882524382f3c0b)
+[JS实现继承的几种方式](http://www.cnblogs.com/humin/p/4556820.html) </br>
+[Javascript面向对象编程：封装,构造函数的继承,非构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)</br>
+[JavaScript继承方式详解](https://segmentfault.com/a/1190000002440502)</br>
+[JavaScript常见的继承方式](https://juejin.im/entry/5993eeaa51882524382f3c0b)</br>
 
 #### 10.javascript创建对象的几种方式
     1. 工厂模式
@@ -164,29 +163,29 @@
     7. 稳妥构造函数模式
        优点:
        缺点:
-[JavaScript创建对象的七种方式](https://xxxgitone.github.io/2017/06/10/JavaScript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F/)
-[JavaScript深入之创建对象的多种方式以及优缺点](https://github.com/mqyqingfeng/Blog/issues/15   )
-[原生js的对象创建模式以及优缺点](https://segmentfault.com/a/1190000008293117)
+[JavaScript创建对象的七种方式](https://xxxgitone.github.io/2017/06/10/JavaScript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F/)</br>
+[JavaScript深入之创建对象的多种方式以及优缺点](https://github.com/mqyqingfeng/Blog/issues/15   )</br>
+[原生js的对象创建模式以及优缺点](https://segmentfault.com/a/1190000008293117)</br>
 
 #### 11.Javascript作用链域
     当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，
     就会从父级(词法层面上的父级)执行上下文的变量对象中查找, 一直找到全局上下文的变量对象, 也就是全局对象。 这样由多个执行上下文的变量对象构成的链表就叫做作用域链。
-[JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/6)
-[深入了解 JavaScript，从作用域链开始（1）](https://juejin.im/entry/57f5d492bf22ec006475238f)
-[理解JavaScript的作用域链](https://www.cnblogs.com/wilber2013/p/4909459.html)
+[JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/6)</br>
+[深入了解 JavaScript，从作用域链开始（1）](https://juejin.im/entry/57f5d492bf22ec006475238f)</br>
+[理解JavaScript的作用域链](https://www.cnblogs.com/wilber2013/p/4909459.html)</br>
 []()
 []()
 []()
 #### 12.谈谈This对象的理解
-[JavaScript 的 this 原理](http://www.ruanyifeng.com/blog/2018/06/javascript-this.html)
-[Javascript 的 this 用法](http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html)
-[彻底理解js中this的指向](https://www.cnblogs.com/pssp/p/5216085.html)
-[从这两套题，重新认识JS的this、作用域、闭包、对象](https://juejin.im/post/59aa71d56fb9a0248d24fae3)
-[this](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this)
-[深入理解 js this 绑定](https://segmentfault.com/a/1190000011194676)
-[你不懂JS：this与对象原型 第二章：this豁然开朗！](https://www.jianshu.com/p/fcbc21a2c507)
-[深入浅出 JavaScript 中的 this](https://www.ibm.com/developerworks/cn/web/1207_wangqf_jsthis/index.html)
-[如何理解 JavaScript 中的 this 关键字？](https://www.zhihu.com/question/19636194)
+[JavaScript 的 this 原理](http://www.ruanyifeng.com/blog/2018/06/javascript-this.html)</br>
+[Javascript 的 this 用法](http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html)</br>
+[彻底理解js中this的指向](https://www.cnblogs.com/pssp/p/5216085.html)</br>
+[从这两套题，重新认识JS的this、作用域、闭包、对象](https://juejin.im/post/59aa71d56fb9a0248d24fae3)</br>
+[this](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this)</br>
+[深入理解 js this 绑定](https://segmentfault.com/a/1190000011194676)</br>
+[你不懂JS：this与对象原型 第二章：this豁然开朗！](https://www.jianshu.com/p/fcbc21a2c507)</br>
+[深入浅出 JavaScript 中的 this](https://www.ibm.com/developerworks/cn/web/1207_wangqf_jsthis/index.html)</br>
+[如何理解 JavaScript 中的 this 关键字？](https://www.zhihu.com/question/19636194)</br>
 #### 13.eval是做什么的？
     eval() 函数会将传入的字符串当做 JavaScript 代码进行执行。
     但是应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
@@ -195,7 +194,7 @@
     eval(new String("2 + 2")); // 返回了包含"2 + 2"的字符串对象.
     如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 
     从 ECMAScript 5 起, 它工作在全局作用域下，而不是局部作用域中。
-   [JavaScript 为什么不推荐使用 eval？](https://www.zhihu.com/question/20591877)
+   [JavaScript 为什么不推荐使用 eval？](https://www.zhihu.com/question/20591877)</br>
 
 #### 14.什么是window对象? 什么是document对象?
     Window 对象表示浏览器中打开的窗口。
@@ -285,7 +284,7 @@
 };
 #### 17.`["1", "2", "3"].map(parseInt)` 答案是多少？
     [1, NaN, NaN]  
-[详细解析](http://blog.csdn.net/justjavac/article/details/19473199)  
+[详细解析](http://blog.csdn.net/justjavac/article/details/19473199)  </br>
 #### 18.事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？
     事件是可以被 JavaScript 侦测到的行为。
     网页中的每个元素都可以产生某些可以触发 JavaScript 函数的事件。
@@ -296,7 +295,7 @@
     然后逐级向上传播到较为不具体的节点（文档）。也就是子级元素先触发，父级元素后触发。
      Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件.
      在W3c中，使用event.stopPropagation()方法。 在IE下设置event.cancelBubble = true；
-[JavaScript 事件](http://www.w3school.com.cn/js/js_events.asp)
+[JavaScript 事件](http://www.w3school.com.cn/js/js_events.asp)</br>
 #### 19.什么是闭包（closure），为什么要用它？
     闭包是指有权访问另一个函数作用域中变量的函数，
     创建闭包的最常见的方式就是在一个函数内创建另一个函数，
@@ -335,8 +334,8 @@
     为了向将来Javascript的新版本过渡，严格模式新增了一些保留字：
     implements, interface, let, package, private, protected, public, static, yield。
     使用这些词作为变量名将会报错。
-[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)
-[Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)
+[严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)</br>
+[Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)</br>
 #### 21.如何判断一个对象是否属于某个类？
     JavaScript中判断一个对象是否为一个类的实例主要有两种方法，即instanceof和constructor。   
     前者的用法是：`object instanceof constructor`；  
@@ -444,17 +443,17 @@
     4、在URL后面加上时间戳："nowtime=" + new Date().getTime();。
     5、如果是使用jQuery，直接这样就可以了 $.ajaxSetup({cache:false})。
     这样页面的所有ajax都会执行这条语句就是不需要保存缓存记录。
-[Ajax 解决浏览器缓存问题](https://www.jianshu.com/p/4f76f06383ec)
-[彻底理解浏览器的缓存机制](https://juejin.im/entry/5ad86c16f265da505a77dca4)
+[Ajax 解决浏览器缓存问题](https://www.jianshu.com/p/4f76f06383ec)</br>
+[彻底理解浏览器的缓存机制](https://juejin.im/entry/5ad86c16f265da505a77dca4)</br>
 #### 30.同步和异步的区别?
     网络通信中的同步机制和异步机制是描述通信模式的概念。
     同步机制是指发送方发送请求后,需要等待接收到接收方发回的响应后,才接着发送下一个请求;
     异步机制,和同步机制正好相反,在异步机制中,发送方发出一个请求后,不等待接收方响应这个请求,就继续发送下个请求。
     在同步机制中,所有的请求在服务器端得到同步,发送方和接收方对请求的处理步调是一致的;
     在异步机制中,所有来自发送方的请求形成一个队列,接收方处理完成后通知发送方。
-[怎样理解阻塞非阻塞与同步异步的区别？](https://www.zhihu.com/question/19732473)
-[深入理解--异步和非阻塞](https://liuchi.coding.me/2017/07/28/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E5%BC%82%E6%AD%A5%E5%92%8C%E9%9D%9E%E9%98%BB%E5%A1%9E/)
-[Javascript异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)
+[怎样理解阻塞非阻塞与同步异步的区别？](https://www.zhihu.com/question/19732473)</br>
+[深入理解--异步和非阻塞](https://liuchi.coding.me/2017/07/28/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E5%BC%82%E6%AD%A5%E5%92%8C%E9%9D%9E%E9%98%BB%E5%A1%9E/)</br>
+[Javascript异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)</br>
 []()
 #### 31. 如何解决跨域问题?
 #### 32. 页面编码和被请求的资源编码如果不一致如何处理？
@@ -494,10 +493,10 @@
     replaceChild
     
     //扩展
-[Javascript操作DOM常用API总结]( http://luopq.com/2015/11/30/javascript-dom/)
-[JavaScript常见原生DOM操作API总结]( https://www.cnblogs.com/liuxianan/p/javascript-dom-api.html)
-[常见的原生javascript DOM操作]( https://segmentfault.com/a/1190000004076145)
-[为什么说DOM操作很慢](https://segmentfault.com/a/1190000004114594)
+[Javascript操作DOM常用API总结]( http://luopq.com/2015/11/30/javascript-dom/)</br>
+[JavaScript常见原生DOM操作API总结]( https://www.cnblogs.com/liuxianan/p/javascript-dom-api.html)</br>
+[常见的原生javascript DOM操作]( https://segmentfault.com/a/1190000004076145)</br>
+[为什么说DOM操作很慢](https://segmentfault.com/a/1190000004114594)</br>
 #### 43. call() 和 apply() 的区别？
     相同点:两个方法产生的作用是完全一样的
     不同点:方法传递的参数不同
@@ -507,7 +506,7 @@
     改变 this 指向
     借用别的对象的方法
     调用函数
-[apply 和 call 的区别]( https://github.com/lin-xin/blog/issues/7)
+[apply 和 call 的区别]( https://github.com/lin-xin/blog/issues/7)</br>
 #### 44. 数组和对象有哪些原生方法，列举一下？
     数组：
     Array.from()  
@@ -532,9 +531,9 @@
     迭代方法[]
     对象：
 
-[Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)   
-[js 数组详细操作方法及解析合集](https://juejin.im/post/5b0903b26fb9a07a9d70c7e0)
-[JavaScript Array 对象](http://www.runoob.com/jsref/jsref-obj-array.html)
+[Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)   </br>
+[js 数组详细操作方法及解析合集](https://juejin.im/post/5b0903b26fb9a07a9d70c7e0)</br>
+[JavaScript Array 对象](http://www.runoob.com/jsref/jsref-obj-array.html)</br>
 []()
 []()
 #### 45. JS 怎么实现一个类。怎么实例化这个类
@@ -547,7 +546,7 @@
 #### 67. jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?
 #### 68.把 `<script>` 标签 放在页面的最底部的`</body>`之前和`</body>`之后有什么区别？浏览器会如何解析它们？
     这种写法是不符合标准HTML5语法规则的, 但是浏览器对HTML容错机制。 错误嵌套的标签、以及位置放置错误的标签都会在paser HTML  过程中尝试修复。修复后得到合法的HTML后在由布局引擎建立相应的DOM对象。在`<script>`标签放置于`</body>`标签之后时，源码被浏览器【泛指PC上常见的】修复为正常形式，即`<script></script></body>`。
-[知乎问题讨论](https://www.zhihu.com/question/20027966)
+[知乎问题讨论](https://www.zhihu.com/question/20027966)</br>
 
 #### 69. 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
 #### 70. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
@@ -560,11 +559,11 @@
     被遗忘的定时器或者回调
     子元素存在引用引起的内存泄漏
 
-[JavaScript 内存泄漏教程](http://www.ruanyifeng.com/blog/2017/04/memory-leak.html)
-[4类 JavaScript 内存泄漏及如何避免](https://jinlong.github.io/2016/05/01/4-Types-of-Memory-Leaks-in-JavaScript-and-How-to-Get-Rid-Of-Them/)
-[了解 JavaScript 应用程序中的内存泄漏](https://www.ibm.com/developerworks/cn/web/wa-jsmemory/index.html)
-[关于js闭包是否真的会造成内存泄漏？](https://www.zhihu.com/question/31078912)
-[常见的 JavaScript 内存泄露](https://github.com/zhansingsong/js-leakage-patterns)
+[JavaScript 内存泄漏教程](http://www.ruanyifeng.com/blog/2017/04/memory-leak.html)</br>
+[4类 JavaScript 内存泄漏及如何避免](https://jinlong.github.io/2016/05/01/4-Types-of-Memory-Leaks-in-JavaScript-and-How-to-Get-Rid-Of-Them/)</br>
+[了解 JavaScript 应用程序中的内存泄漏](https://www.ibm.com/developerworks/cn/web/wa-jsmemory/index.html)</br>
+[关于js闭包是否真的会造成内存泄漏？](https://www.zhihu.com/question/31078912)</br>
+[常见的 JavaScript 内存泄露](https://github.com/zhansingsong/js-leakage-patterns)</br>
 #### 74. Node.js的适用场景？
 #### 75. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
 #### 76. 解释一下 Backbone 的 MVC 实现方式？
@@ -581,12 +580,12 @@
     缺点
     使用浏览器的前进，后退键的时候会重新发送请求，没有合理地利用缓存.
     单页面无法记住之前滚动的位置，无法在前进，后退的时候记住滚动的位置.
-[你了解前端路由吗?](https://juejin.im/post/5ac61da66fb9a028c71eae1b)
-[前端路由是什么东西？](https://www.zhihu.com/question/53064386)
-[前端路由的两种实现原理](https://segmentfault.com/a/1190000007238999)
-[理解Web路由](https://zhuanlan.zhihu.com/p/24814675)
-[浅谈前后端路由与前后端渲染](https://molunerfinn.com/fe-be-router-render/)
-[为什么要前后端分离？有什么优缺点？](https://blog.csdn.net/bntx2jsqfehy7/article/details/80589580)
+[你了解前端路由吗?](https://juejin.im/post/5ac61da66fb9a028c71eae1b)</br>
+[前端路由是什么东西？](https://www.zhihu.com/question/53064386)</br>
+[前端路由的两种实现原理](https://segmentfault.com/a/1190000007238999)</br>
+[理解Web路由](https://zhuanlan.zhihu.com/p/24814675)</br>
+[浅谈前后端路由与前后端渲染](https://molunerfinn.com/fe-be-router-render/)</br>
+[为什么要前后端分离？有什么优缺点？](https://blog.csdn.net/bntx2jsqfehy7/article/details/80589580)</br>
 #### 78. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
     WebKit是一种用来让网页浏览器绘制网页的排版引擎。
     使用Chrome 开发者工具。
@@ -603,32 +602,32 @@
     application: 使用资源面板检查加载的所有资源，包括IndexedDB与Web SQL数据库，本地和会话存储，cookie，应用程序缓存，
     图像，字体和样式表。(Note: 在 Chrome 52 之后资源面板更名为应用面板.)
     security: 使用安全面板调试混合内容问题，证书问题等等
-[深入剖析 WebKit](https://ming1016.github.io/2017/10/11/deeply-analyse-webkit/) 
-[Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn)
-[chrome调试](https://segmentfault.com/a/1190000002439648)    
+[深入剖析 WebKit](https://ming1016.github.io/2017/10/11/deeply-analyse-webkit/) </br>
+[Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn)</br>
+[chrome调试](https://segmentfault.com/a/1190000002439648)    </br>
 
 #### 79. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
     单元测试(Unit Test): mocha, jasmine, jest. 
     比较细粒度的去测试我们业务代码中写的function, 测试function里提供的method是否可靠.
     e2e测试(端对端测试):利用一些工具库提供的API使用代码来模拟终端用户在UI界面上的操作,比如输入, 点击等等。目前常用的工具有: selenium, puppeteer, phantom, protractor(angular), Nightwatch(Vue)等等.
-[作为一个前端开发到底要不要写测试](https://segmentfault.com/a/1190000015724775)
-[如何进行前端自动化测试？](https://www.zhihu.com/question/29922082)
-[TDD 与 BDD 仅仅是语言描述上的区别么？](https://www.zhihu.com/question/20161970)
-[[从入门到不放弃]多浏览器的自动化测试(1)-本地测试](https://zhuanlan.zhihu.com/p/27473256)
+[作为一个前端开发到底要不要写测试](https://segmentfault.com/a/1190000015724775)</br>
+[如何进行前端自动化测试？](https://www.zhihu.com/question/29922082)</br>
+[TDD 与 BDD 仅仅是语言描述上的区别么？](https://www.zhihu.com/question/20161970)</br>
+[[从入门到不放弃]多浏览器的自动化测试(1)-本地测试](https://zhuanlan.zhihu.com/p/27473256)</br>
 #### 80. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
 #### 81. 简述一下 Handlebars 的基本用法？
 #### 82. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
 #### 83. 检测浏览器版本版本有哪些方式？
-    [JS 获得浏览器类型和版本](https://segmentfault.com/a/1190000007640795)
+ [JS 获得浏览器类型和版本](https://segmentfault.com/a/1190000007640795)</br>
 #### 84. What is a Polyfill?
 #### 85. 做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
 #### 86. 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡。会执行几次事件，会先执行冒泡还是捕获？
-[一个DOM元素绑定多个事件时，先执行冒泡还是捕获](https://blog.csdn.net/u013217071/article/details/77613706)
+[一个DOM元素绑定多个事件时，先执行冒泡还是捕获](https://blog.csdn.net/u013217071/article/details/77613706)</br>
 #### 87. 使用JS实现获取文件扩展名？
     function getFileExtension(filename) {
         return filename.slice(filename.lastIndexOf('.')+1);
     }
-[如何更有效的获取文件扩展名](https://segmentfault.com/a/1190000004993946)
+[如何更有效的获取文件扩展名](https://segmentfault.com/a/1190000004993946)</br>
 #### 88. Webpack热更新实现原理?
 #### 89. 函数节流和函数防抖？
     debounce 强制函数在某段时间内只执行一次，throttle 强制函数以固定的速率执行。
@@ -645,16 +644,16 @@
     DOM元素拖拽
     Canvas画笔功能
     总的来说，适合大量事件按时间做平均分配触发
-[函数防抖与函数节流](https://zhuanlan.zhihu.com/p/38313717)
-[Debounce 和 Throttle 的原理及实现](https://segmentfault.com/a/1190000015619151)
-[浅谈 Underscore.js 中 _.throttle 和 _.debounce 的差异](https://segmentfault.com/a/1190000007440036)
+[函数防抖与函数节流](https://zhuanlan.zhihu.com/p/38313717)</br>
+[Debounce 和 Throttle 的原理及实现](https://segmentfault.com/a/1190000015619151)</br>
+[浅谈 Underscore.js 中 _.throttle 和 _.debounce 的差异](https://segmentfault.com/a/1190000007440036)</br>
 
 
 ## part two 库,框架及其他
 #### 49. JQuery的源码看过吗？能不能简单概况一下它的实现原理？
     
-[jQuery诞生记-原理与机制](https://www.zhangxinxu.com/wordpress/2013/07/jquery-%E5%8E%9F%E7%90%86-%E6%9C%BA%E5%88%B6/)    
-[jQuery 源码系列（一）总体架构](https://segmentfault.com/a/1190000008365621)
+[jQuery诞生记-原理与机制](https://www.zhangxinxu.com/wordpress/2013/07/jquery-%E5%8E%9F%E7%90%86-%E6%9C%BA%E5%88%B6/)    </br>
+[jQuery 源码系列（一）总体架构](https://segmentfault.com/a/1190000008365621)</br>
 #### 50. jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？
 #### 51. jquery中如何将数组转化为json字符串，然后再转化回来？
 #### 52. jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？

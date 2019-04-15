@@ -1,14 +1,14 @@
 ## Part 1 基础
 #### 1. 介绍JavaScript的基本数据类型
-	最新的 ECMAScript 标准定义了 7 种数据类型:  
-	6 种原始类型:
-	Undefined
+    最新的 ECMAScript 标准定义了 7 种数据类型:  
+    6 种原始类型:
+    Undefined
     Null
     Boolean
-	Number
-	String
-	Symbol (ECMAScript 6 新定义)
-	和 Object
+    Number
+    String
+    Symbol (ECMAScript 6 新定义)
+    和 Object
 
 #### 2. 介绍js有哪些内置对象？
     Object 是 JavaScript 中所有对象的父对象  
@@ -56,16 +56,6 @@
      9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。  
 [JavaScript编码规范](https://github.com/fex-team/styleguide/blob/master/javascript.md)</br>
 [5个JavaScript编码规范-包括AirBnB, GitHub 和 Google](https://www.css88.com/archives/8405)
-
-#### 4. JavaScript原型, 原型对象, 实例, 构造函数 ,`__proto__`,原型链 ? 有什么特点？
-    所有对象有[[prototype]]属性，指向其构造函数的原型对象.
-    所有函数都有prototype属性，指向其原型对象.
-    所有实例都有constructor属性，指向其构造函数.
-    每个函数对象都有一个`prototype` 属性, 这个属性指向函数的原型对象, 它包含了对象实例共享的方法和属性。  
-    当我们访问一个对象的属性时, 如果这个对象内部不存在这个属性, 那么他就会去prototype里找这个属性, 这个prototype又会有自己的prototype, 于是就这样一直找下去，就构成了实例与原型之间的链条，也就是我们平时所说的原型链的概念。  
-![示意图](https://image-static.segmentfault.com/475/872/475872986-5aab55344226c_articlex)</br>
-[js中__proto__和prototype的区别和关系？](https://www.zhihu.com/question/34183746)</br>
-[(JavaScript)原型与原型对象](https://segmentfault.com/a/1190000013778393)
 #### 5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
     栈：原始数据类型（Undefined，Null，Boolean，Number、String）
     堆：引用数据类型（对象、数组和函数）  
@@ -84,97 +74,12 @@
     扩展：转换函数、强制类型转换、利用JS变量弱类型特点进行转换；
 [JavaScript 字符串与数字的相互转换](https://www.jianshu.com/p/7962deab3cea)
 
-#### 7.  如何将浮点数点左边的数每三位添加一个逗号， 如12000000.11 转化为『12,000,000.11』?
-     function commafy(num){
-        return num && num
-            .toString()
-            .replace(/(\d)(?=(\d{3})+\.)/g, function($1, $2){
-                return $2 + ',';
-            });
-      }
-
-#### 8. 如何实现数组的随机排序？
-```
-方法一：
-    var arr = [1,2,3,4,5,6,7,8,9,10];
-    function randSort1(arr){
-        for(var i = 0,len = arr.length;i < len; i++ ){
-            var rand = parseInt(Math.random()*len);
-            var temp = arr[rand];
-            arr[rand] = arr[i];
-            arr[i] = temp;
-        }
-        return arr;
-    }
-    console.log(randSort1(arr));
-    
-  方法二：
-    var arr = [1,2,3,4,5,6,7,8,9,10];
-    function randSort2(arr){
-        var mixedArray = [];
-        while(arr.length > 0){
-            var randomIndex = parseInt(Math.random()*arr.length);
-            mixedArray.push(arr[randomIndex]);
-            arr.splice(randomIndex, 1);
-        }
-        return mixedArray;
-    }
-    console.log(randSort2(arr));
-
-  方法三：
-    var arr = [1,2,3,4,5,6,7,8,9,10];
-    arr.sort(function(){
-        return Math.random() - 0.5;
-    })
-    console.log(arr);
-```
-
-#### 9.Javascript如何实现继承
-    原型链
-    借用构造函数
-    组合继承
-    原型式继承
-    寄生式继承
-    寄生组合式继承
-[JS实现继承的几种方式](http://www.cnblogs.com/humin/p/4556820.html) </br>
-[Javascript面向对象编程：封装,构造函数的继承,非构造函数的继承](http://www.ruanyifeng.com/blog/2010/05/object-oriented_javascript_encapsulation.html)</br>
-[JavaScript继承方式详解](https://segmentfault.com/a/1190000002440502)</br>
-[JavaScript常见的继承方式](https://juejin.im/entry/5993eeaa51882524382f3c0b)</br>
-
-#### 10.javascript创建对象的几种方式
-    1. 工厂模式
-       优点:
-       缺点:
-    2. 构造函数模式
-       优点:
-       缺点:
-    3. 原型模式
-       优点:
-       缺点:
-    4. 组合使用构造函数模式和原型模式
-       优点:
-       缺点:
-    5. 动态原型模式
-       优点:
-       缺点:
-    6. 寄生构造函数模式
-       优点:
-       缺点:
-    7. 稳妥构造函数模式
-       优点:
-       缺点:
-[JavaScript创建对象的七种方式](https://xxxgitone.github.io/2017/06/10/JavaScript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%83%E7%A7%8D%E6%96%B9%E5%BC%8F/)</br>
-[JavaScript深入之创建对象的多种方式以及优缺点](https://github.com/mqyqingfeng/Blog/issues/15   )</br>
-[原生js的对象创建模式以及优缺点](https://segmentfault.com/a/1190000008293117)</br>
-
 #### 11.Javascript作用链域
     当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，
     就会从父级(词法层面上的父级)执行上下文的变量对象中查找, 一直找到全局上下文的变量对象, 也就是全局对象。 这样由多个执行上下文的变量对象构成的链表就叫做作用域链。
 [JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/6)</br>
 [深入了解 JavaScript，从作用域链开始（1）](https://juejin.im/entry/57f5d492bf22ec006475238f)</br>
 [理解JavaScript的作用域链](https://www.cnblogs.com/wilber2013/p/4909459.html)</br>
-[]()
-[]()
 []()
 #### 12.谈谈This对象的理解
 [JavaScript 的 this 原理](http://www.ruanyifeng.com/blog/2018/06/javascript-this.html)</br>
@@ -195,15 +100,6 @@
     如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 
     从 ECMAScript 5 起, 它工作在全局作用域下，而不是局部作用域中。
    [JavaScript 为什么不推荐使用 eval？](https://www.zhihu.com/question/20591877)</br>
-
-#### 14.什么是window对象? 什么是document对象?
-    Window 对象表示浏览器中打开的窗口。
-    Window 对象是全局对象, 在全局作用域中声明的任何一个变量,  函数都会成为window对象的属性和方法。
-    每个载入浏览器的 HTML 文档都会成为 Document 对象。
-    Document 对象是 HTML 文档的根节点。
-    Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。
-    Document 对象是 Window 对象的一部分，可通过 window.document 属性对其进行访问。
-
 #### 15.null，undefined 的区别？
     ECMAScript 规范认为，既然 null 和  undefined 的行为很相似，并且都表示 一个无效的值，
     那么它们所表示的内容也具有相似性，即有undefined == null.
@@ -222,80 +118,11 @@
     （3）对象没有赋值的属性，该属性的值为undefined。
     （4）函数没有返回值时，默认返回undefined。
 
-#### 16.写一个通用的事件侦听器函数。
-    var eventUtil = {
-    //add dom event
-    // 视能力分别使用dom0||dom2||IE方式 来绑定事件
-    // 参数： 操作的元素,事件名称 ,事件处理程序
-    addEvent: function(element,type,handler){
-        if (element.addEventListener) {
-            element.addEventListener(type,handler,false);
-        } else if (element.attachEvent) {
-            element.attachEvent('on'+type,handler);
-        } else {
-            element['on'+type] = handler;
-        }
-    },
-    //remove dom event
-    removeEvent: function(element,type,handler) {
-        if (element.addEventListener) {
-            element.removeEventListener(type,handler,false);
-        } else if (element.attachEvent) {
-            element.detachEvent('on'+type,handler);
-        } else {
-            element['on'+type] = null;
-        }
-    },
-    //阻止事件 (主要是事件冒泡，因为IE不支持事件捕获)
-    stopPropogation: function(e){
-        if (e.stopPropogation) {
-            e.stopPropogation();
-        } else {
-            e.cancelBubble = true;
-        }
-    },
-    //取消事件的默认行为
-    preventDefault: function(e){
-        if (e.preventDefault) {
-            e.preventDefault();
-        } else {
-            e.returnValue = false;
-        }
-    },
-    // 获取事件目标
-    getTarget: function(e){
-        return e.target || e.srcElement;
-    },
-    // 获取event对象的引用，取到事件的所有信息，确保随时能使用event；
-    getEvent: function(e){
-        var ev = e || window.e;
-        if (!e) {
-            var c = this.getEvent.caller;
-            while(c){
-                e = c.arguments[0];
-                if (ev && Event == ev.constructor) {
-                    break;
-                }
-                c = c.caller;
-            }
-        }
-        return ev;
-    }
-};
 #### 17.`["1", "2", "3"].map(parseInt)` 答案是多少？
     [1, NaN, NaN]  
 [详细解析](http://blog.csdn.net/justjavac/article/details/19473199)  </br>
-#### 18.事件是？IE与火狐的事件机制有什么区别？ 如何阻止冒泡？
-    事件是可以被 JavaScript 侦测到的行为。
-    网页中的每个元素都可以产生某些可以触发 JavaScript 函数的事件。
-    比方说，我们可以在用户点击某按钮时产生一个 onClick 事件来触发某个函数。事件在 HTML 页面中定义。
-    事件举例：
-    鼠标点击, 页面或图像载入, 鼠标悬浮于页面的某个热点之上, 在表单中选取输入框, 确认表单, 键盘按键.
-    IE的事件流叫做事件冒泡（event bubbling），即事件开始时由最具体的元素（文档中嵌套层次最深的那个节点）接收，
-    然后逐级向上传播到较为不具体的节点（文档）。也就是子级元素先触发，父级元素后触发。
-     Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件.
-     在W3c中，使用event.stopPropagation()方法。 在IE下设置event.cancelBubble = true；
-[JavaScript 事件](http://www.w3school.com.cn/js/js_events.asp)</br>
+
+
 #### 19.什么是闭包（closure），为什么要用它？
     闭包是指有权访问另一个函数作用域中变量的函数，
     创建闭包的最常见的方式就是在一个函数内创建另一个函数，
@@ -456,6 +283,7 @@
 [Javascript异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)</br>
 []()
 #### 31. 如何解决跨域问题?
+[前端常见跨域解决方案（全）](https://segmentfault.com/a/1190000011145364)
 #### 32. 页面编码和被请求的资源编码如果不一致如何处理？
 #### 33. 服务器代理转发时，该如何处理cookie？
 #### 34. 模块化开发怎么做？
@@ -465,38 +293,7 @@
 #### 38. 谈一谈你对ECMAScript6的了解？
 #### 39. ECMAScript6 怎么写class么，为什么会出现class这种东西?
 #### 40. 异步加载JS的方式有哪些？
-#### 41. document.write和 innerHTML的区别
-    两者都可向页面输出内容.
-    ducument.write会将内容直接写入页面，即重绘整个页面.
-    innerHTML只将当前元素的内容替换为新的内容,可以重绘页面的一部分。
-    innerHTML很多情况下都优于document.write，其原因在于其允许更精确的控制要刷新页面的那一个部分。
-    [全面理解document.write()](https://segmentfault.com/a/1190000007958530)
-  
-#### 42. DOM操作——怎样添加、移除、移动、复制、创建和查找节点?
-    //查找
-    document.getElementById ：根据ID查找元素，大小写敏感，如果有多个结果，只返回第一个；
-    document.getElementsByClassName ：根据类名查找元素，多个类名用空格分隔，返回一个 HTMLCollection 。注意兼容性为IE9+（含）。
-    document.getElementsByTagName ：根据标签查找元素， * 表示查询所有标签，返回一个 HTMLCollection 。
-    document.getElementsByName ：根据元素的name属性查找，返回一个 NodeList 。
-    document.querySelector ：返回单个Node，IE8+(含），如果匹配到多个结果，只返回第一个。
-    document.querySelectorAll ：返回一个 NodeList ，IE8+(含）。
-    document.forms ：获取当前页面所有form，返回一个 HTMLCollection ；
-    //创建
-    createElement
-    createTextNode
-    cloneNode
-    createDocumentFragment
-    //修改
-    appendChild
-    insertBefore
-    removeChild
-    replaceChild
-    
-    //扩展
-[Javascript操作DOM常用API总结]( http://luopq.com/2015/11/30/javascript-dom/)</br>
-[JavaScript常见原生DOM操作API总结]( https://www.cnblogs.com/liuxianan/p/javascript-dom-api.html)</br>
-[常见的原生javascript DOM操作]( https://segmentfault.com/a/1190000004076145)</br>
-[为什么说DOM操作很慢](https://segmentfault.com/a/1190000004114594)</br>
+
 #### 43. call() 和 apply() 的区别？
     相同点:两个方法产生的作用是完全一样的
     不同点:方法传递的参数不同
@@ -539,18 +336,6 @@
 #### 45. JS 怎么实现一个类。怎么实例化这个类
 #### 46. JavaScript中的作用域与变量声明提升？
 #### 47. 如何编写高性能的Javascript？
-
-#### 64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
-#### 65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
-#### 66. 移动端最小触控区域是多大？
-#### 67. jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?
-#### 68.把 `<script>` 标签 放在页面的最底部的`</body>`之前和`</body>`之后有什么区别？浏览器会如何解析它们？
-    这种写法是不符合标准HTML5语法规则的, 但是浏览器对HTML容错机制。 错误嵌套的标签、以及位置放置错误的标签都会在paser HTML  过程中尝试修复。修复后得到合法的HTML后在由布局引擎建立相应的DOM对象。在`<script>`标签放置于`</body>`标签之后时，源码被浏览器【泛指PC上常见的】修复为正常形式，即`<script></script></body>`。
-[知乎问题讨论](https://www.zhihu.com/question/20027966)</br>
-
-#### 69. 移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）
-#### 70. 知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout...)么? 能讲出他们各自的优点和缺点么?
-#### 71. Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？
 #### 72. 解释JavaScript中的作用域与变量声明提升？
 #### 73. 那些操作会造成内存泄漏？
     意外的全局变量引起的内存泄漏
@@ -564,9 +349,12 @@
 [了解 JavaScript 应用程序中的内存泄漏](https://www.ibm.com/developerworks/cn/web/wa-jsmemory/index.html)</br>
 [关于js闭包是否真的会造成内存泄漏？](https://www.zhihu.com/question/31078912)</br>
 [常见的 JavaScript 内存泄露](https://github.com/zhansingsong/js-leakage-patterns)</br>
-#### 74. Node.js的适用场景？
-#### 75. (如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?
-#### 76. 解释一下 Backbone 的 MVC 实现方式？
+
+
+#### 68.把 `<script>` 标签 放在页面的最底部的`</body>`之前和`</body>`之后有什么区别？浏览器会如何解析它们？
+    这种写法是不符合标准HTML5语法规则的, 但是浏览器对HTML容错机制。 错误嵌套的标签、以及位置放置错误的标签都会在paser HTML  过程中尝试修复。修复后得到合法的HTML后在由布局引擎建立相应的DOM对象。在`<script>`标签放置于`</body>`标签之后时，源码被浏览器【泛指PC上常见的】修复为正常形式，即`<script></script></body>`。
+[知乎问题讨论](https://www.zhihu.com/question/20027966)</br>
+
 #### 77. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
     路由是根据不同的 url 地址展示不同的内容或页面.
     前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。
@@ -606,68 +394,7 @@
 [Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn)</br>
 [chrome调试](https://segmentfault.com/a/1190000002439648)    </br>
 
-#### 79. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
-    单元测试(Unit Test): mocha, jasmine, jest. 
-    比较细粒度的去测试我们业务代码中写的function, 测试function里提供的method是否可靠.
-    e2e测试(端对端测试):利用一些工具库提供的API使用代码来模拟终端用户在UI界面上的操作,比如输入, 点击等等。目前常用的工具有: selenium, puppeteer, phantom, protractor(angular), Nightwatch(Vue)等等.
-[作为一个前端开发到底要不要写测试](https://segmentfault.com/a/1190000015724775)</br>
-[如何进行前端自动化测试？](https://www.zhihu.com/question/29922082)</br>
-[TDD 与 BDD 仅仅是语言描述上的区别么？](https://www.zhihu.com/question/20161970)</br>
-[[从入门到不放弃]多浏览器的自动化测试(1)-本地测试](https://zhuanlan.zhihu.com/p/27473256)</br>
-#### 80. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
-#### 81. 简述一下 Handlebars 的基本用法？
-#### 82. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
-#### 83. 检测浏览器版本版本有哪些方式？
- [JS 获得浏览器类型和版本](https://segmentfault.com/a/1190000007640795)</br>
-#### 84. What is a Polyfill?
-#### 85. 做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
-#### 86. 我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡。会执行几次事件，会先执行冒泡还是捕获？
-[一个DOM元素绑定多个事件时，先执行冒泡还是捕获](https://blog.csdn.net/u013217071/article/details/77613706)</br>
-#### 87. 使用JS实现获取文件扩展名？
-    function getFileExtension(filename) {
-        return filename.slice(filename.lastIndexOf('.')+1);
-    }
-[如何更有效的获取文件扩展名](https://segmentfault.com/a/1190000004993946)</br>
-#### 88. Webpack热更新实现原理?
-#### 89. 函数节流和函数防抖？
-    debounce 强制函数在某段时间内只执行一次，throttle 强制函数以固定的速率执行。
-    函数节流（throttle）与 函数防抖（debounce）都是为了限制函数的执行频次, 以优化函数触发频率过高导致的响应速度跟不上触发频率, 
-    出现延迟, 假死或卡顿的现象。
-    区别：节流函数不管事件触发有多频繁, 都会保证在规定时间内一定会执行一次真正的事件处理函数。
-    对于函数防抖，有以下几种应用场景：
-    给按钮加函数防抖防止表单多次提交。 
-    对于输入框连续输入进行AJAX验证时, 用函数防抖能有效减少请求次数。
-    判断scroll是否滑到底部, 滚动事件+函数防抖
-    总的来说，适合多次事件一次响应的情况
-    对于函数节流, 有如下几个场景：
-    游戏中的刷新率
-    DOM元素拖拽
-    Canvas画笔功能
-    总的来说，适合大量事件按时间做平均分配触发
-[函数防抖与函数节流](https://zhuanlan.zhihu.com/p/38313717)</br>
-[Debounce 和 Throttle 的原理及实现](https://segmentfault.com/a/1190000015619151)</br>
-[浅谈 Underscore.js 中 _.throttle 和 _.debounce 的差异](https://segmentfault.com/a/1190000007440036)</br>
 
-
-## part two 库,框架及其他
-#### 49. JQuery的源码看过吗？能不能简单概况一下它的实现原理？
-    
-[jQuery诞生记-原理与机制](https://www.zhangxinxu.com/wordpress/2013/07/jquery-%E5%8E%9F%E7%90%86-%E6%9C%BA%E5%88%B6/)    </br>
-[jQuery 源码系列（一）总体架构](https://segmentfault.com/a/1190000008365621)</br>
-#### 50. jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？
-#### 51. jquery中如何将数组转化为json字符串，然后再转化回来？
-#### 52. jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？
-#### 53. jquery.extend 与 jquery.fn.extend的区别？
-#### 54. jQuery 的队列是如何实现的？队列可以用在哪些地方？
-#### 55. 谈一下Jquery中的bind(),live(),delegate(),on()的区别？
-#### 56. JQuery一个对象可以同时绑定多个事件，这是如何实现的？
-#### 57. 是否知道自定义事件。jQuery里的fire函数是什么意思，什么时候用？
-#### 58. jQuery 是通过哪个方法和 Sizzle 选择器结合的？（jQuery.fn.find()进入Sizzle）
-#### 59. 针对 jQuery性能的优化方法？
-#### 60. Jquery与jQuery UI 有啥区别？
-#### 61. jQuery和Zepto的区别？各自的使用场景？
-#### 62. Zepto的点透问题如何解决？
-#### 63. jQueryUI如何自定义组件?
 
 
 

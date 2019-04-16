@@ -333,6 +333,57 @@
 [JavaScript Array 对象](http://www.runoob.com/jsref/jsref-obj-array.html)</br>
 []()
 []()
+#### 44. String有哪些原生方法，列举一下？
+    String.fromCharCode(num1, ..., numN)
+    String.prototype.charAt(index)
+    String.prototype.charCodeAt(index)
+    String.prototype.concat(string2, string3[, ..., stringN])
+    String.prototype.includes(searchString[, position])
+    String.prototype.indexOf(searchValue[, fromIndex])
+    String.prototype.lastIndexOf(searchValue[, fromIndex])
+    String.prototype.match(regexp)
+    String.prototype.replace(regexp|substr, newSubStr|function)
+    String.prototype.search(regexp)
+    String.prototype.split([separator[, limit])
+    String.prototype.slice(beginSlice[, endSlice])
+    String.prototype.substring(indexStart[, indexEnd])
+    String.prototype.substr(start[, length])
+    String.prototype.toLowerCase()
+    String.prototype.toUpperCase()
+    String.prototype.trim()
+    String.prototype.toString()  
+    String.prototype.valueOf()
+[String]https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
+#### 44. Object有哪些原生方法，列举一下？
+    Object
+    Object构造函数的方法
+    Object.assign(target, ...sources)
+    Object.create(proto, [propertiesObject])
+    Object.defineProperty(obj, prop, descriptor)
+    Object.defineProperties(obj, props)
+    Object.entries()
+    Object.freeze()
+    Object.getOwnPropertyDescriptor(obj, prop)
+    Object.getOwnPropertyNames(obj)
+    Object.getOwnPropertySymbols()
+    Object.getPrototypeOf(object)
+    Object.is()
+    Object.isExtensible()
+    Object.isFrozen()
+    Object.isSealed()
+    Object.keys(obj)
+    Object.preventExtensions()
+    Object.seal()
+    Object.setPrototypeOf(obj, prototype)
+    Object.values()
+    Object 实例和Object 原型对象
+    Object​.prototype​.has​OwnProperty(prop)
+    Object​.prototype​.isPrototypeOf(object)
+    Object​.prototype​.property​IsEnumerable(prop)
+    Object​.prototype​.toString() `"[object type]"`
+    Object​.prototype​.valueOf()
+[Object
+](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
 #### 45. JS 怎么实现一个类。怎么实例化这个类
 #### 46. JavaScript中的作用域与变量声明提升？
 #### 47. 如何编写高性能的Javascript？

@@ -384,6 +384,43 @@
     Object​.prototype​.valueOf()
 [Object
 ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
+#### 44. Date有哪些原生方法，列举一下？
+    Date.now()
+    Date.parse()
+    Date 实例
+    Getter
+    Date.prototype.getFullYear()
+    Date.prototype.getDate()
+    Date.prototype.getMonth()
+    Date.prototype.getHours()
+    Date.prototype.getMinutes()
+    Date.prototype.getSeconds()
+    Date.prototype.getMilliseconds()
+    Date.prototype.getTime()
+    Date.prototype.getDay()
+    Setter
+    Date.prototype.setFullYear()
+    Date.prototype.setDate()
+    Date.prototype.setMonth()
+    Date.prototype.setHours()
+    Date.prototype.setMinutes()
+    Date.prototype.setSeconds()
+    Date.prototype.setMilliseconds()
+    Date.prototype.setTime()
+[Date](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)
+#### 44. Number有哪些原生方法，列举一下？
+    Number.isNaN()
+    Number.isFinite()
+    Number.isInteger()
+    Number.parseFloat()
+    Number.parseInt()
+    Number.prototype.toExponential([fractionDigits])
+    Number.prototype.toFixed([digits])
+    Number.prototype.toLocaleString()
+    Number.prototype.toPrecision([precision])
+    Number.prototype.toString([radix])
+    Number.prototype.valueOf()
+[Number](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)    
 #### 45. JS 怎么实现一个类。怎么实例化这个类
 #### 46. JavaScript中的作用域与变量声明提升？
 #### 47. 如何编写高性能的Javascript？

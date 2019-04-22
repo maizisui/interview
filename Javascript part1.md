@@ -56,7 +56,7 @@
      9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。  
 [JavaScript编码规范](https://github.com/fex-team/styleguide/blob/master/javascript.md)</br>
 [5个JavaScript编码规范-包括AirBnB, GitHub 和 Google](https://www.css88.com/archives/8405)
-#### 5. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
+#### 4. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
     栈：原始数据类型（Undefined，Null，Boolean，Number、String）
     堆：引用数据类型（对象、数组和函数）  
     特点：
@@ -69,19 +69,29 @@
     取得地址后从堆中获得实体。
 [JavaScript的数据类型及其检测](https://segmentfault.com/a/1190000016733918)
 
-#### 6. 如何将字符串转化为数字，例如'12.3b'?
+#### 5. 如何将字符串转化为数字，例如'12.3b'?
     parseInt(), parseFloat(), Number()(转换的是整个值，而不是部分值)
     扩展：转换函数、强制类型转换、利用JS变量弱类型特点进行转换；
 [JavaScript 字符串与数字的相互转换](https://www.jianshu.com/p/7962deab3cea)
 
-#### 11.Javascript作用链域
+#### 6.Javascript作用链域
     当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，
     就会从父级(词法层面上的父级)执行上下文的变量对象中查找, 一直找到全局上下文的变量对象, 也就是全局对象。 这样由多个执行上下文的变量对象构成的链表就叫做作用域链。
 [JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/6)</br>
 [深入了解 JavaScript，从作用域链开始（1）](https://juejin.im/entry/57f5d492bf22ec006475238f)</br>
 [理解JavaScript的作用域链](https://www.cnblogs.com/wilber2013/p/4909459.html)</br>
-[]()
-#### 12.谈谈This对象的理解
+#### 7.谈谈This对象的理解
+    this是Javascript语言的一个关键字。  
+    它代表函数运行时，自动生成的一个内部对象，而且是所有函数运行时的一个隐藏参数，指向函数的运行环境。  
+    this的使用可以分成以下几个场合: 
+    **（1）全局环境**   
+    在全局环境使用this，它指的就是顶层对象window。  
+    **（2）构造函数**     
+    构造函数中的this，指的是实例对象。   
+    **（3）对象的方法**  
+    如果对象的方法里面包含this，this的指向就是方法运行时所在的对象。该方法赋值给另一个对象，就会改变this的指向。
+    如果this所在的方法不在对象的第一层，这时this只是指向当前一层的对象，而不会继承更上面的层。
+
 [JavaScript 的 this 原理](http://www.ruanyifeng.com/blog/2018/06/javascript-this.html)</br>
 [Javascript 的 this 用法](http://www.ruanyifeng.com/blog/2010/04/using_this_keyword_in_javascript.html)</br>
 [彻底理解js中this的指向](https://www.cnblogs.com/pssp/p/5216085.html)</br>
@@ -91,7 +101,8 @@
 [你不懂JS：this与对象原型 第二章：this豁然开朗！](https://www.jianshu.com/p/fcbc21a2c507)</br>
 [深入浅出 JavaScript 中的 this](https://www.ibm.com/developerworks/cn/web/1207_wangqf_jsthis/index.html)</br>
 [如何理解 JavaScript 中的 this 关键字？](https://www.zhihu.com/question/19636194)</br>
-#### 13.eval是做什么的？
+[this 关键字](https://wangdoc.com/javascript/oop/this.html)
+#### 8.eval是做什么的？
     eval() 函数会将传入的字符串当做 JavaScript 代码进行执行。
     但是应该避免使用eval，不安全，非常耗性能（2次，一次解析成js语句，一次执行）。
     由JSON字符串转换为JSON对象的时候可以用eval，var obj =eval('('+ str +')');
@@ -100,7 +111,7 @@
     如果你间接的使用 eval()，比如通过一个引用来调用它，而不是直接的调用 eval 。 
     从 ECMAScript 5 起, 它工作在全局作用域下，而不是局部作用域中。
    [JavaScript 为什么不推荐使用 eval？](https://www.zhihu.com/question/20591877)</br>
-#### 15.null，undefined 的区别？
+#### 9.null，undefined 的区别？
     ECMAScript 规范认为，既然 null 和  undefined 的行为很相似，并且都表示 一个无效的值，
     那么它们所表示的内容也具有相似性，即有undefined == null.
     typeof null        // "object" (因为一些以前的原因而不是'null')
@@ -118,12 +129,11 @@
     （3）对象没有赋值的属性，该属性的值为undefined。
     （4）函数没有返回值时，默认返回undefined。
 
-#### 17.`["1", "2", "3"].map(parseInt)` 答案是多少？
+#### 10.`["1", "2", "3"].map(parseInt)` 答案是多少？
     [1, NaN, NaN]  
 [详细解析](http://blog.csdn.net/justjavac/article/details/19473199)  </br>
 
-
-#### 19.什么是闭包（closure），为什么要用它？
+#### 11.什么是闭包（closure），为什么要用它？
     闭包是指有权访问另一个函数作用域中变量的函数，
     创建闭包的最常见的方式就是在一个函数内创建另一个函数，
     通过另一个函数访问这个函数的局部变量,利用闭包可以突破作用链域，将函数内部的变量和方法传递到外部。  

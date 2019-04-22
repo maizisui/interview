@@ -304,7 +304,7 @@
     借用别的对象的方法
     调用函数
 [apply 和 call 的区别]( https://github.com/lin-xin/blog/issues/7)</br>
-#### 44. 数组和对象有哪些原生方法，列举一下？
+#### 44. 数组有哪些原生方法，列举一下？
     数组：
     Array.from()  
     Array.isArray()  
@@ -317,7 +317,7 @@
     Array.prototype.sort()
     Array.prototype.splice()
     Array.prototype.unshift()
-    访问方法[], 绝对不会改变调用它们的对象的值, 只会返回一个新的数组。
+    访问方法[Accessor methods], 绝对不会改变调用它们的对象的值, 只会返回一个新的数组。
     Array.prototype.concat()
     Array.prototype.join()
     Array.prototype.slice()
@@ -325,14 +325,19 @@
     Array.prototype.toLocaleString()
     Array.prototype.indexOf()
     Array.prototype.lastIndexOf()
-    迭代方法[]
-    对象：
+    迭代方法[Iteration methods], 回调函数作为参数
+    Array.prototype.forEach()
+    Array.prototype.every()
+    Array.prototype.some()
+    Array.prototype.filter()
+    Array.prototype.map()
+    Array.prototype.reduce()
+    Array.prototype.reduceRight()
 
 [Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)   </br>
 [js 数组详细操作方法及解析合集](https://juejin.im/post/5b0903b26fb9a07a9d70c7e0)</br>
 [JavaScript Array 对象](http://www.runoob.com/jsref/jsref-obj-array.html)</br>
-[]()
-[]()
+
 #### 44. String有哪些原生方法，列举一下？
     String.fromCharCode(num1, ..., numN)
     String.prototype.charAt(index)
@@ -353,7 +358,7 @@
     String.prototype.trim()
     String.prototype.toString()  
     String.prototype.valueOf()
-[String]https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String
+[String](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)
 #### 44. Object有哪些原生方法，列举一下？
     Object
     Object构造函数的方法

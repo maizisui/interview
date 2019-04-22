@@ -31,3 +31,27 @@
 
 #### 88. Webpack热更新实现原理?
 
+
+
+#### 88. http状态码?
+    1** 信息响应
+    2** 成功响应
+    3** 重定向
+    4** 客户端响应
+    5** 服务端响应
+    200 OK 请求成功，正常响应
+    301 Moved Permanently 被请求的资源已永久移动到新位置
+    302 Found 被请求的资源临时移动到新位置
+    304 Not Modified 请求资源从上次请求以来未被修改
+    400 Bad Request 请求包含语法错误
+    401 Unauthorized 访问被拒绝，客户试图未经授权访问受密码保护的页面
+    403 Forbidden  服务器已经理解请求，但是拒绝执行它
+    404 Not Found 请求的资源在服务器上不存在
+    500 Internal Server Error 服务器遇到了不知道如何处理的情况
+    502 Bad Gateway
+    504 Gateway Timeout
+[HTTP状态码](http://www.httpstatus.cn/)
+[关于Http协议，你必须要知道的](https://segmentfault.com/a/1190000016751071)
+[HTTP 协议入门](http://www.ruanyifeng.com/blog/2016/08/http.html)
+[Http协议面试题小结](https://blog.csdn.net/weixin_38051694/article/details/77777010)
+[HTTP 响应代码](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status)

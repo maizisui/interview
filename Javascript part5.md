@@ -45,15 +45,6 @@
     console.log(arr);
 ```
 
-
-
-
-
-
-
-
-
-
 #### 16.写一个通用的事件侦听器函数。
     var eventUtil = {
     //add dom event
@@ -143,3 +134,14 @@
 [函数防抖与函数节流](https://zhuanlan.zhihu.com/p/38313717)</br>
 [Debounce 和 Throttle 的原理及实现](https://segmentfault.com/a/1190000015619151)</br>
 [浅谈 Underscore.js 中 _.throttle 和 _.debounce 的差异](https://segmentfault.com/a/1190000007440036)</br>
+
+#### 89. 创建“原生”（native）方法
+    给字符串对象定义一个repeatify功能。当传入一个整数n时，它会返回重复n次字符串的结果。例如：console.log('hello'.repeatify(3));应打印 hellohellohello。
+    String.prototype.repeatify = function(n){
+        var str = '';
+        for (var i = 0; i < n; i++) {
+            str + = this;
+        }
+        return str;
+    }
+

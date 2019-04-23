@@ -1,5 +1,63 @@
 ## Part 4 库,框架及其他
+#### 1. JQuery的源码看过吗？能不能简单概况一下它的实现原理？
 
+#### 2. jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？
+
+#### 3. jquery中如何将数组转化为json字符串，然后再转化回来？
+
+#### 4. jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？
+
+#### 5. jquery.extend 与 jquery.fn.extend的区别？
+     - jquery.extend 为jquery类添加类方法，可以理解为添加静态方法
+     - jquery.fn.extend:
+        源码中jquery.fn = jquery.prototype，所以对jquery.fn的扩展，就是为jquery类添加成员函数
+     使用：
+     jquery.extend扩展，需要通过jquery类来调用，而jquery.fn.extend扩展，所有jquery实例都可以直接调用。
+#### 6.jQuery 的队列是如何实现的？队列可以用在哪些地方？
+
+#### 7. 谈一下Jquery中的bind(),live(),delegate(),on()的区别？
+
+#### 8. JQuery一个对象可以同时绑定多个事件，这是如何实现的？
+
+#### 9.是否知道自定义事件。jQuery里的fire函数是什么意思，什么时候用？
+
+#### 10.jQuery 是通过哪个方法和 Sizzle 选择器结合的？（jQuery.fn.find()进入Sizzle）
+
+#### 11.针对 jQuery性能的优化方法？
+
+#### 12.Jquery与jQuery UI 有啥区别？
+     *jQuery是一个js库，主要提供的功能是选择器，属性修改和事件绑定等等。
+     *jQuery UI则是在jQuery的基础上，利用jQuery的扩展性，设计的插件。
+      提供了一些常用的界面元素，诸如对话框、拖动行为、改变大小行为等等
+ 
+
+#### 13.jquery 中如何将数组转化为json字符串，然后再转化回来？
+
+jQuery中没有提供这个功能，所以你需要先编写两个jQuery的扩展：
+
+    $.fn.stringifyArray = function(array) {
+        return JSON.stringify(array)
+    }
+
+    $.fn.parseArray = function(array) {
+        return JSON.parse(array)
+    }
+
+    然后调用：
+    $("").stringifyArray(array)
+jQuery和Zepto的区别？各自的使用场景？
+
+针对 jQuery 的优化方法？
+
+ *基于Class的选择性的性能相对于Id选择器开销很大，因为需遍历所有DOM元素。
+
+ *频繁操作的DOM，先缓存起来再操作。用Jquery的链式调用更好。
+  比如：var str=$("a").attr("href");
+
+ *for (var i = size; i < arr.length; i++) {}
+  for 循环每一次循环都查找了数组 (arr) 的.length 属性，在开始循环的时候设置一个变量来存储这个数字，可以让循环跑得更快：
+  for (var i = size, length = arr.length; i < length; i++) {}
+Zepto的点透问题如何解决？
 
 #### 67. jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?
 

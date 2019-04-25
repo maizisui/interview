@@ -106,6 +106,11 @@
     }
 };
 #### 64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
+    
+[pushState + ajax 实现浏览器无刷新前进后退](http://blog.chenxu.me/post/detail?id=ed4f0732-897f-48e4-9d4f-821e82f17fad)
+[Manipulating the browser history
+](https://developer.mozilla.org/zh-CN/docs/Web/API/History_API)
+
 #### 65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
 #### 66. 移动端最小触控区域是多大？
 

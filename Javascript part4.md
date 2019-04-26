@@ -79,12 +79,21 @@ Zepto的点透问题如何解决？
 [如何进行前端自动化测试？](https://www.zhihu.com/question/29922082)</br>
 [TDD 与 BDD 仅仅是语言描述上的区别么？](https://www.zhihu.com/question/20161970)</br>
 [[从入门到不放弃]多浏览器的自动化测试(1)-本地测试](https://zhuanlan.zhihu.com/p/27473256)</br>
+
 #### 80. 前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?
+
 #### 81. 简述一下 Handlebars 的基本用法？
+
 #### 82. 简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？
+
 #### 83. 检测浏览器版本版本有哪些方式？
  [JS 获得浏览器类型和版本](https://segmentfault.com/a/1190000007640795)</br>
+
 #### 84. What is a Polyfill?
+[HTML5 Cross Browser Polyfills](https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-browser-Polyfills) <br>
+[shim 和 polyfill）](http://www.ituring.com.cn/article/details/766#)<br>
+[JavaScript术语：shim 和 polyfill](https://www.html.cn/archives/8339)<br>
+
 #### 85. 做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？
 
 

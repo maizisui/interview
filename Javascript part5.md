@@ -1,6 +1,6 @@
 ## Part 5 算法, 编程实战
 
-#### 7.  如何将浮点数点左边的数每三位添加一个逗号， 如12000000.11 转化为『12,000,000.11』?
+#### 1.  如何将浮点数点左边的数每三位添加一个逗号， 如12000000.11 转化为『12,000,000.11』?
      function commafy(num){
         return num && num
             .toString()
@@ -9,7 +9,7 @@
             });
       }
 
-#### 8. 如何实现数组的随机排序？
+#### 2. 如何实现数组的随机排序？
 ```
 方法一：
     var arr = [1,2,3,4,5,6,7,8,9,10];
@@ -45,7 +45,7 @@
     console.log(arr);
 ```
 
-#### 16.写一个通用的事件侦听器函数。
+#### 3.写一个通用的事件侦听器函数。
     var eventUtil = {
     //add dom event
     // 视能力分别使用dom0||dom2||IE方式 来绑定事件
@@ -105,23 +105,44 @@
         return ev;
     }
 };
-#### 64. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
-    
-[pushState + ajax 实现浏览器无刷新前进后退](http://blog.chenxu.me/post/detail?id=ed4f0732-897f-48e4-9d4f-821e82f17fad)
+
+#### 4. 需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？
+    pushState + ajax
+    HTML5里引用了新的API，就是history.pushState和history.replaceState，就是通过这个接口做到无刷新改变页面URL的, 且正确响应浏览器前进、后退;
+    1. 当我们完成一次ajax调用后，就应当使用history.pushState将新的记录执行。
+    history.pushState(stateObj, title, url); //状态对象, 标题, URL
+    Html5 增加了 window.onpopstate  事件来响应浏览器的这些操作。  当点击浏览器上的前进、后退按钮或者使用 javascript 代码 history.go、history.back 都会触发onpopstate事件， 并返回 pushState时传入的 state 对象以供调用。 我们只要在该事件处理函数中把页面内容复原就OK了。
+    window.onpopstate = function (evt) {
+        var state = evt.state;
+        //chrome 和 safari 会在第一次加载页面的时候触发该事件，因此要做一些逻辑上的处理以免出现怪异的情况 
+        if (state) {     
+        $("#container").html(state.content);
+        }
+    }
+    使用 replaceState把初始载入的页面放入历史记录中.
+    if (history.replaceState) {
+        history.replaceState({ url: location.href, title:"",content:data }, "", location.href);
+    }
+[pushState + ajax 实现浏览器无刷新前进后退](http://blog.chenxu.me/post/detail?id=ed4f0732-897f-48e4-9d4f-821e82f17fad) <br>
 [Manipulating the browser history
-](https://developer.mozilla.org/zh-CN/docs/Web/API/History_API)
+](https://developer.mozilla.org/zh-CN/docs/Web/API/History_API) <br>
+[拿offer解答](https://www.naoffer.com/exam/319/935)
 
-#### 65. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
-#### 66. 移动端最小触控区域是多大？
+#### 5. 如何判断当前脚本运行在浏览器还是node环境中？（阿里）
+    通过判断Global对象是否为window，如果不为window，当前脚本没有运行在浏览器中
 
-#### 87. 使用JS实现获取文件扩展名？
+#### 6. 移动端最小触控区域是多大？
+    iOS 44pt x 44pt (point) 16mm*16mm
+    pt是一种固定长度的度量单位, 常见于软件设计、排版印刷行业, 1点=0.376毫米; 
+[知乎讨论](https://www.zhihu.com/question/19642393)
+
+#### 7. 使用JS实现获取文件扩展名？
     function getFileExtension(filename) {
         return filename.slice(filename.lastIndexOf('.')+1);
     }
 [如何更有效的获取文件扩展名](https://segmentfault.com/a/1190000004993946)</br>
 
-
-#### 89. 函数节流和函数防抖？
+#### 8. 函数节流和函数防抖？
     debounce 强制函数在某段时间内只执行一次，throttle 强制函数以固定的速率执行。
     函数节流（throttle）与 函数防抖（debounce）都是为了限制函数的执行频次, 以优化函数触发频率过高导致的响应速度跟不上触发频率, 
     出现延迟, 假死或卡顿的现象。
@@ -140,7 +161,7 @@
 [Debounce 和 Throttle 的原理及实现](https://segmentfault.com/a/1190000015619151)</br>
 [浅谈 Underscore.js 中 _.throttle 和 _.debounce 的差异](https://segmentfault.com/a/1190000007440036)</br>
 
-#### 89. 创建“原生”（native）方法
+#### 9. 创建“原生”（native）方法
     给字符串对象定义一个repeatify功能。当传入一个整数n时，它会返回重复n次字符串的结果。例如：console.log('hello'.repeatify(3));应打印 hellohellohello。
     String.prototype.repeatify = function(n){
         var str = '';

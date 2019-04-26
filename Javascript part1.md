@@ -8,7 +8,17 @@
     Number
     String
     Symbol (ECMAScript 6 新定义)
-    和 Object
+    和 Object 
+    数据类型判断方法：   
+    那么问题来了，如何判断某变量是否为数组数据类型？    
+    方法一：判断其是否具有“数组性质”，如slice()方法。可自己给该变量定义slice方法, 故有时会失效;   
+    方法二：obj instanceof Array 在某些IE版本中不正确;     
+    方法三：方法一二皆有漏洞, 在ECMA Script5中定义了新方法Array.isArray(),    保证其兼容性，最好的方法如下：   
+        if(typeof Array.isArray==="undefined") {
+          Array.isArray = function(arg){
+              return Object.prototype.toString.call(arg)==="[object Array]"
+            }; 
+        }
 
 #### 2. 介绍js有哪些内置对象？
     Object 是 JavaScript 中所有对象的父对象  
@@ -43,7 +53,6 @@
 [JS所有内置对象属性和方法汇总](https://segmentfault.com/a/1190000011467723) </br>
 [标准内置对象的分类](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects)    
     
-
 #### 3. 说几条写JavaScript的基本规范？
      1.不要在同一行声明多个变量。  
      2.请使用 ===/!==来比较true/false或者数值  
@@ -56,6 +65,8 @@
      9.for-in循环中的变量 应该使用var关键字明确限定作用域，从而避免作用域污染。  
 [JavaScript编码规范](https://github.com/fex-team/styleguide/blob/master/javascript.md)</br>
 [5个JavaScript编码规范-包括AirBnB, GitHub 和 Google](https://www.css88.com/archives/8405)
+[前端JavaScript规范](http://www.codeceo.com/article/javascript-guide.html)
+
 #### 4. JavaScript有几种类型的值？，你能画一下他们的内存图吗？
     栈：原始数据类型（Undefined，Null，Boolean，Number、String）
     堆：引用数据类型（对象、数组和函数）  
@@ -141,6 +152,7 @@
     一个是可以读取函数内部的变量，
     另一个就是让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。
     闭包的另一个用处，是封装对象的私有属性和私有方法。
+
 #### 20.javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
     'use strict'是一种ECMAscript 5 添加的一种运行模式：即严格模式,这种模式使得 Javascript 在更严格的条件下运行。
     设立"严格模式"的目的，主要有以下几个：
@@ -173,6 +185,7 @@
     使用这些词作为变量名将会报错。
 [严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)</br>
 [Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)</br>
+
 #### 21.如何判断一个对象是否属于某个类？
     JavaScript中判断一个对象是否为一个类的实例主要有两种方法，即instanceof和constructor。   
     前者的用法是：`object instanceof constructor`；  
@@ -185,6 +198,7 @@
     alert(a.constructor == Array);  //返回true  
     alert(a.constructor == Object);  //返回false  
     </pre>
+
 #### 22.new操作符具体干了什么呢?
     new命令的作用，就是执行构造函数，返回一个实例对象。     
     使用new命令时，它后面的函数调用就不是正常的调用，而是依次执行下面的步骤。  
@@ -192,7 +206,9 @@
     -  将这个空对象的原型，指向构造函数的prototype属性；   
     -  将这个空对象赋值给函数内部的this关键字；   
     -  开始执行构造函数内部的代码。  
+
 #### 23.用原生JavaScript的实现过什么功能吗？
+
 #### 24.Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？
      `hasOwnProperty`  
     javaScript中`hasOwnProperty()`方法是返回一个布尔值，指出一个对象是否具有指定名称的属性。
@@ -200,6 +216,7 @@
     使用方法：  
     `object.hasOwnProperty(proName)`     
     如果 object 具有指定名称的属性，那么JavaScript中hasOwnProperty()方法返回 true，反之则返回 false。
+
 #### 25.JSON 的了解
     JSON 指的是 JavaScript 对象表示法（JavaScript Object Notation）。   
     JSON 是存储和交换文本信息的语法，类似 XML，JSON 比 XML 更小、更快，更易解析。  
@@ -224,6 +241,7 @@
     var last=JSON.stringify(obj);
 
 #### 26.`[].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)}) 能解释一下这段代码的意思吗？`
+
 #### 27.js延迟加载的方式有哪些？
     （1）直接将script节点放置在</body>之前，这样js脚本就会在页面显示出来之后再加载。  
     （2）使用script标签的defer和async属性，defer属性为延迟加载，是在页面渲染完成之后再进行加载的，
@@ -252,6 +270,7 @@
     这些需等到页面加载后再执行的JavaScript代码，应放在一个外部文件，然后再引进来。   
     （4）通过ajax下载js脚本，动态添加script节点。但是ajax有一个缺点，就是无法引用使用CDN方式提供的js文件，
     因为这种方式下，你即时通过xhr.open下载了js文件，而向body中注入script节点时还是需要向CDN请求js文件。   
+
 #### 28.Ajax 是什么? 如何创建一个Ajax？
     AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML, 是浏览器用来实现异步加载的一种技术方案.
     在后台与服务器进行异步数据交换，不用重载整个网页，实现局部刷新。
@@ -271,8 +290,9 @@
         }
     };
     xhr.send(data);
-    [Ajax 是什么? 如何创建一个Ajax？](https://zhuanlan.zhihu.com/p/23605192)
-    [深入浅出Ajax](https://segmentfault.com/a/1190000015611594)
+[Ajax 是什么? 如何创建一个Ajax？](https://zhuanlan.zhihu.com/p/23605192)
+[深入浅出Ajax](https://segmentfault.com/a/1190000015611594)
+
 #### 29.Ajax 解决浏览器缓存问题？
     1、在ajax发送请求前加上anyAjaxObj.setRequestHeader("If-Modified-Since","0")。
     2、在ajax发送请求前加上anyAjaxObj.setRequestHeader("Cache-Control","no-cache")。
@@ -282,6 +302,7 @@
     这样页面的所有ajax都会执行这条语句就是不需要保存缓存记录。
 [Ajax 解决浏览器缓存问题](https://www.jianshu.com/p/4f76f06383ec)</br>
 [彻底理解浏览器的缓存机制](https://juejin.im/entry/5ad86c16f265da505a77dca4)</br>
+
 #### 30.同步和异步的区别?
     网络通信中的同步机制和异步机制是描述通信模式的概念。
     同步机制是指发送方发送请求后,需要等待接收到接收方发回的响应后,才接着发送下一个请求;
@@ -291,7 +312,7 @@
 [怎样理解阻塞非阻塞与同步异步的区别？](https://www.zhihu.com/question/19732473)</br>
 [深入理解--异步和非阻塞](https://liuchi.coding.me/2017/07/28/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E5%BC%82%E6%AD%A5%E5%92%8C%E9%9D%9E%E9%98%BB%E5%A1%9E/)</br>
 [Javascript异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)</br>
-[]()
+
 #### 31. 如何解决跨域问题?
 [前端常见跨域解决方案（全）](https://segmentfault.com/a/1190000011145364)
 #### 32. 页面编码和被请求的资源编码如果不一致如何处理？
@@ -314,6 +335,7 @@
     借用别的对象的方法
     调用函数
 [apply 和 call 的区别]( https://github.com/lin-xin/blog/issues/7)</br>
+
 #### 44. 数组有哪些原生方法，列举一下？
     数组：
     Array.from()  
@@ -342,9 +364,8 @@
     Array.prototype.map()
     Array.prototype.reduce()
     Array.prototype.reduceRight()
-
-[Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)        
-[js 数组详细操作方法及解析合集](https://juejin.im/post/5b0903b26fb9a07a9d70c7e0)    
+[Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)       <br>  
+[js 数组详细操作方法及解析合集](https://juejin.im/post/5b0903b26fb9a07a9d70c7e0)  <br>  
 [JavaScript Array 对象](http://www.runoob.com/jsref/jsref-obj-array.html)</br>
 
 #### 44. String有哪些原生方法，列举一下？
@@ -368,6 +389,7 @@
     String.prototype.toString()  
     String.prototype.valueOf()
 [String](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)
+
 #### 44. Object有哪些原生方法，列举一下？
     Object
     Object构造函数的方法
@@ -398,6 +420,7 @@
     Object​.prototype​.valueOf()
 [Object
 ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
 #### 44. Date有哪些原生方法，列举一下？
     Date.now()
     Date.parse()
@@ -422,6 +445,7 @@
     Date.prototype.setMilliseconds()
     Date.prototype.setTime()
 [Date](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
 #### 44. Number有哪些原生方法，列举一下？
     Number.isNaN()
     Number.isFinite()
@@ -445,7 +469,6 @@
     没有清理的DOM元素引用
     被遗忘的定时器或者回调
     子元素存在引用引起的内存泄漏
-
 [JavaScript 内存泄漏教程](http://www.ruanyifeng.com/blog/2017/04/memory-leak.html)</br>
 [4类 JavaScript 内存泄漏及如何避免](https://jinlong.github.io/2016/05/01/4-Types-of-Memory-Leaks-in-JavaScript-and-How-to-Get-Rid-Of-Them/)</br>
 [了解 JavaScript 应用程序中的内存泄漏](https://www.ibm.com/developerworks/cn/web/wa-jsmemory/index.html)</br>
@@ -476,6 +499,7 @@
 [理解Web路由](https://zhuanlan.zhihu.com/p/24814675)</br>
 [浅谈前后端路由与前后端渲染](https://molunerfinn.com/fe-be-router-render/)</br>
 [为什么要前后端分离？有什么优缺点？](https://blog.csdn.net/bntx2jsqfehy7/article/details/80589580)</br>
+
 #### 78. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
     WebKit是一种用来让网页浏览器绘制网页的排版引擎。
     使用Chrome 开发者工具。

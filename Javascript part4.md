@@ -1,5 +1,16 @@
 ## Part 4 库,框架及其他
 #### 1. JQuery的源码看过吗？能不能简单概况一下它的实现原理？
+    没细看;     
+    jquery可以分为入口模块, 底层支持模块和功能模块三部分;    
+    入口模块: 构造jQuery对象;   
+    底层支持模块: 工具方法(Utilities), 选择器(Sizzle), 回调函数列表(Callbacks Object), 异步队列(Deferred Object), 浏览器功能测试(Support), 数据缓存(Data), 队列;    
+    功能模块: 属性操作(Attribute), 事件系统(Events), DOM遍历(Traversing), 样式操作(CSS), 异步请求(Ajax), 动画(Effects);
+    其核心是构造jQuery对象, 调用构造函数jQuery根据传入的参数不同,  创建jQuery对象也不同; 
+    
+
+
+
+
 
 #### 2. jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？
 

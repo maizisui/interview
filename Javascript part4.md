@@ -3,14 +3,16 @@
     没细看;     
     jQuery可以分为入口模块, 底层支持模块和功能模块三部分;    
     入口模块: 构造jQuery对象;   
-    底层支持模块: 工具方法(Utilities), 选择器(Sizzle), 回调函数列表(Callbacks Object), 异步队列(Deferred Object), 浏览器功能测试(Support), 数据缓存(Data), 队列;    
+    底层支持模块: 工具方法(Utilities), 选择器(Sizzle), 回调函数列表(Callbacks Object), 异步队列(Deferred Object),      
+    浏览器功能测试(Support), 数据缓存(Data), 队列;    
     功能模块: 属性操作(Attribute), 事件系统(Events), DOM遍历(Traversing), 样式操作(CSS), 异步请求(Ajax), 动画(Effects);
 ![jQuery模块分类](https://thumbnail0.baidupcs.com/thumbnail/fcb526a5ca49a1d6aeb7c6c9918c73eb?fid=3825913931-250528-945902542473770&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-zoK%2f9fJRNROWfm8VleS%2fdKxS6wI%3d&expires=8h&chkbd=0&chkv=0&dp-logid=2746396159924838046&dp-callid=0&time=1556499600&size=c1920_u1080&quality=90&vuk=3825913931&ft=image&autopolicy=1)
 
 ![jQuery源码总体结构](https://thumbnail0.baidupcs.com/thumbnail/7cc5c5fb116857c7fe0d5aa2c5cd4b53?fid=3825913931-250528-181993357041500&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-iHIvyd8v1AH%2fedjp6rsS%2bc8AL6c%3d&expires=8h&chkbd=0&chkv=0&dp-logid=2746396159924838046&dp-callid=0&time=1556499600&size=c1920_u1080&quality=90&vuk=3825913931&ft=image&autopolicy=1)
 
     其核心是构造jQuery对象, 调用构造函数jQuery根据传入的参数不同,  创建jQuery对象也不同;   
-    在立即执行函数内, 定义变量jQuery, 自调用匿名函数返回jQuery构造函数并赋值给变量jQuery, 最后再把这个jQuery变量暴露给全局作用域window, 并定义为别名$.    
+    在立即执行函数内, 定义变量jQuery, 自调用匿名函数返回jQuery构造函数并赋值给变量jQuery,       
+    最后再把这个jQuery变量暴露给全局作用域window, 并定义为别名$.    
 ![构造jQuery对象模块的总体源码结构](https://thumbnail0.baidupcs.com/thumbnail/68c4e7e9b2519bc897e80c62e3231b1b?fid=3825913931-250528-912614335947438&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-2GhDYHk1hwg7REPvdsrpottUR30%3d&expires=8h&chkbd=0&chkv=0&dp-logid=2746396159924838046&dp-callid=0&time=1556499600&size=c1920_u1080&quality=90&vuk=3825913931&ft=image&autopolicy=1)
 ![构造jQuery对象模块的总体源码结构解析](https://thumbnail0.baidupcs.com/thumbnail/ca581c58f578485223a9f759581da43a?fid=3825913931-250528-129703248934925&rt=pr&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-xz6yw3FalpNXkxQsFRxDcXtrfSY%3d&expires=8h&chkbd=0&chkv=0&dp-logid=2746759758132300828&dp-callid=0&time=1556503200&size=c1920_u1080&quality=90&vuk=3825913931&ft=image&autopolicy=1)
 

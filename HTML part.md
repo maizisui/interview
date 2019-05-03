@@ -1,6 +1,8 @@
 HTML part
 #### 1. Doctype作用？标准模式与兼容模式各有什么区别?
-    Doctype是Document Type（文档类型）的缩写，`<!DOCTYPE>`声明位于文档中的最前面，处于`<html>`标签之前。告诉浏览器以何种模式来渲染文档。`<!DOCTYPE>`声明不是HTML标签，`<!DOCTYPE>`声明没有结束标签，`<!DOCTYPE>`声明对大小写不敏感。   
+    告诉浏览器以何种模式来渲染文档。      
+    Doctype是Document Type（文档类型）的缩写，`<!DOCTYPE>`声明位于文档中的最前面，处于`<html>`标签之前。              
+    `<!DOCTYPE>`声明不是HTML标签，`<!DOCTYPE>`声明没有结束标签，`<!DOCTYPE>`声明对大小写不敏感。      
      DOCTYPE不存在或格式不正确会导致文档以兼容模式呈现。 
 
      标准模式： 以该浏览器支持的最高标准呈现页面。  
@@ -250,7 +252,7 @@ HTML part
 |书签|可收藏为书签  |不可收藏为书签|
 |缓存 |能被缓存   |不能缓存|
 |编码类型|application/x-www-form-urlencoded|application/x-www-form-urlencoded or multipart/form-data 为二进制数据使用多重编码。|
-|历史|参数保留在浏览器历史中。|	参数不会保存在浏览器历史中。|
+|浏览历史|参数保留在浏览器历史中。|	参数不会保存在浏览器历史中。|
 |对数据长度的限制|是的。当发送数据时，GET 方法向 URL 添加数据；URL 的长度是受限制的（URL 的最大长度是 2048 个字符）。|无限制。|
 |对数据类型的限制|只允许 ASCII 字符。|没有限制。也允许二进制数据。|
 |安全性    |与 POST 相比，GET 的安全性较差，因为所发送的数据是 URL 的一部分。在发送密码或其他敏感信息时绝不要使用 GET ！|POST 比 GET 更安全，因为参数不会被保存在浏览器历史或 web 服务器日志中。|

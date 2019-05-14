@@ -1,6 +1,5 @@
 ## Part 4 库,框架及其他
 #### 1. jQuery的源码看过吗？能不能简单概况一下它的实现原理？
-    没细看;     
     jQuery可以分为入口模块, 底层支持模块和功能模块三部分;    
     入口模块: 构造jQuery对象;   
     底层支持模块: 工具方法(Utilities), 选择器(Sizzle), 回调函数列表(Callbacks Object), 异步队列(Deferred Object),      
@@ -126,7 +125,9 @@
     在触发元素的事件时预先停止所有的动画，再执行相应的动画事件：$('.tab').stop().slideUp();
 
 #### 16. 你觉得jQuery或zepto源码有哪些写的好的地方
-    jquery源码封装在一个匿名函数的自执行环境中，有助于防止变量的全局污染，然后通过传入window对象参数，可以使window对象作为局部变量使用，好处是当jquery中访问window对象的时候，就不用将作用域链退回到顶层作用域了，从而可以更快的访问window对象。同样，传入undefined参数，可以缩短查找undefined时的作用域链 
+    jquery源码封装在一个匿名函数的自执行环境中，有助于防止变量的全局污染，然后通过传入window对象参数，可以使window对象作为局部变量使用，  
+    好处是当jquery中访问window对象的时候，就不用将作用域链退回到顶层作用域了，从而可以更快的访问window对象。                   
+    同样，传入undefined参数，可以缩短查找undefined时的作用域链 
         (function( window, undefined ) {
              //用一个函数域包起来，就是所谓的沙箱
              //在这里边var定义的变量，属于这个函数域内的局部变量，避免污染全局
@@ -155,7 +156,8 @@
 #### 79. 如何测试前端代码么? 知道BDD, TDD, Unit Test么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?
     单元测试(Unit Test): mocha, jasmine, jest. 
     比较细粒度的去测试我们业务代码中写的function, 测试function里提供的method是否可靠.
-    e2e测试(端对端测试):利用一些工具库提供的API使用代码来模拟终端用户在UI界面上的操作,比如输入, 点击等等。目前常用的工具有: selenium, puppeteer, phantom, protractor(angular), Nightwatch(Vue)等等.
+    e2e测试(端对端测试):利用一些工具库提供的API使用代码来模拟终端用户在UI界面上的操作,比如输入,点击等等。            
+    目前常用的工具有: selenium, puppeteer, phantom, protractor(angular), Nightwatch(Vue)等等.
 [作为一个前端开发到底要不要写测试](https://segmentfault.com/a/1190000015724775)</br>
 [如何进行前端自动化测试？](https://www.zhihu.com/question/29922082)</br>
 [TDD 与 BDD 仅仅是语言描述上的区别么？](https://www.zhihu.com/question/20161970)</br>
@@ -171,7 +173,7 @@
  [JS 获得浏览器类型和版本](https://segmentfault.com/a/1190000007640795)</br>
 
 #### 84. What is a Polyfill?
-    Shim 指的是在一个旧的环境中模拟出一个新 API , 而且仅靠旧环境中已有的手段实现,    以便所有的浏览器具有相同的行为。     
+    Shim 指的是在一个旧的环境中模拟出一个新API, 而且仅靠旧环境中已有的手段实现, 以便所有的浏览器具有相同的行为。     
     主要特征：
     该 API 存在于现代浏览器中;   
     浏览器有各自的 API 或 可通过别的 API 实现;          
@@ -179,7 +181,8 @@
     拦截 API 调用，并提供自己的实现；          
     是一个优雅降级。    
     
-    polyfill是一段代码(或者插件), 提供了那些开发者们希望浏览器原生提供支持的功能。            程序库先检查浏览器是否支持某个API，如果不支持则加载对应的 polyfill。    
+    polyfill是一段代码(或者插件), 提供了那些开发者们希望浏览器原生提供支持的功能。          
+    程序库先检查浏览器是否支持某个API，如果不支持则加载对应的 polyfill。    
     主要特征：
     是一个浏览器 API 的 Shim;      
     与浏览器有关;       

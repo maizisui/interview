@@ -87,10 +87,12 @@
 
 #### 6.Javascript作用链域
     当查找变量的时候，会先从当前上下文的变量对象中查找，如果没有找到，
-    就会从父级(词法层面上的父级)执行上下文的变量对象中查找, 一直找到全局上下文的变量对象, 也就是全局对象。 这样由多个执行上下文的变量对象构成的链表就叫做作用域链。
+    就会从父级(词法层面上的父级)执行上下文的变量对象中查找, 一直找到全局上下文的变量对象, 也就是全局对象。   
+    这样由多个执行上下文的变量对象构成的链表就叫做作用域链。
 [JavaScript深入之作用域链](https://github.com/mqyqingfeng/Blog/issues/6)</br>
 [深入了解 JavaScript，从作用域链开始（1）](https://juejin.im/entry/57f5d492bf22ec006475238f)</br>
 [理解JavaScript的作用域链](https://www.cnblogs.com/wilber2013/p/4909459.html)</br>
+
 #### 7.谈谈This对象的理解
     this是Javascript语言的一个关键字。  
     它代表函数运行时，自动生成的一个内部对象，而且是所有函数运行时的一个隐藏参数，指向函数的运行环境。  
@@ -153,7 +155,7 @@
     另一个就是让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。
     闭包的另一个用处，是封装对象的私有属性和私有方法。
 
-#### 20.javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
+#### 12.javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
     'use strict'是一种ECMAscript 5 添加的一种运行模式：即严格模式,这种模式使得 Javascript 在更严格的条件下运行。
     设立"严格模式"的目的，主要有以下几个：
     - 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
@@ -186,7 +188,7 @@
 [严格模式](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Strict_mode)</br>
 [Javascript 严格模式详解](http://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html)</br>
 
-#### 21.如何判断一个对象是否属于某个类？
+#### 13.如何判断一个对象是否属于某个类？
     JavaScript中判断一个对象是否为一个类的实例主要有两种方法，即instanceof和constructor。   
     前者的用法是：`object instanceof constructor`；  
     后者的用法是：`var o = new Object // 或者 o = {} ;  o.constructor == Object`；    
@@ -199,7 +201,7 @@
     alert(a.constructor == Object);  //返回false  
     </pre>
 
-#### 22.new操作符具体干了什么呢?
+#### 14.new操作符具体干了什么呢?
     new命令的作用，就是执行构造函数，返回一个实例对象。     
     使用new命令时，它后面的函数调用就不是正常的调用，而是依次执行下面的步骤。  
     - 创建一个空对象，作为将要返回的对象实例；   
@@ -207,9 +209,9 @@
     -  将这个空对象赋值给函数内部的this关键字；   
     -  开始执行构造函数内部的代码。  
 
-#### 23.用原生JavaScript的实现过什么功能吗？
+#### 15.用原生JavaScript的实现过什么功能吗？
 
-#### 24.Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？
+#### 16.Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？
      `hasOwnProperty`  
     javaScript中`hasOwnProperty()`方法是返回一个布尔值，指出一个对象是否具有指定名称的属性。
     此方法无法检查该对象的原型链中是否具有该属性；该属性必须是对象本身的一个成员。  
@@ -217,13 +219,13 @@
     `object.hasOwnProperty(proName)`     
     如果 object 具有指定名称的属性，那么JavaScript中hasOwnProperty()方法返回 true，反之则返回 false。
 
-#### 25.JSON 的了解
+#### 17.JSON 的了解
     JSON 指的是 JavaScript 对象表示法（JavaScript Object Notation）。   
     JSON 是存储和交换文本信息的语法，类似 XML，JSON 比 XML 更小、更快，更易解析。  
     JSON 是轻量级的文本数据交换格式。  
     JSON 独立于语言 *。  
     JSON 具有自我描述性，更易理解。  
-    * JSON 使用 JavaScript 语法来描述数据对象，但是 JSON 仍然独立于语言和平台。JSON 解析器和 JSON 库支持许多不同的编程语言。  
+    * JSON 使用JavaScript 语法来描述数据对象，但是JSON仍然独立于语言和平台。JSON解析器和JSON库支持许多不同的编程语言。  
     **优点：**  
     轻量级、易于人的阅读和编写，便于机器（JavaScript）解析，支持复合数据类型（数组、对象、字符串、数字）。  
     **缺点：**   
@@ -240,9 +242,9 @@
     var last=obj.toJSONString();
     var last=JSON.stringify(obj);
 
-#### 26.`[].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)}) 能解释一下这段代码的意思吗？`
+#### 18.`[].forEach.call($$("*"),function(a){a.style.outline="1px solid #"+(~~(Math.random()*(1<<24))).toString(16)}) 能解释一下这段代码的意思吗？`
 
-#### 27.js延迟加载的方式有哪些？
+#### 19.js延迟加载的方式有哪些？
     （1）直接将script节点放置在</body>之前，这样js脚本就会在页面显示出来之后再加载。  
     （2）使用script标签的defer和async属性，defer属性为延迟加载，是在页面渲染完成之后再进行加载的，
     而async属性则是和文档并行加载，这两种解决方案都不完美，原因在于不是所有浏览器都支持。  
@@ -271,7 +273,7 @@
     （4）通过ajax下载js脚本，动态添加script节点。但是ajax有一个缺点，就是无法引用使用CDN方式提供的js文件，
     因为这种方式下，你即时通过xhr.open下载了js文件，而向body中注入script节点时还是需要向CDN请求js文件。   
 
-#### 28.Ajax 是什么? 如何创建一个Ajax？
+#### 20.Ajax 是什么? 如何创建一个Ajax？
     AJAX(Asynchronous Javascript And XML) = 异步 JavaScript + XML, 是浏览器用来实现异步加载的一种技术方案.
     在后台与服务器进行异步数据交换，不用重载整个网页，实现局部刷新。
     创建 ajax 步骤：
@@ -293,7 +295,7 @@
 [Ajax 是什么? 如何创建一个Ajax？](https://zhuanlan.zhihu.com/p/23605192)
 [深入浅出Ajax](https://segmentfault.com/a/1190000015611594)
 
-#### 29.Ajax 解决浏览器缓存问题？
+#### 21.Ajax 解决浏览器缓存问题？
     1、在ajax发送请求前加上anyAjaxObj.setRequestHeader("If-Modified-Since","0")。
     2、在ajax发送请求前加上anyAjaxObj.setRequestHeader("Cache-Control","no-cache")。
     3、在URL后面加上一个随机数： "fresh=" + Math.random();。
@@ -303,7 +305,7 @@
 [Ajax 解决浏览器缓存问题](https://www.jianshu.com/p/4f76f06383ec)</br>
 [彻底理解浏览器的缓存机制](https://juejin.im/entry/5ad86c16f265da505a77dca4)</br>
 
-#### 30.同步和异步的区别?
+#### 22.同步和异步的区别?
     网络通信中的同步机制和异步机制是描述通信模式的概念。
     同步机制是指发送方发送请求后,需要等待接收到接收方发回的响应后,才接着发送下一个请求;
     异步机制,和同步机制正好相反,在异步机制中,发送方发出一个请求后,不等待接收方响应这个请求,就继续发送下个请求。
@@ -313,19 +315,19 @@
 [深入理解--异步和非阻塞](https://liuchi.coding.me/2017/07/28/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3-%E5%BC%82%E6%AD%A5%E5%92%8C%E9%9D%9E%E9%98%BB%E5%A1%9E/)</br>
 [Javascript异步编程的4种方法](http://www.ruanyifeng.com/blog/2012/12/asynchronous%EF%BC%BFjavascript.html)</br>
 
-#### 31. 如何解决跨域问题?
+#### 23. 如何解决跨域问题?
 [前端常见跨域解决方案（全）](https://segmentfault.com/a/1190000011145364)
-#### 32. 页面编码和被请求的资源编码如果不一致如何处理？
-#### 33. 服务器代理转发时，该如何处理cookie？
-#### 34. 模块化开发怎么做？
-#### 35. AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？
-#### 36. requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）
-#### 37. JS模块加载器的轮子怎么造，也就是如何实现一个模块加载器？
-#### 38. 谈一谈你对ECMAScript6的了解？
-#### 39. ECMAScript6 怎么写class么，为什么会出现class这种东西?
-#### 40. 异步加载JS的方式有哪些？
+#### 24. 页面编码和被请求的资源编码如果不一致如何处理？
+#### 25. 服务器代理转发时，该如何处理cookie？
+#### 26. 模块化开发怎么做？
+#### 27. AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？
+#### 28. requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）
+#### 29. JS模块加载器的轮子怎么造，也就是如何实现一个模块加载器？
+#### 30. 谈一谈你对ECMAScript6的了解？
+#### 31. ECMAScript6 怎么写class么，为什么会出现class这种东西?
+#### 32. 异步加载JS的方式有哪些？
 
-#### 43. call() 和 apply() 的区别？
+#### 33. call() 和 apply() 的区别？
     相同点:两个方法产生的作用是完全一样的
     不同点:方法传递的参数不同
     apply 方法传入两个参数：一个是作为函数上下文的对象，另外一个是作为函数参数所组成的数组。
@@ -336,7 +338,7 @@
     调用函数
 [apply 和 call 的区别]( https://github.com/lin-xin/blog/issues/7)</br>
 
-#### 44. 数组有哪些原生方法，列举一下？
+#### 34. 数组有哪些原生方法，列举一下？
     数组：
     Array.from()  
     Array.isArray()  
@@ -368,7 +370,7 @@
 [js 数组详细操作方法及解析合集](https://juejin.im/post/5b0903b26fb9a07a9d70c7e0)  <br>  
 [JavaScript Array 对象](http://www.runoob.com/jsref/jsref-obj-array.html)</br>
 
-#### 44. String有哪些原生方法，列举一下？
+#### 35. String有哪些原生方法，列举一下？
     String.fromCharCode(num1, ..., numN)
     String.prototype.charAt(index)
     String.prototype.charCodeAt(index)
@@ -390,7 +392,7 @@
     String.prototype.valueOf()
 [String](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)
 
-#### 44. Object有哪些原生方法，列举一下？
+#### 36. Object有哪些原生方法，列举一下？
     Object
     Object构造函数的方法
     Object.assign(target, ...sources)
@@ -413,15 +415,15 @@
     Object.setPrototypeOf(obj, prototype)
     Object.values()
     Object 实例和Object 原型对象
-    Object​.prototype​.has​OwnProperty(prop)
-    Object​.prototype​.isPrototypeOf(object)
-    Object​.prototype​.property​IsEnumerable(prop)
-    Object​.prototype​.toString() `"[object type]"`
-    Object​.prototype​.valueOf()
+    Object.prototype.hasOwnProperty(prop)
+    Object.prototype.isPrototypeOf(object)
+    Object.prototype.propertyIsEnumerable(prop)
+    Object.prototype.toString() `"[object type]"`
+    Object.prototype.valueOf()
 [Object
 ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
-#### 44. Date有哪些原生方法，列举一下？
+#### 37. Date有哪些原生方法，列举一下？
     Date.now()
     Date.parse()
     Date 实例
@@ -446,7 +448,7 @@
     Date.prototype.setTime()
 [Date](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
-#### 44. Number有哪些原生方法，列举一下？
+#### 38. Number有哪些原生方法，列举一下？
     Number.isNaN()
     Number.isFinite()
     Number.isInteger()
@@ -459,11 +461,11 @@
     Number.prototype.toString([radix])
     Number.prototype.valueOf()
 [Number](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)    
-#### 45. JS 怎么实现一个类。怎么实例化这个类
-#### 46. JavaScript中的作用域与变量声明提升？
-#### 47. 如何编写高性能的Javascript？
-#### 72. 解释JavaScript中的作用域与变量声明提升？
-#### 73. 那些操作会造成内存泄漏？
+#### 39. JS 怎么实现一个类。怎么实例化这个类
+#### 40. JavaScript中的作用域与变量声明提升？
+#### 41. 如何编写高性能的Javascript？
+#### 42. 解释JavaScript中的作用域与变量声明提升？
+#### 43. 那些操作会造成内存泄漏？
     意外的全局变量引起的内存泄漏
     闭包引起的内存泄漏
     没有清理的DOM元素引用
@@ -476,11 +478,14 @@
 [常见的 JavaScript 内存泄露](https://github.com/zhansingsong/js-leakage-patterns)</br>
 
 
-#### 68.把 `<script>` 标签 放在页面的最底部的`</body>`之前和`</body>`之后有什么区别？浏览器会如何解析它们？
-    这种写法是不符合标准HTML5语法规则的, 但是浏览器对HTML容错机制。 错误嵌套的标签、以及位置放置错误的标签都会在paser HTML  过程中尝试修复。修复后得到合法的HTML后在由布局引擎建立相应的DOM对象。在`<script>`标签放置于`</body>`标签之后时，源码被浏览器【泛指PC上常见的】修复为正常形式，即`<script></script></body>`。
+#### 44.把 `<script>` 标签 放在页面的最底部的`</body>`之前和`</body>`之后有什么区别？浏览器会如何解析它们？
+    这种写法是不符合标准HTML5语法规则的, 但是浏览器对HTML容错机制。       
+    错误嵌套的标签、以及位置放置错误的标签都会在paser HTML  过程中尝试修复。    
+    修复后得到合法的HTML后在由布局引擎建立相应的DOM对象。  
+    在`<script>`标签放置于`</body>`标签之后时，源码被浏览器【泛指PC上常见的】修复为正常形式，即`<script></script></body>`。
 [知乎问题讨论](https://www.zhihu.com/question/20027966)</br>
 
-#### 77. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
+#### 45. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
     路由是根据不同的 url 地址展示不同的内容或页面.
     前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。
     传统的路由指的是：当用户访问一个url时，对应的服务器会接收这个请求，然后解析url中的路径，从而执行对应的处理逻辑。
@@ -500,20 +505,20 @@
 [浅谈前后端路由与前后端渲染](https://molunerfinn.com/fe-be-router-render/)</br>
 [为什么要前后端分离？有什么优缺点？](https://blog.csdn.net/bntx2jsqfehy7/article/details/80589580)</br>
 
-#### 78. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
+#### 46. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
     WebKit是一种用来让网页浏览器绘制网页的排版引擎。
     使用Chrome 开发者工具。
     是一套内置于Google Chrome中的Web开发和调试工具，可用来对网站进行迭代、调试和分析。
     Elements, console, sources, network, performance, memory, application, security, audits
     elements: 使用元素面板可以自由的操作DOM和CSS来迭代布局和设计页面.
     console: 使用控制台面板查看信息，或者使用它作为 shell在页面上与JavaScript交互。
-    sources:在源代码面板中设置断点来调试 JavaScript ，或者通过Workspaces（工作区）连接本地文件来使用开发者工具的实时编辑器。
+    sources:在源代码面板中设置断点来调试 JavaScript,或者通过Workspaces(工作区)连接本地文件来使用开发者工具的实时编辑器。
     network: 使用网络面板了解请求和下载的资源文件并优化网页加载性能.
     performance:使用时间轴面板可以通过记录和查看网站生命周期内发生的各种事件来提高页面的运行时性能。
     (Note: 在 Chrome 57 之后时间线Timeline面板更名为性能面板.)
     memory：查找影响页面性能的内存问题，包括内存泄漏、内存膨胀和频繁的垃圾回收;
     JavaScript CPU 分析器(识别开销大的函数);
-    application: 使用资源面板检查加载的所有资源，包括IndexedDB与Web SQL数据库，本地和会话存储，cookie，应用程序缓存，
+    application: 使用资源面板检查加载的所有资源,包括IndexedDB与Web SQL数据库,本地和会话存储,cookie,应用程序缓存，
     图像，字体和样式表。(Note: 在 Chrome 52 之后资源面板更名为应用面板.)
     security: 使用安全面板调试混合内容问题，证书问题等等
 [深入剖析 WebKit](https://ming1016.github.io/2017/10/11/deeply-analyse-webkit/) </br>

@@ -344,6 +344,7 @@
     Array.from(arrayLike[, mapFn[, thisArg]])  //从一个类似数组或可迭代对象中创建一个新的数组实例。 返回值:一个新的数组实例。
     Array.isArray(obj)  //判断某个变量是否是一个数组对象.  返回值: 如果对象是 Array，则为true; 否则为false。
     Array.of(element0[, element1[, ...[, elementN]]]) //创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。 返回值: 新的 Array 实例
+    
     修改器方法[Mutator methods], 会改变调用它们的对象自身的值：
     Array.prototype.pop()     //删除数组的最后一个元素，并返回这个元素。此方法更改数组的长度。
     Array.prototype.push(element1, ..., elementN))    //在数组的末尾增加一个或多个元素，并返回数组的新长度。
@@ -381,55 +382,58 @@
     String.prototype.includes(searchString[, position]) //判断一个字符串里是否包含其他字符串。
     String.prototype.indexOf(searchValue[, fromIndex]) //从字符串对象中返回首个被发现的给定值的索引值，如果没有找到则返回-1。
     String.prototype.lastIndexOf(searchValue[, fromIndex])
-    String.prototype.match(regexp)
-    String.prototype.replace(regexp|substr, newSubStr|function)
-    String.prototype.search(regexp)
-    String.prototype.split([separator[, limit])
-    String.prototype.slice(beginSlice[, endSlice])
-    String.prototype.substring(indexStart[, indexEnd])
-    String.prototype.substr(start[, length])
-    String.prototype.toLowerCase()
-    String.prototype.toUpperCase()
-    String.prototype.trim()
-    String.prototype.toString()  
+    String.prototype.match(regexp) //使用正则表达式与字符串相比较
+    String.prototype.replace(regexp|substr, newSubStr|function) //被用来在正则表达式和字符串直接比较，然后用新的子串来替换被匹配的子串
+    String.prototype.search(regexp) //对正则表达式和指定字符串进行匹配搜索，返回第一个出现的匹配项的下标
+    String.prototype.split([separator[, limit])  //通过分离字符串成字串，将字符串对象分割成字符串数组
+    String.prototype.slice(beginSlice[, endSlice])     //摘取一个字符串区域，返回一个新的字符串
+    String.prototype.substring(indexStart[, indexEnd]) //返回在字符串中指定两个下标之间的字符
+    String.prototype.substr(start[, length])            //通过指定字符数返回在指定位置开始的字符串中的字符
+    String.prototype.toLowerCase() //将字符串转换成小写并返回
+    String.prototype.toUpperCase() //将字符串转换成大写并返回
+    String.prototype.trim() //从字符串的开始和结尾去除空格
+    String.prototype.toString()  //返回指定对象的字符串形式
     String.prototype.valueOf()
 [String](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String)
 
 #### 36. Object有哪些原生方法，列举一下？
     Object
     Object构造函数的方法
-    Object.assign(target, ...sources)
-    Object.create(proto, [propertiesObject])
-    Object.defineProperty(obj, prop, descriptor)
-    Object.defineProperties(obj, props)
-    Object.entries()
-    Object.freeze()
-    Object.getOwnPropertyDescriptor(obj, prop)
-    Object.getOwnPropertyNames(obj)
-    Object.getOwnPropertySymbols()
-    Object.getPrototypeOf(object)
-    Object.is()
-    Object.isExtensible()
-    Object.isFrozen()
-    Object.isSealed()
-    Object.keys(obj)
-    Object.preventExtensions()
-    Object.seal()
-    Object.setPrototypeOf(obj, prototype)
-    Object.values()
+    Object.assign(target, ...sources) //通过复制一个或多个对象来创建一个新的对象
+    Object.create(proto, [propertiesObject]) //使用指定的原型对象和属性创建一个新对象
+    Object.defineProperty(obj, prop, descriptor) //给对象添加一个属性并指定该属性的配置
+    Object.defineProperties(obj, props) //给对象添加多个属性并分别指定它们的配置
+    Object.entries() //返回给定对象自身可枚举属性的[key, value]数组
+    Object.freeze()  //冻结对象：其他代码不能删除或更改任何属性
+    Object.getOwnPropertyDescriptor(obj, prop) //返回对象指定的属性配置。
+    Object.getOwnPropertyNames(obj) //返回一个数组，它包含了指定对象所有的可枚举或不可枚举的属性名。
+    Object.getOwnPropertySymbols() //返回一个数组，它包含了指定对象自身所有的符号属性。
+    Object.getPrototypeOf(object)  //返回指定对象的原型对象。
+    Object.is(value1, value2)   //比较两个值是否相同。所有 NaN 值都相等（这与==和===不同）
+    Object.isExtensible(obj) //判断对象是否可扩展。
+    Object.isFrozen()  //判断对象是否已经冻结。
+    Object.isSealed()  //判断对象是否已经密封。
+    Object.keys(obj)  //返回一个包含所有给定对象自身可枚举属性名称的数组
+    Object.preventExtensions() //防止对象的任何扩展。
+    Object.seal() //防止其他代码删除对象的属性。
+    Object.setPrototypeOf(obj, prototype) //设置对象的原型（即内部[[Prototype]]属性）。
+    Object.values() //返回给定对象自身可枚举值的数组。
+       
     Object 实例和Object 原型对象
-    Object.prototype.hasOwnProperty(prop)
-    Object.prototype.isPrototypeOf(object)
-    Object.prototype.propertyIsEnumerable(prop)
-    Object.prototype.toString() `"[object type]"`
-    Object.prototype.valueOf()
+    Object.prototype.hasOwnProperty(prop) //返回一个布尔值 ，表示某个对象是否含有指定的属性，而且此属性非原型链继承的。
+    Object.prototype.isPrototypeOf(object)  //返回一个布尔值，表示指定的对象是否在本对象的原型链中。
+    Object.prototype.propertyIsEnumerable(prop) //判断指定属性是否可枚举
+    Object.prototype.toString() //返回对象的字符串表示。`"[object type]"` 其中type是对象的类型 Object.prototype.toString.call()
+    Object.prototype.valueOf() //返回指定对象的原始值
 [Object
 ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
 #### 37. Date有哪些原生方法，列举一下？
     Date.now() //返回自 1970-1-1 00:00:00  UTC（世界标准时间）至今所经过的毫秒数。
     Date.parse() //解析一个表示日期的字符串,并返回从 1970-1-1 00:00:00 所经过的毫秒数
+    
     Date 实例
+    
     Getter
     Date.prototype.getFullYear()     //根据本地时间返回指定日期对象的年份（四位数年份时返回四位数字）
     Date.prototype.getDate()         //根据本地时间返回指定日期对象的月份中的第几天（1-31）
@@ -439,7 +443,8 @@
     Date.prototype.getSeconds()       //根据本地时间返回指定日期对象的秒数（0-59）
     Date.prototype.getMilliseconds()  //根据本地时间返回指定日期对象的毫秒（0-999）
     Date.prototype.getTime()          //返回从1970-1-1 00:00:00 UTC（协调世界时）到该日期经过的毫秒数
-    Date.prototype.getDay()            //根据本地时间返回指定日期对象的星期中的第几天（0-6）。         
+    Date.prototype.getDay()            //根据本地时间返回指定日期对象的星期中的第几天（0-6）。 
+    
     Setter
     Date.prototype.setFullYear(yearValue[, monthValue[, dayValue])
     Date.prototype.setDate(dayValue)

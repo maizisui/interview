@@ -8,6 +8,10 @@
                 return $2 + ',';
             });
       }
+      
+      new Intl.NumberFormat().format(number) // 对语言敏感的格式化数字类的构造器类
+[Intl.NumberFormat](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat)      
+      
 
 #### 2. 如何实现数组的随机排序？
 ```

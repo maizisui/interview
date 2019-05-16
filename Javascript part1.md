@@ -355,29 +355,30 @@
     访问方法[Accessor methods], 绝对不会改变调用它们的对象的值, 只会返回一个新的数组。
     Array.prototype.concat()  //合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组; var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
     Array.prototype.join([separator])   //连接所有数组元素组成一个字符串。
-    Array.prototype.slice()
-    Array.prototype.indexOf()
+    Array.prototype.slice([begin[, end]])  //抽取当前数组中的一段元素组合成一个新数组。返回值:一个含有提取元素的新数组.
+    Array.prototype.indexOf(searchElement[, fromIndex = 0]) //返回数组中第一个与指定值相等的元素的索引，如果找不到这样的元素，则返回 -1。
     Array.prototype.lastIndexOf()
-    Array.prototype.toString()
+    Array.prototype.toString() //返回一个由所有数组元素组合而成的字符串。
+                         
     迭代方法[Iteration methods], 回调函数作为参数
-    Array.prototype.forEach()
-    Array.prototype.every()
-    Array.prototype.some()
-    Array.prototype.filter()
-    Array.prototype.map()
-    Array.prototype.reduce()
+    Array.prototype.forEach(callback(element[, index[, array]])[, thisArg]) //为数组中的每个元素执行一次回调函数。
+    Array.prototype.every(callback(element[, index[, array]])[, thisArg])  //如果数组中的每个元素都满足测试函数，则返回 true，否则返回 false。
+    Array.prototype.some(callback(element[, index[, array]])[, thisArg]) //如果数组中至少有一个元素满足测试函数，则返回 true，否则返回 false。
+    Array.prototype.filter(callback(element[, index[, array]])[, thisArg]) //将所有在过滤函数中返回 true 的数组元素放进一个新数组中并返回。
+    Array.prototype.map() //返回一个由回调函数的返回值组成的新数组。
+    Array.prototype.reduce() //从左到右为每个数组元素执行一次回调函数，并把上次回调函数的返回值放在一个暂存器中传给下次回调函数，并返回最后一次回调函数的返回值。
     Array.prototype.reduceRight()
 [Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)       <br>  
 [js 数组详细操作方法及解析合集](https://juejin.im/post/5b0903b26fb9a07a9d70c7e0)  <br>  
 [JavaScript Array 对象](http://www.runoob.com/jsref/jsref-obj-array.html)</br>
 
 #### 35. String有哪些原生方法，列举一下？
-    String.fromCharCode(num1, ..., numN)
-    String.prototype.charAt(index)
-    String.prototype.charCodeAt(index)
-    String.prototype.concat(string2, string3[, ..., stringN])
-    String.prototype.includes(searchString[, position])
-    String.prototype.indexOf(searchValue[, fromIndex])
+    String.fromCharCode(num1, ..., numN) //通过一串 Unicode 创建字符串。
+    String.prototype.charAt(index) //返回特定位置的字符
+    String.prototype.charCodeAt(index) //返回表示给定索引的字符的Unicode的值。
+    String.prototype.concat(string2, string3[, ..., stringN]) //连接两个字符串文本，并返回一个新的字符串。
+    String.prototype.includes(searchString[, position]) //判断一个字符串里是否包含其他字符串。
+    String.prototype.indexOf(searchValue[, fromIndex]) //从字符串对象中返回首个被发现的给定值的索引值，如果没有找到则返回-1。
     String.prototype.lastIndexOf(searchValue[, fromIndex])
     String.prototype.match(regexp)
     String.prototype.replace(regexp|substr, newSubStr|function)

@@ -340,8 +340,8 @@
 
 #### 34. 数组有哪些原生方法，列举一下？
     数组：
-    Array.from()  
-    Array.isArray()  
+    Array.from(arrayLike[, mapFn[, thisArg]])  
+    Array.isArray(obj)  
     Array.of()
     修改器方法[Mutator methods], 会改变调用它们的对象自身的值：
     Array.prototype.pop()

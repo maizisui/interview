@@ -154,6 +154,7 @@
     一个是可以读取函数内部的变量，
     另一个就是让这些变量始终保持在内存中，即闭包可以使得它诞生环境一直存在。
     闭包的另一个用处，是封装对象的私有属性和私有方法。
+[用闭包模拟私有方法](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures#Emulating_private_methods_with_closures)    
 
 #### 12.javascript 代码中的"use strict";是什么意思 ? 使用它区别是什么？
     'use strict'是一种ECMAscript 5 添加的一种运行模式：即严格模式,这种模式使得 Javascript 在更严格的条件下运行。
@@ -426,48 +427,47 @@
 ](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
 
 #### 37. Date有哪些原生方法，列举一下？
-    Date.now()
-    Date.parse()
+    Date.now() //返回自 1970-1-1 00:00:00  UTC（世界标准时间）至今所经过的毫秒数。
+    Date.parse() //解析一个表示日期的字符串,并返回从 1970-1-1 00:00:00 所经过的毫秒数
     Date 实例
     Getter
-    Date.prototype.getFullYear()
-    Date.prototype.getDate()
-    Date.prototype.getMonth()
-    Date.prototype.getHours()
-    Date.prototype.getMinutes()
-    Date.prototype.getSeconds()
-    Date.prototype.getMilliseconds()
-    Date.prototype.getTime()
-    Date.prototype.getDay()
+    Date.prototype.getFullYear()     //根据本地时间返回指定日期对象的年份（四位数年份时返回四位数字）
+    Date.prototype.getDate()         //根据本地时间返回指定日期对象的月份中的第几天（1-31）
+    Date.prototype.getMonth()        //根据本地时间返回指定日期对象的月份（0-11）
+    Date.prototype.getHours()        //根据本地时间返回指定日期对象的小时（0-23）
+    Date.prototype.getMinutes()       //根据本地时间返回指定日期对象的分钟（0-59）
+    Date.prototype.getSeconds()       //根据本地时间返回指定日期对象的秒数（0-59）
+    Date.prototype.getMilliseconds()  //根据本地时间返回指定日期对象的毫秒（0-999）
+    Date.prototype.getTime()          //返回从1970-1-1 00:00:00 UTC（协调世界时）到该日期经过的毫秒数
+    Date.prototype.getDay()            //根据本地时间返回指定日期对象的星期中的第几天（0-6）。         
     Setter
-    Date.prototype.setFullYear()
-    Date.prototype.setDate()
-    Date.prototype.setMonth()
-    Date.prototype.setHours()
-    Date.prototype.setMinutes()
-    Date.prototype.setSeconds()
-    Date.prototype.setMilliseconds()
-    Date.prototype.setTime()
+    Date.prototype.setFullYear(yearValue[, monthValue[, dayValue])
+    Date.prototype.setDate(dayValue)
+    Date.prototype.setMonth(monthValue[, dayValue])
+    Date.prototype.setHours(hoursValue[, minutesValue[, secondsValue[, msValue]]])
+    Date.prototype.setMinutes(minutesValue[, secondsValue[, msValue]])
+    Date.prototype.setSeconds(secondsValue[, msValue])
+    Date.prototype.setMilliseconds(millisecondsValue)
+    Date.prototype.setTime(timeValue)
 [Date](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
 #### 38. Number有哪些原生方法，列举一下？
     Number.isNaN()
     Number.isFinite()
     Number.isInteger()
-    Number.parseFloat()
-    Number.parseInt()
-    Number.prototype.toExponential([fractionDigits])
-    Number.prototype.toFixed([digits])
-    Number.prototype.toLocaleString()
-    Number.prototype.toPrecision([precision])
-    Number.prototype.toString([radix])
+    Number.parseFloat(string) //解析一个字符串参数并返回一个浮点数
+    Number.parseInt(string[, radix]) //解析一个字符串参数，并返回一个指定基数的整数
+    Number.prototype.toExponential([fractionDigits]) //以指数表示法返回该数值字符串表示形式
+    Number.prototype.toFixed([digits])  //使用定点表示法来格式化一个数。
+    Number.prototype.toLocaleString() //返回这个数字在特定语言环境下的表示字符串. //var number = 3523600.89; number.toLocaleString() // "3,523,600.89"
+    Number.prototype.toPrecision([precision]) //指定的精度返回该数值对象的字符串表示
+    Number.prototype.toString([radix])  //返回指定 Number 对象的字符串表示形式。
     Number.prototype.valueOf()
 [Number](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number)    
 #### 39. JS 怎么实现一个类。怎么实例化这个类
 #### 40. JavaScript中的作用域与变量声明提升？
 #### 41. 如何编写高性能的Javascript？
-#### 42. 解释JavaScript中的作用域与变量声明提升？
-#### 43. 那些操作会造成内存泄漏？
+#### 42. 那些操作会造成内存泄漏？
     意外的全局变量引起的内存泄漏
     闭包引起的内存泄漏
     没有清理的DOM元素引用
@@ -480,26 +480,26 @@
 [常见的 JavaScript 内存泄露](https://github.com/zhansingsong/js-leakage-patterns)</br>
 
 
-#### 44.把 `<script>` 标签 放在页面的最底部的`</body>`之前和`</body>`之后有什么区别？浏览器会如何解析它们？
+#### 43.把 `<script>` 标签 放在页面的最底部的`</body>`之前和`</body>`之后有什么区别？浏览器会如何解析它们？
     这种写法是不符合标准HTML5语法规则的, 但是浏览器对HTML容错机制。       
-    错误嵌套的标签、以及位置放置错误的标签都会在paser HTML  过程中尝试修复。    
+    错误嵌套的标签、以及位置放置错误的标签都会在paser HTML过程中尝试修复。    
     修复后得到合法的HTML后在由布局引擎建立相应的DOM对象。  
     在`<script>`标签放置于`</body>`标签之后时,源码被浏览器修复为正常形式,即`<script></script></body>`。
 [知乎问题讨论](https://www.zhihu.com/question/20027966)</br>
 
-#### 45. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
+#### 44. 什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?
     路由是根据不同的 url 地址展示不同的内容或页面.
-    前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。
-    传统的路由指的是：当用户访问一个url时，对应的服务器会接收这个请求，然后解析url中的路径，从而执行对应的处理逻辑。
-    而前端路由是不涉及服务器的，是前端利用hash或者HTML5的history API来实现的，一般用于不同内容的展示和切换。
+    前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做,之前是通过服务端根据 url 的不同返回不同的页面实现的。
+    传统的路由指的是：当用户访问一个url时,对应的服务器会接收这个请求,然后解析url中的路径,从而执行对应的处理逻辑。
+    而前端路由是不涉及服务器的,是前端利用hash或者HTML5的history API来实现的,一般用于不同内容的展示和切换。
     其实前端路由要做的就是两点：
-    在页面不刷新的情况下实现url的变化;捕捉url的变化，根据url更改页面内容。
-    在单页面应用，大部分页面结构不变，只改变部分内容的使用.
+    在页面不刷新的情况下实现url的变化; 捕捉url的变化,根据url更改页面内容。
+    在单页面应用,大部分页面结构不变,只改变部分内容的使用.
     优点
-    用户体验好，不需要每次都从服务器全部获取，快速展现给用户
+    用户体验好,不需要每次都从服务器全部获取,快速展现给用户
     缺点
-    使用浏览器的前进，后退键的时候会重新发送请求，没有合理地利用缓存.
-    单页面无法记住之前滚动的位置，无法在前进，后退的时候记住滚动的位置.
+    使用浏览器的前进,后退键的时候会重新发送请求,没有合理地利用缓存.
+    单页面无法记住之前滚动的位置,无法在前进,后退的时候记住滚动的位置.
 [你了解前端路由吗?](https://juejin.im/post/5ac61da66fb9a028c71eae1b)</br>
 [前端路由是什么东西？](https://www.zhihu.com/question/53064386)</br>
 [前端路由的两种实现原理](https://segmentfault.com/a/1190000007238999)</br>
@@ -507,22 +507,21 @@
 [浅谈前后端路由与前后端渲染](https://molunerfinn.com/fe-be-router-render/)</br>
 [为什么要前后端分离？有什么优缺点？](https://blog.csdn.net/bntx2jsqfehy7/article/details/80589580)</br>
 
-#### 46. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
+#### 45. 知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?
     WebKit是一种用来让网页浏览器绘制网页的排版引擎。
     使用Chrome 开发者工具。
-    是一套内置于Google Chrome中的Web开发和调试工具，可用来对网站进行迭代、调试和分析。
+    是一套内置于Google Chrome中的Web开发和调试工具,可用来对网站进行迭代、调试和分析。
     Elements, console, sources, network, performance, memory, application, security, audits
     elements: 使用元素面板可以自由的操作DOM和CSS来迭代布局和设计页面.
     console: 使用控制台面板查看信息，或者使用它作为 shell在页面上与JavaScript交互。
     sources:在源代码面板中设置断点来调试 JavaScript,或者通过Workspaces(工作区)连接本地文件来使用开发者工具的实时编辑器。
     network: 使用网络面板了解请求和下载的资源文件并优化网页加载性能.
     performance:使用时间轴面板可以通过记录和查看网站生命周期内发生的各种事件来提高页面的运行时性能。
-    (Note: 在 Chrome 57 之后时间线Timeline面板更名为性能面板.)
-    memory：查找影响页面性能的内存问题，包括内存泄漏、内存膨胀和频繁的垃圾回收;
-    JavaScript CPU 分析器(识别开销大的函数);
-    application: 使用资源面板检查加载的所有资源,包括IndexedDB与Web SQL数据库,本地和会话存储,cookie,应用程序缓存，
-    图像，字体和样式表。(Note: 在 Chrome 52 之后资源面板更名为应用面板.)
-    security: 使用安全面板调试混合内容问题，证书问题等等
+    (Note: 在Chrome57之后时间线Timeline面板更名为性能面板.)
+    memory：查找影响页面性能的内存问题,包括内存泄漏、内存膨胀和频繁的垃圾回收; JS CPU分析器(识别开销大的函数);
+    application: 使用资源面板检查加载的所有资源,包括IndexedDB与Web SQL数据库,本地和会话存储,cookie,应用程序缓存,
+    图像,字体和样式表。(Note: 在 Chrome 52 之后资源面板更名为应用面板.)
+    security: 使用安全面板调试混合内容问题,证书问题等等
 [深入剖析 WebKit](https://ming1016.github.io/2017/10/11/deeply-analyse-webkit/) </br>
 [Chrome 开发者工具](https://developers.google.com/web/tools/chrome-devtools/?hl=zh-cn)</br>
 [chrome调试](https://segmentfault.com/a/1190000002439648)    </br>

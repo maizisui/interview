@@ -340,20 +340,21 @@
 
 #### 34. 数组有哪些原生方法，列举一下？
     数组：
-    Array.from(arrayLike[, mapFn[, thisArg]])  
-    Array.isArray(obj)  
-    Array.of()
+    Array.from(arrayLike[, mapFn[, thisArg]])  //从一个类似数组或可迭代对象中创建一个新的数组实例。 返回值:一个新的数组实例。
+    Array.isArray(obj)  //判断某个变量是否是一个数组对象.  返回值: 如果对象是 Array，则为true; 否则为false。
+    Array.of(element0[, element1[, ...[, elementN]]]) //创建一个具有可变数量参数的新数组实例，而不考虑参数的数量或类型。 返回值: 新的 Array 实例
     修改器方法[Mutator methods], 会改变调用它们的对象自身的值：
-    Array.prototype.pop()
-    Array.prototype.push()
-    Array.prototype.shift()
-    Array.prototype.unshift()
-    Array.prototype.reverse()
-    Array.prototype.sort()
-    Array.prototype.splice()
+    Array.prototype.pop()     //删除数组的最后一个元素，并返回这个元素。此方法更改数组的长度。
+    Array.prototype.push(element1, ..., elementN))    //在数组的末尾增加一个或多个元素，并返回数组的新长度。
+    Array.prototype.shift()   //删除数组的第一个元素，并返回这个元素。
+    Array.prototype.unshift(element1, ..., elementN) //在数组的开头增加一个或多个元素，并返回数组的新长度。
+    Array.prototype.reverse() //颠倒数组中元素的排列顺序，即原先的第一个变为最后一个，原先的最后一个变为第一个。
+    Array.prototype.sort()    //对数组元素进行排序，并返回当前数组。默认排序顺序是根据字符串Unicode码点.
+    Array.prototype.splice(start[, deleteCount[, item1[, item2[, ...]]]])  //在任意的位置给数组添加或删除任意个元素。
+                                            
     访问方法[Accessor methods], 绝对不会改变调用它们的对象的值, 只会返回一个新的数组。
-    Array.prototype.concat()
-    Array.prototype.join()
+    Array.prototype.concat()  //合并两个或多个数组。此方法不会更改现有数组，而是返回一个新数组; var new_array = old_array.concat(value1[, value2[, ...[, valueN]]])
+    Array.prototype.join([separator])   //连接所有数组元素组成一个字符串。
     Array.prototype.slice()
     Array.prototype.indexOf()
     Array.prototype.lastIndexOf()

@@ -166,6 +166,38 @@
     DOM元素拖拽
     Canvas画笔功能
     总的来说，适合大量事件按时间做平均分配触发
+    function debounce(func,delay){
+		var timeout;
+		return function(){
+			clearTimeout(timeout);
+			var context = this, args = arguments;
+			timeout = setTimeout(function(){
+				func.apply(context,args);
+			},delay)
+
+		}
+	}
+     
+     
+     function throttle(fn,threshhold) {
+          var timeout;
+          var start = new Date;
+          var threshhold = threshhold || 160;
+          return function(){
+               var context = this, args = arguments, curr = new Date - 0;
+               clearTimeout(timeout);
+               if (curr-start >= threshhold) {
+                    //只执行一部分方法，这些方法是在某个时间段内执行一次
+                    fn.apply(context,args);
+                    start = curr;
+               } else {
+                    //让方法在脱离事件后也能执行一次
+                    timeout = setTimeout(function(){
+                         fn.apply(context,args)
+                    },threshhold)
+               }
+          }
+     }
 [函数防抖与函数节流](https://zhuanlan.zhihu.com/p/38313717)</br>
 [Debounce 和 Throttle 的原理及实现](https://segmentfault.com/a/1190000015619151)</br>
 [浅谈 Underscore.js 中 _.throttle 和 _.debounce 的差异](https://segmentfault.com/a/1190000007440036)</br>

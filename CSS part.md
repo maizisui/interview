@@ -4,7 +4,7 @@ CSS part
 	（1）有两种， IE 盒子模型、W3C 盒子模型；
 	（2）盒模型： 内容(content)、填充(padding)、边界(margin)、 边框(border)；
 	（3）区  别： IE的content部分把 border 和 padding计算了进去;
-	通过css3新增的属性 box-sizing: content-box | border-box分别设置盒模型为标准模型（content-box）和IE模型（border-box）。
+	通过css3新增的属性box-sizing: content-box|border-box分别设置盒模型为标准模型(content-box)和IE模型(border-box)。
 
 #### 2. CSS选择符有哪些？哪些属性可以继承？
 ```
@@ -34,7 +34,7 @@ CSS part
   	同权重: 内联样式表（标签内部）> 嵌入样式表（当前文件中）> 外部样式表（外部文件中）。
   	!important >  id > class > tag
   	important 比 内联优先级高
-
+[CSS 样式优先级](https://www.runoob.com/w3cnote/css-style-priority.html)
 ####  4.  CSS3新增伪类有那些？
 	p:first-of-type     选择属于其父元素的首个<p>元素的每个<p>元素。
 	p:last-of-type     选择属于其父元素的最后<p>元素的每个<p>元素。

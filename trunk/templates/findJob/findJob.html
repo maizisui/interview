@@ -1,0 +1,212 @@
+<div class="findJob-wrapper">
+  <div class="container">
+    <h3 style="color: #536a82;">萝卜多—找职位</h3>
+  </div>
+  <div class="container">
+    <div class="row findJob-top">
+      <div class="col-md-2" style="padding: 0;">
+        <div class="findJob-search-tags findJob-menu clearfix">
+          <div id="menu-box" class="col-lg-12 col-md-12 menu-box" data-ng-init="vm.load()"
+               ng-repeat="li in vm.list track by $index">
+            <!--一级类目-->
+            <h4 class="font-bold"><span></span>{{li.jobType|jobTypeFilter}}
+              <i class="pull-right" style="padding-right: 10px">
+                <img src="../../images/icon/findjobdayu.png" class="findjobdayu">
+                <img src="../../images/icon/findjobdayu2.png" class="findjobdayu2">
+              </i>
+            </h4>
+            <!--二级类目-->
+            <div class="clearfix">
+              <a ng-repeat="item in li.jobTypeList track by $index"
+                 ui-sref="app.searchMain.searchJob({type:item.secondType})">{{item.secondType|secondTypeFilter}}
+              </a>
+            </div>
+            <!--三级类目-->
+            <div id="menu-sub" class="menu-sub dn">
+              <div ng-repeat="item in li.jobTypeList track by $index">
+                <span class="findjob-dettype">{{item.secondType|secondTypeFilter}}</span>
+                <a ng-repeat="subItem in item.secondTypeList track by $index"
+                  ui-sref="app.searchMain.searchJob({type:item.secondType,subType:subItem.thirdType})">{{subItem.jobName}}</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <!--search box-->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="findJob-search-box">
+              <label class="company-name">公司名称</label>
+              <input type="text"  ng-model="vm.searchParams.jobName" class="input-form-control" placeholder="请输入公司名称">
+              <button class="btn btn-default" ui-sref="app.searchMain.searchCompany({name:vm.searchParams.jobName})">搜索</button>
+            </div>
+          </div>
+        </div>
+        <!--top carousel-->
+        <div class="row">
+          <div class="col-md-12 findJob-top-carousel">
+            <div id="findJob-top-carousel" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner" role="listbox">
+                <div class="item" ng-repeat="findJobArticle in vm.findJobArticle.data.articleList track by $index"
+                     ng-class="{'active': $first}">
+                  <img ng-src="{{findJobArticle.img}}" class="img-responsive">
+                </div>
+              </div>
+              <!--controls-->
+              <a href="#findJob-top-carousel" class="left carousel-control carousel-button"
+                 role="button" data-slide="prev" onclick="return false;">
+                <span aria-hidden="true"><img ng-src="../../images/icon/pre-2.png" alt=""></span>
+              </a>
+              <a href="#findJob-top-carousel" class="right carousel-control carousel-button"
+                 role="button" data-slide="next" onclick="return false;">
+                <span aria-hidden="true"><img ng-src="../../images/icon/next-2.png" alt=""></span>
+              </a>
+              <!--carousel item-->
+              <ol class="carousel-indicators">
+                <li data-target="#find-top-carousel" data-slide-to="{{$index}}"
+                    ng-repeat="homeArticle in vm.findJobArticle.data.articleList track by $index"
+                    ng-class="{'active':$first}"></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--recommended and new jobs-->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="job-top">
+          <a class="position-rec" ng-class="{'font-choose-style': !vm.isChoose}"
+             ng-click="exchangeJob(!vm.isChoose)">推荐职位</a>
+          <a class="position-rec" ng-class="{'font-choose-style': vm.isChoose}"
+             ng-click="exchangeJob(vm.isChoose)">最新职位</a>
+          <a class="pull-right more-over" ng-class="{navChoice: $state.includes('app.recommendJob')}"
+             ui-sref="app.jobList({n:vm.isChoose||false})"
+            >查看更多&gt;&gt;</a>
+        </div>
+      </div>
+    </div>
+      <!--recommended job-->
+    <div class="row" ng-if="!vm.isChoose" style="background-color: #fff;">
+      <div class="findJob-jobList clearfix">
+        <div class="col-lg-3 col-sm-6 col-xs-12" ng-repeat="x in vm.recommendJobList.data track by $index">
+          <div class="findJob-jobList-box clearfix" ui-sref="app.jobDescription({id:x.id})"
+               ng-class="{navChoice: $state.includes('app.jobDescription')}">
+            <div class="middle-img-box1">
+              <img ng-src="{{x.logo}}" class="img-responsive">
+            </div>
+            <div class="findJob-joblist-text">
+              <p><strong>{{x.name}}</strong></p>
+              <p>{{x.compensation | compensationFilter}}</p>
+              <p>{{x.companyName}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--new job-->
+    <div class="row" ng-if="vm.isChoose" style="background-color: #fff;">
+      <div class="findJob-jobList clearfix">
+        <div class="col-lg-3 col-sm-6 col-xs-12" ng-repeat="x in vm.newJobList.data track by $index">
+          <div class="findJob-jobList-box clearfix" ng-class="{navChoice: $state.includes('app.jobDescription')}"
+               ui-sref="app.jobDescription({id:x.id})">
+            <div class="middle-img-box1">
+              <img ng-src="{{x.logo}}" class="img-responsive">
+            </div>
+            <div class="findJob-joblist-text">
+              <p><strong>{{x.name}}</strong></p>
+              <p>{{x.compensation | compensationFilter}}</p>
+              <p>{{x.companyName}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--recommended company-->
+  <div class="container recommended-company">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="job-top">
+          <span href="#" class="position-rec">推荐公司</span>
+          <a ui-sref="app.searchMain.searchCompany" ng-class="{navChoice: $state.includes('app.searchMain.searchCompany')}"
+             class="pull-right more-over">查看更多&gt;&gt;</a>
+        </div>
+      </div>
+    </div>
+    <!--recommended company list-->
+    <div class="row">
+      <div class="recommend clearfix">
+        <div class="col-md-4 col-xs-12"
+             ui-sref="app.companyMain.companyDetail({id:vm.industryImg.id})"
+             ng-class="{navChoice: $state.includes('app.company.home')}">
+          <div class="recommend-leftBox">
+            <img ng-src="{{vm.industryImg.industryImg}}" class="img-responsive">
+            <div class="findJob-recommend-text">
+              <p>优质推荐公司</p>
+              <span>{{vm.industryImg.industryId|industryFilter}}</span>
+              <span>{{vm.industryImg.financing|financingFilter}}</span>
+              {{vm.industryImg.province|provinceFilter}}
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8 col-xs-12">
+          <div class="middle-img-box findJob-recommend-logo" ng-class="{navChoice: $state.includes('app.companyMain.companyDetail')}"
+               ng-repeat="x in vm.normalCompanyList track by $index">
+            <img ng-src="{{x.logo}}" class="img-responsive" ui-sref="app.companyMain.companyDetail({id:x.id})">
+          </div>
+        </div>
+        <upcarousel></upcarousel>
+      </div>
+      <!--<company-carousel></company-carousel>-->
+    </div>
+  </div>
+  <!--position banner-->
+  <div class="container">
+    <!--<div class="position-banner">-->
+      <div class="row position-banner-top position-banner-bg">
+        <div class="col-md-6 col-xs-12">
+          <div class="img-box1 clearfix">
+            <img src="../../images/findJob/zjy-0fengxian.png" class="img-responsive">
+          </div>
+        </div>
+        <div class="col-md-6 col-xs-12 position-banner-textTop">
+          <p class="findJob-big-size">无成本，零风险</p>
+          <p>无任何隐含费用全程免费</p>
+          <p>人才从投递到成功入职不需要任何费用，通过测试 后还可免费提供从业建议，不浪费每一分天赋。</p>
+        </div>
+      </div>
+      <div class="row position-banner-bot position-banner-bg">
+        <div class="col-md-6 col-xs-12 position-banner-textBot">
+          <p  class="findJob-big-size">高效匹配，高度契合 </p>
+          <p>1-3天发送首个聘请通知<br>
+            甄选职位 深度匹配 发送聘请通知 </p>
+          <p> 3-5天安排候选人面试 <br>
+            安排面试 协助客户快速入职</p>
+
+          <p>平均一周内推荐成功 <br>
+            多方洽谈 售后服务</p>
+        </div>
+        <div class="col-md-6 col-xs-12 position-banner-topImg">
+          <div class="img-box">
+            <img src="../../images/findJob/zjy-youxuan.png" class="img-responsive">
+          </div>
+        </div>
+      </div>
+    <!--</div>-->
+  </div>
+  <div class="container">
+    <div class="row findJob-bottom-img">
+      <!--<div class="col-md-12">-->
+        <img src="../../images/findJob/job-bottom-img.png" class="img-responsive"> <br>
+      <!--</div>-->
+    </div>
+  </div>
+</div>

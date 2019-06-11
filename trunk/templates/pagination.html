@@ -1,0 +1,58 @@
+<ul class="pagination">
+  <style>
+    .pagination > li > a[disabled],
+    .pagination > li > a[disabled]:hover {
+      cursor: not-allowed;
+    }
+    .pagination-first {
+      margin-right: 10px;
+      border-radius: 3px;
+      background-color: #eee;
+    }
+    .pagination-last {
+      margin-left: 10px;
+      border-radius: 3px;
+      background-color: #eee;
+    }
+    .pagination>li>a {
+      margin-right: 10px;
+      border-radius: 3px;
+      background-color: #eee;
+    }
+    input.paginationGo  {
+      width: 40px;
+      height: 34px;
+      margin: 0 5px;
+      border-radius: 3px;
+      border: 1px solid #eee;
+      /*background-color: #eee;*/
+    }
+    a.pagination-confirm {
+      margin-left: 10px !important;
+      border-radius: 3px;
+      background-color: #eee;
+    }
+    a.pagination-next  {
+      border-radius: 3px;
+      background-color: #eee;
+    }
+  </style>
+  <li><a class="pagination-first" ng-class="{'isclicked-status':(activePage===1)}" ng-disabled="isDisabled(1)"
+         ng-click="goPage(1)">首页</a></li>
+  <li><a class="pagination-pre" ng-if="isHavePrePage()" ng-click="goPage(activePage - 1)"> < </a></li>
+
+  <li ng-repeat="li in pageList track by $index" ng-class="{'active': isActive(li)}">
+    <a ng-disabled="isDisabled(li)" ng-click="goPage(li)"> {{li}} </a>
+  </li>
+
+  <li><a class="pagination-next" ng-if="isHaveNextPage()" ng-click="goPage(activePage + 1)"> > </a></li>
+  <li><a class="pagination-last" ng-class="{'isclicked-status':(activePage===totalPage)}"
+         ng-disabled="isDisabled(totalPage)"
+         ng-click="goPage(totalPage)">末页</a></li>
+  <li>
+    去第
+    <input type="text" class="paginationGo text-center" ng-model="jumpPage" ng-change="changeInput()"/>
+    页
+    <a class="pagination-confirm pull-right" ng-click="goPage(jumpPage)">确定</a>
+  </li>
+</ul>

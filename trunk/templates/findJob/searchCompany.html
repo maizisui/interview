@@ -1,0 +1,78 @@
+<div class="jobList-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <!--条件筛选-->
+        <div class="search-panel">
+          <form class="form-horizontal" name="searchParams" novalidate >
+            <div class="form-group">
+              <label>关 键 字：</label>
+              <input type="text" name="name" maxlength="10" class="form-control keyword-search"
+                     placeholder="输入职位关键词：如阿里巴巴等"  ng-maxlenght="10" ng-model="vm.data.name">
+              <span ng-if="searchParams.name.$dirty" class="search-word">当前关键词： {{vm.data.name}}</span>
+              <span ng-if="searchParams.name.$invalid">验证失败，请不要超过10个字符</span>
+            </div>
+            <div class="form-group">
+              <label>所在地区：</label>
+              <a ng-class="{true: 'defaultChoice'}[a.choose]"
+                 ng-click="vm.checkboxMulti($index, vm.option.province)"
+                 ng-repeat="a in vm.option.province track by $index">{{a.name}}</a>
+            </div>
+            <div class="form-group">
+              <label>所属行业：</label>
+              <a ng-class="{true: 'defaultChoice'}[a.choose]"
+                 ng-click="vm.checkboxMulti($index, vm.option.industry)"
+                 ng-repeat="a in vm.option.industry track by $index">{{a.name}}</a>
+            </div>
+            <div class="form-group">
+              <label>融资规模：</label>
+              <a ng-class="{true: 'defaultChoice'}[a.choose]"
+                 ng-click="vm.checkboxMulti($index, vm.option.financing)"
+                 ng-repeat="a in vm.option.financing track by $index">{{a.name}}</a>
+            </div>
+            <div class="search-btn clearfix">
+              <button class="begin-search pull-right" ng-click="vm.search()">搜索</button>
+              <button class="clear-search pull-right" ng-click="vm.clear()">清空</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--搜索内容-->
+    <div class="search-content">
+      <div class="search-data">
+        <div class="row search-rowBox">
+          <div class="col-md-3 col-sm-6 col-xs-12 search-box" ng-repeat="item in vm.companyList.data track by $index" >
+            <div class="search-innerBox-notFind" ui-sref="app.companyMain.companyDetail({name:item.name,id:item.id,companyId:item.id})"
+                 ng-class="{navChoice: $state.includes('app.companyMain')}" style="margin: 10px 25px">
+              <div class="box-img-notFind">
+                <img ng-src="item.logo">
+              </div>
+              <div class="job-description">
+                <span>{{item.city | cityFilter}}</span>
+                <span>{{item.financing | financingFilter}}</span>
+                <span ng-repeat="type in item.industryList track by $index">{{type.industry | industryFilter}}</span>
+              </div>
+              <div class="company-name word-length-limit">
+                <span><strong>{{item.name}}</strong></span>
+              </div>
+              <div class="company-slogan word-length-limit">
+                <span>{{item.slogan}}</span>
+              </div>
+              <div class="company-professionNum">
+                <span>{{item.professionNum}}个在招职位</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row pagination-bottom">
+        <div class="col-xs-12">
+          <pagination ng-if="vm.companyList.total" total="{{vm.companyList.total}}"></pagination>
+        </div>
+      </div>
+      <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="4"></not-find>
+      <!--<not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="4"></not-find>-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="a404">
+  <div class="width-100">
+    <div class="width-100" style="overflow: hidden">
+      <div class="col-md-12 a404-cont">
+        <div class="col-sm-5">
+          <img src="../../images/icon/404.png" class="img-responsive notfind-img-sm">
+        </div>
+        <div class="col-sm-7 a404-text notfind-text-sm">
+          <div class="a404-text1">暂时没有符合该搜索条件的内容</div>
+          <div class="a404-text2">请重新修改搜索条件后再次进行搜索</div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <!--公司-->
+        <div ng-if="showrecommend==='company'" class="width-100 searchRecomendChoice">
+          <div class="row">
+            <div class="earchCompanyList-title col-xs-12">推荐公司</div>
+            <span class="notFindLine"></span>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-card"
+                 ng-repeat="item in eliteCompany.data track by $index">
+              <div class="search-innerBox-notFind" ui-sref="app.companyMain.companyDetail({name:x.name,id:x.id,companyId:x.id})"
+                   ng-class="{navChoice: $state.includes('app.companyMain')}">
+                <div class="box-img-notFind">
+                  <img ng-src="{{item.logo}}">
+                </div>
+                <div class="job-description word-length-limit">
+                  <span>{{item.city | cityFilter}}</span>
+                  <span>{{item.financing | financingFilter}}</span>
+                  <span ng-repeat="type in item.industryList track by $index">{{type.industry | industryFilter}}</span>
+                </div>
+                <div class="company-name word-length-limit">
+                  <span><strong>{{item.name}}</strong></span>
+                </div>
+                <div class="company-slogan word-length-limit">
+                  <span>{{item.slogan}}</span>
+                </div>
+                <div class="company-professionNum">
+                  <span class="word-length-limit">{{item.professionNum}}个在招职位</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <span class="notFindLine"></span>
+        </div>
+        <!--职位-->
+        <div ng-if="showrecommend==='position'" class="width-100 searchRecomendChoice">
+          <div class="row">
+            <div class="earchCompanyList-title col-xs-12">推荐职位</div>
+            <span class="notFindLine"></span>
+            <div class="col-md-3 col-sm-6 col-xs-12 company-card"
+                 ng-repeat="x in elitePosition.data track by $index">
+              <div class="col-xs-12 company-main img-thumbnail"
+                   ui-sref="app.jobDescription({id:x.id})"
+                   ng-class="{navChoice: $state.includes('app.jobDescription')}">
+                <div class="company-content clearfix">
+                  <div class="middle-img-box-notFind1">
+                    <img ng-src="{{x.logo}}" class="img-responsive">
+                  </div>
+                  <div class="companybox-content">
+                    <p class="word-length-limit findJob-position">
+                      {{x.name}}
+                    </p>
+                    <p class="word-length-limit findJob-payroll mg-top-6">
+                      {{x.compensation|compensationFilter}}
+                    </p>
+
+                    <p class="word-length-limit findJob-companyName">
+                      <span>{{x.companyName}}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

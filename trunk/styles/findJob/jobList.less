@@ -1,0 +1,136 @@
+@import "../my-public";
+.jobList-wrapper {
+	.bg-f8;
+}
+.jobList-nowTitle {
+	padding: 0 20px;
+}
+.middle-line {
+	display: inline-block;
+	color: black;
+	border-top: 1px solid #eee;
+	width: 30%;
+	margin-bottom: .4rem;
+}
+.search-panel {
+	.bg-fff;
+	padding: 25px;
+	margin-bottom: 20px;
+}
+.keyword-search {
+	display: inline-block;
+	width: 50%;
+}
+.search-panel .form-control,
+.search-panel .form-horizontal {
+	padding-right: 15px !important;
+	padding-left: 15px !important;
+}
+@media screen and (max-width: 768px) {
+	.keyword-search {
+		display: block;
+		width: 90%;
+	}
+}
+.form-group > a {
+	color: rgb(83, 106, 130);
+	cursor: pointer;
+	display: inline-block;
+	padding: 3px 10px;
+	.mg-right-10;
+}
+
+.form-group > a:hover {
+	text-decoration: none;
+	.bg-f4;
+	.font-white;
+}
+.defaultChoice {
+	.bg-f4;
+	.font-white !important;
+}
+
+.search-content {
+	.bg-fff;
+}
+.search-oneRow {
+	padding: 20px 10px 0 10px;
+}
+.search-rowBox {
+	border: 1px solid #eee;
+	padding: 15px;
+	margin: 0 10px 0 10px;
+}
+.search-rowBox:hover {
+	box-shadow: 0 0 10px #eee;
+	cursor: pointer;
+}
+.search-rowRight {
+	border-left: 1px solid #eee;
+}
+@media screen and (max-width: 992px) {
+	.search-rowRight {
+		padding-top: 10px;
+		border-left: none !important;
+	}
+}
+.jobList-img-logo {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	margin-right: 15px;
+	width: 100px;
+	height: 60px;
+	border: 1px solid #e8e8e8;
+	border-radius: 5px;
+	background-color: #fff;
+	justify-content: center;
+	cursor: pointer;
+}
+.jobList-img-logo img {
+	vertical-align: middle;
+	display: inline-block;
+	max-width: 90%;
+	max-height: 100%;
+}
+
+.left-more-details {
+	.pd-bot-10;
+}
+.tags-display {
+	//margin-left: 20px;
+	span{
+		display: inline-block;
+		padding: 3px 5px;
+		margin: 5px 5px 0 5px;
+		.border-solid-e8;
+	}
+}
+.company-Name {
+	margin-left: 20px;
+}
+.industry-type {
+	margin-left: 20px;
+	span {
+		padding-right: 15px;
+	}
+}
+@media screen and (max-width: 360px) {
+	.companyName-industry {
+		width: 100%;
+	}
+	.company-Name,
+	.industry-type {
+		margin-left: 0;
+	}
+}
+
+.pagination-bottom {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.jobList-split-line {
+	padding: 0 10px;
+}

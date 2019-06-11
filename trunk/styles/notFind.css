@@ -1,0 +1,166 @@
+@charset "utf-8";
+.a404 {
+	margin: 0;
+}
+
+.a404 > .container, .searchCompanyChoice {
+	background-color: #fff
+}
+
+.a404-cont {
+	background-color: white;
+	padding: 40px 0;
+	overflow: hidden;
+}
+
+.notFindLine {
+	margin: 30px 15px 0px 15px;
+	display: block;
+	height: 1px;
+	background-color: #e8e8e8;
+}
+
+@media screen and (min-width: 768px) {
+	.notfind-img-sm {
+		float: right;
+	}
+
+	.a404-text {
+		padding: 88px 0;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.notfind-img-sm {
+		margin: 0 auto;
+	}
+	.a404-text {
+		padding: 20px;
+	}
+
+	.notfind-text-sm {
+		text-align: center;
+	}
+}
+
+.a404-text1 {
+	font-size: 20px;
+	font-weight: 700;
+	color: #2b3d51;
+	margin-bottom: 15px;
+}
+
+.a404-text2 {
+	font-size: 17px;
+	color: #536a82;
+}
+
+.searchRecomendChoice {
+	padding: 20px 0 25px 0;
+}
+
+.earchCompanyList-title {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 25px;
+}
+
+.width-100 {
+	width: 100%;
+}
+
+/*推荐内容部分css*/
+.findJob-payroll {
+	color: #fc2b47;
+	font-size: 16px;
+}
+
+.findJob-position {
+	color: #2d3e50;
+}
+
+.company-content p:last-child {
+	margin-bottom: 0;
+}
+
+.findJob-jobList-text p {
+	margin-bottom: 10px;
+}
+
+.findJob-companyName {
+	color: #536a82;
+}
+.middle-img-box-notFind1 {
+	display: flex;
+	float: left;
+	align-items: center;
+	padding: 5px;
+	margin: 10px 10px 10px 0;
+	width: 48%;
+	height: 90px;
+	border: 1px solid #e8e8e8;
+	border-radius: 5px;
+	background-color: #fff;
+	justify-content: center;
+}
+.middle-img-box-notFind1 img {
+	vertical-align: middle;
+	display: inline-block;
+	max-width: 90%;
+	max-height: 100%;
+}
+.companybox-content {
+	width: 43%;
+	float: left;
+	margin-top: 10px;
+}
+.company-main:hover {
+	box-shadow: 0 0 25px #eee;
+	cursor: pointer;
+}
+
+/* 推荐公司 */
+.search-innerBox-notFind {
+	margin-top: 25px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	text-align: center;
+}
+.company-name {
+	padding: 5px 0;
+}
+.pagination-bottom {
+	padding-top: 20px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.box-img-notFind {
+	display: flex;
+	align-items: center;
+	margin: 12px auto;
+	padding: 5px;
+	width: 140px;
+	height: 118px;
+	border: 1px solid #e8e8e8;
+	border-radius: 5px;
+	background-color: #fff;
+	justify-content: center;
+	cursor: pointer;
+}
+.box-img-notFind img {
+	vertical-align: middle;
+	display: inline-block;
+	max-width: 90%;
+	max-height: 100%;
+}
+.search-innerBox-notFind:hover {
+	box-shadow: 0 0 15px #e8e8e8;
+}
+
+.company-professionNum {
+	border-top: 1px solid #eee;
+	padding: 5px 0;
+	background-color: #eee;
+	margin-top: 5px;
+}

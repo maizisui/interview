@@ -1,0 +1,103 @@
+<div class="container-wrapper">
+  <header class="header-static-top">
+    <div class="header-panel">
+      <div class="container">
+        <div class="row">
+          <nav class="navbar navbar-default nav-clear">
+            <div class=" col-xs-12 pd-0">
+              <div class="col-sm-5">
+                <img src="../images/logo.png" ui-sref="app.home" class="pull-left main-logo">
+                <div class="main-location disHidden">
+                  <img src="../images/icon/location-logo.png">
+                  <span class="selected-location">北京站</span>
+                </div>
+              </div>
+              <div class=" pull-right collapse navbar-collapse col-sm-6 nav-xs"
+                   id="bs-example-navbar-collapse-1">
+                <ul ontouchstart=""
+                    data-toggle="{{vm.isToggle}}"
+                    class="nav navbar-nav navbar-right nav-media main-nav mg-0">
+                  <li class="nav-page" ui-sref="app.home"
+                      ng-class="{navChoice: $state.includes('app.home')}">首页
+                    <span class="nav-page-underline"></span>
+                  </li>
+                  <li class="nav-page" ui-sref="app.findJob"
+                      ng-class="{navChoice: $state.includes('app.findJob')||$state.includes('app.jobList')
+                      || $state.includes('app.searchMain')||$state.includes('app.companyMain')||
+                       $state.includes('app.jobDescription') || $state.includes('app.notFind')}">
+                    找职位
+                    <span class="nav-page-underline"></span>
+                  </li>
+                  <li class="nav-page" ui-sref="app.findElite"
+                      ng-class="{navChoice: $state.includes('app.findElite')||$state.includes('app.companyList')}">
+                    找精英
+                    <span class="nav-page-underline"></span>
+                  </li>
+                  <li class="nav-page mg-right-0" ui-sref="app.aboutUs"
+                      ng-class="{navChoice: $state.includes('app.aboutUs')}">关于我们
+                    <span class="nav-page-underline"></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- 移动设备折叠排列-->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="content-wraper">
+      <div ui-view>
+      </div>
+  </div>
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-4 footer-left">
+            <div class="footer-left-top">
+              <img src="../images/homepage/wechat.jpg" alt="wechat-img">
+            </div>
+            <div class="footer-left-bottom">
+              <a ui-sref="app.aboutUs({status:'true'})">关于我们</a> | <a ui-sref="app.aboutUs({status:'false'})">联系我们</a>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4 footer-middle">
+            <div class="row">
+              <div class="col-xs-12">
+                <h3>其他项目</h3>
+              </div>
+            </div>
+            <div class="row other-project">
+              <div class="col-xs-3"><a href="http://www.jnshu.com/home" target="_blank">修真院</a></div>
+              <div class="col-xs-4"><a href="http://www.caochuanyun.com/ target='_blank' ">草船云</a></div>
+            </div>
+            <div class="row">
+              <div class="col-xs-3"><a href=" http://luoboduo.com/home" target='_blank'>萝卜多</a></div>
+              <div class="col-xs-4"><a href="http://wiki.ptteng.com/"  target='_blank'>桌游精灵</a></div>
+              <div class="col-xs-4"><a href="http://wiki.ptteng.com/" target='_blank'>葡萄藤轻游戏</a></div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-4 footer-right">
+            <h3>联系我们&nbsp;&nbsp;</h3>
+            <p>联系电话&nbsp;&nbsp;(010)59478634</p>
+            <p>邮箱支持&nbsp;&nbsp; fuhua@ptteng.com</p>
+            <p>地址&nbsp;&nbsp; 北京市海淀区翠微路甲10#225室</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      Copyright &copy; 2015 北京葡萄藤信息技术有限公司 All Rights Reserved | 京ICP备15035574号-3
+    </div>
+  </footer>
+</div>

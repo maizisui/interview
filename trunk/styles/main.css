@@ -1,0 +1,171 @@
+.container-wrapper {
+	background-color: #f6f7f8;
+}
+.navbar-static-top {
+	z-index: 555;
+	padding-bottom: 20px;
+	background-color: #f6f7f8;
+}
+.main-logo {
+	margin-top: 19px;
+	cursor: pointer;
+}
+
+.nav, .pagination, .panel-title a {
+	cursor: pointer
+}
+
+@media screen and (max-width: 767px) {
+	.mg-right-0 {
+		margin-right: 24px !important;
+	}
+
+	.main-nav {
+		margin: 8px 9px
+	}
+
+	.nav-xs {
+		position: absolute;
+		width: 100%;
+		top: 50px;
+		z-index: 999;
+		background-color: #fff;
+		border-bottom: 1px solid #000
+	}
+
+	.main-location {
+		margin-top: 8px;
+	}
+
+	.main-logo {
+		margin-top: 4px;
+	}
+	.navbar-default .navbar-nav > li {
+		line-height: 42px  !important;
+	}
+
+}
+
+.nav-clear {
+	background: 0;
+	border: 0;
+	margin: 0
+}
+
+.header-panel {
+	background-color: white;
+	box-shadow: 0 4px 7px #eeeef0;
+}
+
+.main-location {
+	font-size: 16px;
+	display: inline-block;
+	margin-top: 25px;
+	margin-left: 20px;
+	padding: 6px 0 6px 15px;
+	border-left: 1px solid #e2e2e2;
+}
+
+.selected-location {
+	vertical-align: middle;
+	margin-left: 4px;
+	font-size: 16px;
+	color: #333
+}
+
+.navbar-default .navbar-nav > li {
+	font-size: 16px;
+	line-height: 77px;
+	margin: 0 24px;
+	cursor: pointer;
+	text-align: center;
+	color: #2d3e50
+}
+
+.nav-page-underline {
+	display: block;
+	width: 0;
+	height: 3px;
+	background-color: #fc2b47;
+	margin: 0 auto;
+	border-bottom: 0 solid #fc2b47;
+	transition: width .2s;
+	-moz-transition: width .2s; /* Firefox 4 */
+	-webkit-transition: width .2s; /* Safari 和 Chrome */
+	-o-transition: width .2s; /* Opera */
+}
+
+.nav-page:hover .nav-page-underline,
+.navChoice > .nav-page-underline {
+	width: 100%;
+}
+
+.nav-page:hover, .navChoice {
+	color: #fc2b47 !important;
+}
+
+@media screen and (min-width: 768px) {
+	.nav-media {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		display: -webkit-flex;
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end
+	}
+}
+
+.navbar-toggle, .navbar-toggle:hover {
+	margin-top: -36px;
+	background-color: rgba(252, 43, 71, .8) !important;
+	border: none
+}
+
+.navbar-toggle span {
+	background-color: #fff !important;
+}
+
+
+@media screen and (max-width: 991px) {
+	.disHidden {
+		display: none;
+	}
+}
+
+footer {
+  background-color: #fff;
+	margin-top: 20px;
+}
+.footer-top {
+	padding: 2% 0;
+}
+.footer-left-top img {
+  display: block;
+  width: 60px;
+  height: 60px;
+}
+.footer-left {
+	margin-top: 20px;
+}
+.other-project {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+footer .copyright {
+  margin-top: 40px;
+  padding: 5px 0;
+  text-align: center;
+  background-color: #536a82;
+  color: #fff;
+}
+
+.footer-right {
+	padding-left: 10%;
+}
+@media screen and (max-width: 1200px) {
+	.footer-right {
+		padding-left: 15px;
+	}
+}

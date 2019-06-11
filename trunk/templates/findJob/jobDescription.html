@@ -1,0 +1,65 @@
+<div>
+  <div class="container jobDescription-wrapper">
+    <div class="row">
+      <div class="col-md-9 col-xs-12">
+        <div class="jobDescription-content-box border-left">
+          <h3>{{vm.jobDescription.data.name}}</h3>
+          <p>{{vm.jobDescription.data.companyName}}</p>
+          <div class="jobDescriptionKeywords">
+            <p class="jobDescription-compensation"> {{vm.jobDescription.data.compensation|compensationFilter}} </p>
+            <p>
+              <span class="location"><img src="../../images/icon/location.png">{{vm.jobDescription.data.province|provinceFilter}}</span>
+              <span class="update-time"><img src="../../images/icon/date.png">发布时间：{{vm.jobDescription.data.updateAt| date:'yyyy-MM-dd'}}</span>
+            </p>
+            <p>
+              <span class="education">{{vm.jobDescription.data.education|educationFilter}}</span> |
+              <span class="experience">{{vm.jobDescription.data.experience|experienceFilter}} </span>
+            </p>
+            <span class="tags" ng-repeat="tage in vm.jobDescription.data.tags track by $index">
+              <span class="detail-welfare">{{tage.tag}}</span>
+            </span>
+          </div>
+          <h4 class="font-bold">职位描述</h4>
+          <div class="job-detail">
+            <div class="job-detail-text">
+              <p>岗位职责：</p>
+              <p>{{vm.jobDescription.data.responsibility}}</p>
+            </div>
+            <div class="job-detail-text">
+              <p>必要条件：</p>
+              <p>{{vm.jobDescription.data.requisite}}</p>
+            </div>
+            <div class="job-detail-text">
+              <p>公司福利：</p>
+              <p>{{vm.jobDescription.data.boon}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-xs-12" style="padding-left:0">
+        <div class="jobDescription-content-right border-right">
+          <div class="img-logo-jobDescription">
+            <img ng-src="{{vm.jobDescription.data.logo}}" class="img-responsive">
+          </div>
+          <a class="companyName font-bold" ui-sref="app.companyMain.companyDetail({id:vm.jobDescription.data.companyId})">{{vm.jobDescription.data.companyName}}</a>
+          <div>
+            <span class="base-info font-bold">基本信息</span>
+            <span class="middle-line-jobDescription"></span>
+          </div>
+          <div class="totalNum">
+            <img src="../../images/icon/people.png" alt="">
+            <span>{{vm.jobDescription.data.totalNum}}人</span>
+          </div>
+          <div class="totalNum">
+            <img src="../../images/icon/company-home-3.png">
+            <span class="company-industry">
+              <span ng-repeat="total in vm.jobDescription.data.industryList track by $index">
+                {{total.industry|industryFilter}} <span style="padding-right: 5px"></span>
+              </span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

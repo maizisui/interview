@@ -1,0 +1,243 @@
+<div>
+  <div class="home-banner">
+    <div class="wrap" id="bannerFirst">
+      <img class="img-responsive" ng-src="{{bannerUrl}}" style="width: 100%; height: 340px;">
+    </div>
+    <!--<div id="findJob-top-carousel" class="carousel slide" data-ride="carousel">-->
+      <!--<div class="carousel-inner" role="listbox">-->
+        <!--<div class="item" ng-repeat="findJobArticle in vm.findJobArticle.data.articleList track by $index"-->
+             <!--ng-class="{'active': $first}">-->
+          <!--<img ng-src="{{findJobArticle.img}}" class="img-responsive" style="height: 400px;">-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--&lt;!&ndash;controls&ndash;&gt;-->
+      <!--<a href="#findJob-top-carousel" class="left carousel-control carousel-button"-->
+         <!--role="button" data-slide="prev" onclick="return false;">-->
+        <!--<span aria-hidden="true"><img ng-src="../../images/icon/pre-2.png" alt=""></span>-->
+      <!--</a>-->
+      <!--<a href="#findJob-top-carousel" class="right carousel-control carousel-button"-->
+         <!--role="button" data-slide="next" onclick="return false;">-->
+        <!--<span aria-hidden="true"><img ng-src="../../images/icon/next-2.png" alt=""></span>-->
+      <!--</a>-->
+      <!--&lt;!&ndash;carousel item&ndash;&gt;-->
+      <!--<ol class="carousel-indicators">-->
+        <!--<li data-target="#find-top-carousel" data-slide-to="{{$index}}"-->
+            <!--ng-repeat="homeArticle in vm.findJobArticle.data.articleList track by $index"-->
+            <!--ng-class="{'active':$first}"></li>-->
+      <!--</ol>-->
+    <!--</div>-->
+  </div>
+  <div class="home-introduce">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-3">
+          <div class="home-intr-img"><img src="../../images/homepage/jianjie-1.png" alt="jianjie1"></div>
+          <p class="home-intr-font">超短相应时间</p>
+          <p>48小时高效推荐</p>
+        </div>
+        <div class="col-md-3">
+          <div class="home-intr-img"><img src="../../images/homepage/jianjie-2.png" alt="jianjie2"></div>
+          <p class="home-intr-font">行业1/3价格</p>
+          <p>成功推荐仅收费1月工资</p>
+        </div>
+        <div class="col-md-3">
+          <div class="home-intr-img"><img src="../../images/homepage/jianjie-3.png" alt="jianjie3"></div>
+          <p class="home-intr-font">三维人才评测</p>
+          <p>技术人事背景三维评定</p>
+        </div>
+        <div class="col-md-3 home-data-border">
+          <div>
+            <p class="home-data-font">500+</p>
+            <p>入职成功</p>
+          </div>
+          <div>
+            <p class="home-data-font">498人</p>
+            <p>成功转正</p>
+          </div>
+          <div>
+            <p class="home-data-font">98%</p>
+            <p>成功率</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-newJob">
+    <div class="container">
+      <div class="row home-service-top">
+        <span class="home-service-line"></span>
+        <span class="home-service-title">最新职位</span>
+        <span class="home-service-line"></span>
+        <a class="home-newJob-more more-hover" href="#"
+           ui-sref="app.jobList({n:'true'})"
+           ng-class="{navChoice: $state.includes('app.newJob')}">更多&gt;&gt;
+        </a>
+      </div>
+      <div>
+        <profession-carousel></profession-carousel>
+      </div>
+    </div>
+  </div>
+  <div class="home-service">
+    <div class="container">
+      <div class="row home-service-top">
+        <span class="home-service-line"></span>
+        <span class="home-service-title">萝卜多，服务流程</span>
+        <span class="home-service-line"></span>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1">
+          <div class="home-service-flow">
+            <img class="img-responsive" src="../../images/homepage/flow-path1.png" alt="flow-path1">
+            <p class="word-length-limit">1.意向洽谈、深入评审</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <span class="glyphicon glyphicon-arrow-right home-service-arrow" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="home-service-flow">
+            <img class="img-responsive" src="../../images/homepage/flow-path2.png" alt="flow-path2">
+            <p class="word-length-limit">2.确认合作、签订合同</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <span class="glyphicon glyphicon-arrow-right home-service-arrow" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="home-service-flow">
+            <img class="img-responsive" src="../../images/homepage/flow-path3.png" alt="flow-path3">
+            <p class="word-length-limit">3.提出需求、提供jd</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 col-md-offset-1"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-arrow-down home-service-arrow" aria-hidden="true" style="margin-bottom: 20px; margin-top: 10px"></span>
+        </div>
+      </div>
+      <div class="row home-service-span">
+        <div class="col-md-2 col-md-offset-1">
+          <div class="home-service-flow">
+            <img class="img-responsive" src="../../images/homepage/flow-path6.png" alt="flow-path6">
+            <p class="word-length-limit">6.上岗、转入售后</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <span class="glyphicon glyphicon-arrow-left home-service-arrow" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="home-service-flow">
+            <img class="img-responsive" src="../../images/homepage/flow-path5.png" alt="flow-path5">
+            <p class="word-length-limit">5.人才评测、简历脱水</p>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div>
+            <span class="glyphicon glyphicon-arrow-left home-service-arrow" aria-hidden="true"></span>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="home-service-flow">
+            <img class="img-responsive" src="../../images/homepage/flow-path4.png" alt="flow-path4">
+            <p class="word-length-limit">4.开始招聘、人才海选</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="home-evaluation">
+    <div class="container">
+      <div class="row home-service-top">
+        <span class="home-service-line"></span>
+        <span class="home-service-title">伙伴之言</span>
+        <span class="home-service-line"></span>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div  class="home-evaluation-content">
+            <img src="../../images/homepage/xd.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="home-evaluation-content">
+            <img src="../../images/homepage/ms.png" alt="">
+            <p>
+              王思聪 <br>
+              拓尔思集团创始人
+            </p>
+            <p class="home-eval-para">萝卜多推荐的同学有一个共性就是高度的工作责任感与吃苦耐劳的结合，同时技术过硬，工作扎实、认真。
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="home-evaluation-content">
+            <img src="../../images/homepage/xd.png" alt="">
+            <p>
+              王思聪 <br>
+              拓尔思集团创始人
+            </p>
+            <p class="home-eval-para">萝卜多推荐的同学有一个共性就是高度的工作责任感与吃苦耐劳的结合，同时技术过硬，工作扎实、认真。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <div class="col-md-3">
+          <div class="home-evaluation-content">
+            <img src="../../images/homepage/ms.png" alt="">
+            <p>
+              王思聪 <br>
+              拓尔思集团创始人
+            </p>
+            <p class="home-eval-para">萝卜多推荐的同学有一个共性就是高度的工作责任感与吃苦耐劳的结合，同时技术过硬，工作扎实、认真。
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="home-evaluation-content">
+            <img src="../../images/homepage/xd.png" alt="">
+            <p>
+              王思聪 <br>
+              拓尔思集团创始人
+            </p>
+            <p class="home-eval-para">萝卜多推荐的同学有一个共性就是高度的工作责任感与吃苦耐劳的结合，同时技术过硬，工作扎实、认真。
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="home-evaluation-content">
+            <img src="../../images/homepage/ms.png" alt="">
+            <p>
+              王思聪 <br>
+              拓尔思集团创始人
+            </p>
+            <p class="home-eval-para">萝卜多推荐的同学有一个共性就是高度的工作责任感与吃苦耐劳的结合，同时技术过硬，工作扎实、认真。
+            </p>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="home-evaluation-content">
+            <img src="../../images/homepage/xd.png" alt="">
+            <p>
+              王思聪 <br>
+              拓尔思集团创始人
+            </p>
+            <p class="home-eval-para">萝卜多推荐的同学有一个共性就是高度的工作责任感与吃苦耐劳的结合，同时技术过硬，工作扎实、认真。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

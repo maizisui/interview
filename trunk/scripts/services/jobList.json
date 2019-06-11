@@ -1,0 +1,274 @@
+{
+	"code": 0,
+	"message": "查询成功",
+	"data": [
+		{
+			"jobType": 1,
+			"name": "技术",
+			"jobTypeList": [
+				{
+					"secondType": 1,
+					"name": "前端",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "web前端"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "flash"
+						},
+						{
+							"thirdType": 3,
+							"jobName": "javascript"
+						},
+						{
+							"thirdType": 4,
+							"jobName": "html5"
+						},
+						{
+							"thirdType": 5,
+							"jobName": "前端开发其他"
+						}
+					]
+				},
+				{
+					"secondType": 2,
+					"name": "后端",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "java"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "php"
+						},
+						{
+							"thirdType": 3,
+							"jobName": "c++"
+						},
+						{
+							"thirdType": 4,
+							"jobName": "ruby"
+						},
+						{
+							"thirdType": 5,
+							"jobName": "node.js"
+						},
+						{
+							"thirdType": 6,
+							"jobName": "python"
+						},
+						{
+							"thirdType": 7,
+							"jobName": "后端开发其他"
+						}
+					]
+				},
+				{
+					"secondType": 3,
+					"name": "移动",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "html5"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "Android"
+						},
+						{
+							"thirdType": 3,
+							"jobName": "IOS"
+						},
+						{
+							"thirdType": 4,
+							"jobName": "WP"
+						},
+						{
+							"thirdType": 5,
+							"jobName": "移动开发其他"
+						}
+					]
+				},
+				{
+					"secondType": 4,
+					"name": "测试",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "测试工程师"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "性能测试"
+						},
+						{
+							"thirdType": 3,
+							"jobName": "功能测试"
+						},
+						{
+							"thirdType": 4,
+							"jobName": "测试其他"
+						}
+					]
+				},
+				{
+					"secondType": 4,
+					"name": "运维",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "运维工程师"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "网络工程师"
+						},
+						{
+							"thirdType": 3,
+							"jobName": "系统工程师"
+						},
+						{
+							"thirdType": 4,
+							"jobName": "运维其他"
+						}
+					]
+				},
+				{
+					"secondType": 6,
+					"name": "高端职位",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "技术总监"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "技术经理"
+						},
+						{
+							"thirdType": 3,
+							"jobName": "架构师"
+						},
+						{
+							"thirdType": 4,
+							"jobName": "CTO"
+						},
+						{
+							"thirdType": 5,
+							"jobName": "高端技术职位其他"
+						}
+					]
+				}
+			]
+		},
+		{
+			"jobType": 2,
+			"name": "产品",
+			"jobTypeList": [
+				{
+					"secondType": 7,
+					"name": "产品经理",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "产品经理"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "移动产品经理"
+						},
+						{
+							"thirdType": 3,
+							"jobName": "网页产品经理"
+						},
+						{
+							"thirdType": 4,
+							"jobName": "电商产品经理"
+						},
+						{
+							"thirdType": 5,
+							"jobName": "游戏策划"
+						}
+					]
+				},
+				{
+					"secondType": 8,
+					"name": "高端职位",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "产品总监"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "游戏制作人"
+						}
+					]
+				}
+			]
+		},
+		{
+			"jobType": 3,
+			"name": "设计",
+			"jobTypeList": [
+				{
+					"secondType": 9,
+					"name": "视觉设计",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "UI设计师"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "平面设计师"
+						},
+						{
+							"thirdType": 3,
+							"jobName": "网页设计师"
+						},
+						{
+							"thirdType": 4,
+							"jobName": "app设计师"
+						}
+					]
+				},
+				{
+					"secondType": 10,
+					"name": "交互设计",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "网页交互设计师"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "交互设计师"
+						}
+					]
+				},
+				{
+					"secondType": 11,
+					"name": "高端职位",
+					"secondTypeList": [
+						{
+							"thirdType": 1,
+							"jobName": "设计总监"
+						},
+						{
+							"thirdType": 2,
+							"jobName": "视觉设计主管"
+						},
+						{
+							"thirdType": 3,
+							"jobName": "交互设计主管"
+						}
+					]
+				}
+			]
+		}
+	]
+}

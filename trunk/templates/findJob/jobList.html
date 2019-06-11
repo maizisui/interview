@@ -1,0 +1,99 @@
+<div class="jobList-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div style="text-align: center; padding: 20px 0">
+          <span class="middle-line"></span>
+          <span class="jobList-nowTitle font-bold" style="font-size: 18px;">{{recommendAndNewJob}}</span>
+          <span class="middle-line"></span>
+        </div>
+        <!--条件筛选-->
+        <div class="search-panel">
+          <form class="form-horizontal" name="searchParams" novalidate >
+            <div class="form-group">
+              <label>关 键 字：</label>
+              <input type="text" name="name" maxlength="10" class="form-control keyword-search"
+                     placeholder="输入职位关键词：如产品经理等"  ng-maxlenght="10" ng-model="vm.data.name">
+              <span ng-if="searchParams.name.$dirty" class="search-word" style="margin-left: 10px;">当前关键词： {{vm.data.name}}</span>
+              <span ng-if="searchParams.name.$invalid">验证失败，请不要超过10个字符</span>
+            </div>
+            <div class="form-group">
+              <label>所在地区：</label>
+              <a ng-class="{true: 'defaultChoice'}[a.choose]"
+                 ng-click="vm.checkboxMulti($index, vm.option.province)"
+                 ng-repeat="a in vm.option.province track by $index">{{a.name}}</a>
+            </div>
+            <div class="form-group">
+              <label>所属行业：</label>
+              <a ng-class="{true: 'defaultChoice'}[a.choose]"
+                 ng-click="vm.checkboxMulti($index, vm.option.industry)"
+                 ng-repeat="a in vm.option.industry track by $index">{{a.name}}</a>
+            </div>
+            <div class="form-group">
+              <label>工作经验：</label>
+              <a ng-class="{true: 'defaultChoice'}[a.choose]"
+                 ng-click="vm.checkboxMulti($index, vm.option.experience)"
+                 ng-repeat="a in vm.option.experience track by $index">{{a.name}}</a>
+            </div>
+            <div class="form-group">
+              <label>薪资水平：</label>
+              <a ng-class="{true: 'defaultChoice'}[a.choose]"
+                 ng-click="vm.checkboxMulti($index, vm.option.compensation)"
+                 ng-repeat="a in vm.option.compensation track by $index">{{a.name}}</a>
+            </div>
+            <div class="form-group">
+              <label>发布时间：</label>
+              <a ng-class="{true: 'defaultChoice'}[a.choose]"
+                 ng-click="vm.radioType($index, vm.option.updateAt)"
+                 ng-repeat="a in vm.option.updateAt track by $index">{{a.name}}</a>
+            </div>
+            <div class="search-btn clearfix">
+              <button class="begin-search pull-right" ng-click="vm.search()">搜索</button>
+              <button class="clear-search pull-right" ng-click="vm.clear()">清空</button>
+            </div>
+          </form>
+        </div>
+        <!--搜索内容-->
+        <div class="search-content">
+          <div class="search-oneRow" ng-repeat="item in vm.jobList.data track by $index">
+            <div class="row search-rowBox" ui-sref="app.jobDescription">
+              <div class="col-md-7 col-xs-12 search-rowLeft">
+                <div class="left-jobName">
+                  <p ui-sref="app.jobDescription"> <b>{{item.name}}</b></p>
+                </div>
+                <div class="left-more-details">
+                  <span>{{item.compensation | compensationFilter}}</span> <span class="jobList-split-line">|</span>
+                  <span>{{item.city | cityFilter}}-{{item.county | countyFilter }}</span><span class="jobList-split-line">|</span>
+                  <span>{{item.education | educationFilter}}</span><span class="jobList-split-line">|</span>
+                  <span>{{item.experience | experienceFilter}}</span>
+                </div>
+                <div class="left-time">发布时间： {{item.updateAt | updateAtFilter}}</div>
+              </div>
+              <div class="col-md-5 col-xs-12 search-rowRight">
+                <div class="row">
+                  <div class="col-xs-4">
+                    <div class="jobList-img-logo"><img class="img-responsive" ng-src="{{item.logo}}"></div>
+                  </div>
+                  <div class="col-xs-8 companyName-industry">
+                    <p class="company-Name">{{item.companyName}}</p>
+                    <p class="industry-type"><span>{{item.industryList[0].industry | industryFilter}}</span></p>
+                  </div>
+                  <div class="col-xs-12">
+                    <p class="tags-display"><span ng-repeat="f in item.tags track by $index">{{f.tag}}</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row pagination-bottom">
+            <div class="col-xs-12">
+              <pagination ng-if="vm.jobList.total" total="{{vm.jobList.total}}"></pagination>
+            </div>
+          </div>
+          <!--notFind页面-->
+          <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="4"></not-find>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

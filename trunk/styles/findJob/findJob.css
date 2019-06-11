@@ -1,0 +1,776 @@
+@charset "utf-8";
+/*改变input框提示文字颜色*/
+input::-webkit-input-placeholder {
+  color: #D6D0CA !important;
+}
+input:-moz-placeholder {
+  color: #D6D0CA !important;
+}
+ul,
+li {
+  list-style: none;
+}
+/*margin*/
+.mg-top-5 {
+  margin-top: 5px;
+}
+.mg-top-10 {
+  margin-top: 10px;
+}
+.mg-top-20 {
+  margin-top: 20px;
+}
+.mg-top-30 {
+  margin-top: 30px;
+}
+.mg-top-40 {
+  margin-top: 40px;
+}
+.mg-top-50 {
+  margin-top: 50px;
+}
+.mg-right-5 {
+  margin-right: 5px;
+}
+.mg-right-10 {
+  margin-right: 10px;
+}
+.mg-right-20 {
+  margin-right: 20px;
+}
+.mg-right-30 {
+  margin-right: 30px;
+}
+.mg-right-40 {
+  margin-right: 40px;
+}
+.mg-right-50 {
+  margin-right: 50px;
+}
+.margin-bot-5 {
+  margin-bottom: 5px;
+}
+.margin-bot-10 {
+  margin-bottom: 10px;
+}
+.margin-bot-15 {
+  margin-bottom: 15px;
+}
+.margin-bot-20 {
+  margin-bottom: 20px;
+}
+.margin-bot-30 {
+  margin-bottom: 30px;
+}
+.margin-bot-40 {
+  margin-bottom: 40px;
+}
+.margin-bot-50 {
+  margin-bottom: 50px;
+}
+.mg-left-5 {
+  margin-left: 5px;
+}
+.mg-left-10 {
+  margin-left: 10px;
+}
+.mg-left-20 {
+  margin-left: 20px;
+}
+.mg-left-30 {
+  margin-left: 30px;
+}
+.mg-left-40 {
+  margin-left: 40px;
+}
+.mg-left-50 {
+  margin-left: 50px;
+}
+/*padding*/
+.pd-top-5 {
+  margin-top: 5px;
+}
+.pd-top-10 {
+  margin-top: 10px;
+}
+.pd-top-20 {
+  margin-top: 20px;
+}
+.pd-top-30 {
+  margin-top: 30px;
+}
+.pd-top-40 {
+  margin-top: 40px;
+}
+.pd-top-50 {
+  margin-top: 50px;
+}
+.pd-right-5 {
+  margin-right: 5px;
+}
+.pd-right-10 {
+  margin-right: 10px;
+}
+.pd-right-20 {
+  margin-right: 20px;
+}
+.pd-right-30 {
+  margin-right: 30px;
+}
+.pd-right-40 {
+  margin-right: 40px;
+}
+.pd-right-50 {
+  margin-right: 50px;
+}
+.pd-bot-5 {
+  margin-bottom: 5px;
+}
+.pd-bot-10 {
+  margin-bottom: 10px;
+}
+.pd-bot-15 {
+  margin-bottom: 15px;
+}
+.pd-bot-20 {
+  margin-bottom: 20px;
+}
+.pd-bot-30 {
+  margin-bottom: 30px;
+}
+.pd-bot-40 {
+  margin-bottom: 40px;
+}
+.pd-bot-50 {
+  margin-bottom: 50px;
+}
+.pd-left-5 {
+  margin-left: 5px;
+}
+.pd-left-10 {
+  margin-left: 10px;
+}
+.pd-left-20 {
+  margin-left: 20px;
+}
+.pd-left-30 {
+  margin-left: 30px;
+}
+.pd-left-40 {
+  margin-left: 40px;
+}
+.pd-left-50 {
+  margin-left: 50px;
+}
+/*color*/
+.font-fc2b47 {
+  color: #fc2b47;
+}
+.font-eb5255 {
+  color: #eb5255;
+}
+.font-white {
+  color: #fff;
+}
+.font-536a82 {
+  color: #536a82;
+}
+.font-2b3d51 {
+  color: #2b3d51;
+}
+.font-a1a1a1 {
+  color: #a1a1a1;
+}
+/*字体宽度*/
+.font-bold {
+  font-weight: bold;
+}
+/*宽度*/
+.width5 {
+  width: 5%;
+}
+.width8 {
+  width: 8%;
+}
+/*字体大小*/
+.font-size-14 {
+  font-size: 14px;
+}
+.font-size-12 {
+  font-size: 14px;
+}
+.font-size-16 {
+  font-size: 14px;
+}
+/*background-color*/
+.bg-f4 {
+  background-color: #f43851;
+}
+.bg-fff {
+  background-color: #fff;
+}
+.bg-f8 {
+  background-color: #f6f7f8;
+}
+.bg-536a82 {
+  background-color: #536a82;
+}
+/*border*/
+.border-dot-e8 {
+  border: 1px dotted #e8e8e8;
+}
+.border-solid-e8 {
+  border: 1px solid #e8e8e8;
+}
+.search-btn > button {
+  display: inline-block;
+  padding: 3px 16px;
+  margin-left: 20px;
+  border: none;
+}
+.begin-search {
+  background-color: #EB5255;
+  color: #fff;
+}
+.form-group label {
+  padding-right: 5px;
+}
+.clear-search {
+  background-color: #fff;
+}
+.clear-search:hover {
+  background-color: #f43851;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.word-length-limit {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.findJob-top {
+  background-color: #f6f7f8;
+}
+/* 职位标签搜索 */
+.dn {
+  display: none;
+}
+h4 {
+  padding-left: 8px;
+  color: #fff;
+}
+.findJob-search-tags {
+  background-color: #fc2a48;
+}
+.findJob-menu {
+  height: 460px;
+}
+.menu-box {
+  padding: 10px;
+  position: relative;
+  flex: 1;
+  border-bottom: solid 1px transparent;
+  border-top: solid 1px transparent;
+}
+.menu-box:hover {
+  background-color: #ffffff;
+  color: #fc2a48;
+  border-bottom: #fc2a48 solid 1px;
+  border-top: #fc2a48 solid 1px;
+}
+.menu-box:hover h4 {
+  color: #fc2a48;
+}
+.menu-box > div > a {
+  color: #ffffff;
+}
+.menu-box > div > a {
+  float: left;
+  padding: 6px 15px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.menu-box:hover > div > a {
+  color: #fc2a48 !important;
+  text-decoration: none;
+}
+.menu-sub {
+  width: 700px;
+  position: absolute;
+  top: -1px;
+  left: 100%;
+  z-index: 100;
+  background: white;
+  min-height: 125px;
+  padding: 5px 0 5px 40px;
+  border-right: solid 1px #fc2a48;
+  border-bottom: solid 1px #fc2a48;
+  border-top: solid 1px #fc2a48;
+}
+.menu-sub:hover {
+  color: #566A81;
+}
+.menu-sub > div > span {
+  display: inline-block;
+  color: #fc2b47;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: right;
+  margin-right: 10px;
+}
+.menu-box > h4 > i > .findjobdayu {
+  display: none;
+}
+.menu-box:hover > h4 > i > .findjobdayu {
+  display: inline-block;
+}
+.menu-box > h4 > i > .findjobdayu2 {
+  display: inline-block;
+}
+.menu-box:hover > h4 > i > .findjobdayu2 {
+  display: none;
+}
+.menu-sub > div > a:last-of-type {
+  border: none;
+}
+.menu-sub > div > a {
+  color: #536a82;
+  padding: 0 16px;
+  text-decoration: none;
+  border-right: 1px solid #E9E9E9;
+  font-size: 14px;
+  line-height: 12px;
+}
+.menu-sub > div > a:hover {
+  color: #fc2b47;
+}
+.carousel-control {
+  top: 46% !important;
+}
+@media screen and (max-width: 992px) {
+  .findJob-search-tags {
+    display: none;
+  }
+  .input-form-control {
+    width: 39%;
+  }
+  .carousel-control {
+    top: 40% !important;
+  }
+}
+/* 搜索框 */
+.findJob-search-box {
+  text-align: center;
+  margin: 10px 0;
+}
+label.company-name {
+  padding-right: 15px;
+}
+button.btn.btn-default {
+  margin-left: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.input-form-control {
+  width: 65%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  /* box-shadow: inset 0 1px 1px rgba(0,0,0,.075); */
+  /* -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; */
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+.findJob-top-carousel .item img {
+  height: 405px;
+  width: 100%;
+}
+/* recommended and new jobs */
+/*推荐职位*/
+.job-top {
+  padding: 20px 20px 6px 20px;
+}
+.job-top > a.position-rec {
+  text-decoration: none;
+  color: #2d3e50;
+}
+.more-hover {
+  text-decoration: none;
+  color: #536a82;
+}
+.job-top > a:first-of-type {
+  margin-right: 8px;
+}
+a:hover {
+  cursor: pointer;
+}
+.font-choose-style {
+  font-size: 14px;
+  font-weight: bold;
+}
+.findJob-jobList {
+  height: 355px;
+  padding: 30px 13px 46px 13px;
+}
+.findJob-jobList-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0 7px 20px 7px;
+  border: 1px solid #E9E9E9;
+  border-radius: 3px;
+}
+.findJob-jobList-box:hover {
+  cursor: pointer;
+  box-shadow: 0 0 7px #DAE0E3;
+  border: solid 1px #f5f5f5;
+}
+.findJob-jobList-text {
+  padding: 15px 0 0 20px;
+  width: 54%;
+}
+.findJob-jobList-text p:last-child {
+  margin-bottom: 0;
+}
+.findJob-jobList-text p {
+  margin-bottom: 10px;
+}
+.findJob-payroll {
+  color: #fc2b47;
+  font-size: 16px;
+}
+.findJob-position {
+  color: #2d3e50;
+}
+.middle-img-box1 {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin-right: 10px;
+  width: 126px;
+  height: 105px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  background-color: #fff;
+  justify-content: center;
+  cursor: pointer;
+}
+.middle-img-box1 img {
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 90%;
+  max-height: 100%;
+}
+.findJob-companyName {
+  color: #536a82;
+}
+/* recommended company */
+.recommend {
+  background-color: #fff;
+  padding: 15px 0;
+}
+.recommended-company {
+  margin-bottom: 20px;
+}
+.recommend-leftBox {
+  position: relative;
+}
+.recommend-leftBox img {
+  width: 375px;
+  height: 215px;
+  display: block;
+  cursor: pointer;
+}
+.recommend-leftBox .findJob-recommend-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.findJob-recommend-logo {
+  width: 25%;
+  display: inline-block;
+  cursor: pointer;
+}
+.findJob-recommend-logo img {
+  width: 145px;
+  height: 100px;
+  margin: 2px;
+}
+@media screen and (max-width: 660px) {
+  .findJob-recommend-logo {
+    width: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .findJob-recommend-logo img {
+    width: 125px;
+    height: 100px;
+    margin: 5px;
+  }
+}
+.company_carousel {
+  margin: 9px 0;
+  cursor: pointer;
+  height: 160px;
+  clear: both;
+}
+.company_carousel_logo {
+  height: 130px;
+  width: 180px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  flex-shrink: 0;
+}
+.company_carousel_logo img {
+  height: 100%;
+}
+.company_carousel_info span {
+  border-left: 1px solid #e8e8e8;
+  display: inline-block;
+  width: 89px;
+  text-align: center;
+}
+.company_carousel_info .tag {
+  border-radius: 5px;
+  display: inline-block;
+}
+.company_carousel_wrap,
+.job_list {
+  border: 1px solid #e8e8e8;
+  width: 95.7%;
+  height: 100%;
+  border-radius: 5px;
+  padding: 5px 0;
+  margin-bottom: 20px;
+  display: flex;
+}
+.company_carousel_job {
+  font-size: .16rem;
+  padding-left: 25px;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.company_carousel_job .company_carousel_list {
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.company_carousel_job span:nth-child(1) {
+  border: none;
+  padding-left: 0;
+}
+.company_carousel_job span {
+  flex-shrink: 0;
+  border-left: 1px solid #e8e8e8;
+  display: inline-block;
+  margin-right: 15px;
+  padding-left: 15px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.company_carousel_job span:last-child {
+  flex-shrink: 1;
+  width: 160px;
+}
+.company_msg {
+  border-right: 1px solid #d8d8d8;
+  height: 130px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 15px;
+}
+.company_msg .company_carousel_info {
+  margin-left: 30px;
+  display: flex;
+  /*
+		padding:30px 0
+		*/
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100px;
+  text-align: left;
+  overflow: hidden;
+  width: 100%;
+}
+.company_msg .company_carousel_info .tag_wrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.company_msg .company_carousel_info .text_pre {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.company_carousel .carousel-control {
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 28px;
+  color: #F44336;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  filter: alpha(opacity=50);
+  height: 36px;
+  line-height: 27px;
+}
+.company_carousel .carousel-control.glyphicon-chevron-left {
+  font-size: 20px;
+}
+.company_carousel .carousel-control.left {
+  left: 60px;
+  background-image: none;
+  background-color: #fff;
+}
+.company_carousel .carousel-control.right {
+  right: 60px;
+  background-image: none;
+  background-color: #fff;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .vertical-carousel .carousel-inner > .item {
+    -webkit-transition: -webkit-transform 0.6s ease-in-out;
+    -o-transition: -o-transform 0.6s ease-in-out;
+    transition: transform 0.6s ease-in-out;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .vertical-carousel .carousel-inner > .item.next,
+  .vertical-carousel .carousel-inner > .item.active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  .vertical-carousel .carousel-inner > .item.prev,
+  .vertical-carousel .carousel-inner > .item.active.left {
+    left: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  .vertical-carousel .carousel-inner > .item.next.left,
+  .vertical-carousel .carousel-inner > .item.prev.right,
+  .vertical-carousel .carousel-inner > .item.active {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .vertical-carousel .carousel-indicators li {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ccc;
+    display: block;
+  }
+  .vertical-carousel .carousel-indicators li.active {
+    background-color: #eb5255;
+    width: 20px;
+    height: 20px;
+  }
+  .vertical-carousel .carousel-indicators {
+    left: 97%;
+    width: 20px;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 0;
+  }
+  .vertical-carousel .carousel-control {
+    display: none;
+  }
+  .vertical-carousel .carousel-inner {
+    height: 140px;
+  }
+}
+/* position-banner */
+.position-banner-bg {
+  background-color: #fff;
+  padding: 20px 0;
+}
+.position-banner-top {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.position-banner-top .img-box1 img {
+  float: right;
+  padding-right: 10%;
+}
+@media screen and (max-width: 992px) {
+  .img-box1 img {
+    float: none !important;
+    padding-right: 0 !important;
+  }
+}
+.position-banner-bot {
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+.findJob-big-size {
+  font-weight: bold;
+  font-size: 24px;
+}
+.position-banner-textTop {
+  padding-right: 15%;
+  padding-top: 3%;
+  padding-left: 3%;
+}
+.img-box {
+  padding-left: 6%;
+}
+.position-banner-textBot {
+  padding-left: 23%;
+  padding-top: 3%;
+}
+@media screen and (max-width: 991px) {
+  .position-banner-topImg {
+    text-align: center !important;
+    padding: 0;
+  }
+  .img-box1 {
+    padding-bottom: 15px;
+  }
+  .position-banner-textTop {
+    text-align: center !important;
+    padding: 0 25%;
+  }
+  .position-banner-textBot {
+    text-align: center !important;
+    padding: 0 10%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .position-banner-textTop {
+    padding: 0 15%;
+  }
+}
+.findJob-bottom-img {
+  margin-top: 20px;
+}
